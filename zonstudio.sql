@@ -10,13 +10,32 @@ Target Server Type    : MYSQL
 Target Server Version : 50614
 File Encoding         : 65001
 
-Date: 2013-12-08 17:49:37
+Date: 2013-12-21 02:17:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `account`
+-- ----------------------------
+DROP TABLE IF EXISTS `account`;
+CREATE TABLE `account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '0',
+  `last_sign_on` datetime DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Table structure for album
+-- Records of account
+-- ----------------------------
+INSERT INTO `account` VALUES ('1', 'zudio', 'e10adc3949ba59abbe56e057f20f883e', '1', '2013-12-08 00:00:00', 'Zon ', 'Studio');
+
+-- ----------------------------
+-- Table structure for `album`
 -- ----------------------------
 DROP TABLE IF EXISTS `album`;
 CREATE TABLE `album` (
@@ -32,7 +51,7 @@ CREATE TABLE `album` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for file
+-- Table structure for `file`
 -- ----------------------------
 DROP TABLE IF EXISTS `file`;
 CREATE TABLE `file` (
@@ -47,7 +66,7 @@ CREATE TABLE `file` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for news
+-- Table structure for `news`
 -- ----------------------------
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
@@ -68,24 +87,25 @@ CREATE TABLE `news` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for package
+-- Table structure for `package`
 -- ----------------------------
 DROP TABLE IF EXISTS `package`;
 CREATE TABLE `package` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `service_id` int(11) DEFAULT NULL,
   `package_name` varchar(255) DEFAULT NULL,
   `summary` varchar(255) DEFAULT NULL,
   `description` text,
   `price` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of package
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for photo
+-- Table structure for `photo`
 -- ----------------------------
 DROP TABLE IF EXISTS `photo`;
 CREATE TABLE `photo` (
@@ -105,7 +125,7 @@ CREATE TABLE `photo` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for photo_tag
+-- Table structure for `photo_tag`
 -- ----------------------------
 DROP TABLE IF EXISTS `photo_tag`;
 CREATE TABLE `photo_tag` (
@@ -119,7 +139,7 @@ CREATE TABLE `photo_tag` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for service
+-- Table structure for `service`
 -- ----------------------------
 DROP TABLE IF EXISTS `service`;
 CREATE TABLE `service` (
@@ -132,48 +152,21 @@ CREATE TABLE `service` (
   `updated_at` datetime DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of service
 -- ----------------------------
+INSERT INTO `service` VALUES ('1', 'Fashion', 'Chụp ảnh thời trang', 'Blah blah', '2013-12-08 22:59:07', null, '2013-12-08 22:59:13', null);
+INSERT INTO `service` VALUES ('2', 'Ném đá hội nghị', 'Ném đá hội nghị', 'Ném đá hội nghị', '2013-12-14 04:42:49', null, null, null);
+INSERT INTO `service` VALUES ('3', 'Ném đá hội nghị', null, null, null, null, null, null);
+INSERT INTO `service` VALUES ('4', 'Ném đá hội nghị', null, null, null, null, null, null);
+INSERT INTO `service` VALUES ('5', 'Ném đá hội nghị23', null, null, null, null, null, null);
+INSERT INTO `service` VALUES ('7', 'Sửa ngon ', null, null, null, null, null, null);
+INSERT INTO `service` VALUES ('8', 'Sửa ngon', null, null, null, null, null, null);
 
 -- ----------------------------
--- Table structure for settings
--- ----------------------------
-DROP TABLE IF EXISTS `settings`;
-CREATE TABLE `settings` (
-  `setting_id` int(11) NOT NULL AUTO_INCREMENT,
-  `setting_key` varchar(50) NOT NULL,
-  `setting_value` longtext NOT NULL,
-  PRIMARY KEY (`setting_id`),
-  KEY `setting_key` (`setting_key`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of settings
--- ----------------------------
-INSERT INTO `settings` VALUES ('1', 'default_language', 'english');
-INSERT INTO `settings` VALUES ('2', 'date_format', 'm/d/Y');
-INSERT INTO `settings` VALUES ('3', 'currency_symbol', '$');
-INSERT INTO `settings` VALUES ('4', 'currency_symbol_placement', 'before');
-INSERT INTO `settings` VALUES ('5', 'invoices_due_after', '30');
-INSERT INTO `settings` VALUES ('6', 'quotes_expire_after', '15');
-INSERT INTO `settings` VALUES ('7', 'default_invoice_group', '1');
-INSERT INTO `settings` VALUES ('8', 'default_quote_group', '2');
-INSERT INTO `settings` VALUES ('9', 'thousands_separator', ',');
-INSERT INTO `settings` VALUES ('10', 'decimal_point', '.');
-INSERT INTO `settings` VALUES ('11', 'cron_key', 'z6pA2XZupB2MNko9');
-INSERT INTO `settings` VALUES ('12', 'tax_rate_decimal_places', '2');
-INSERT INTO `settings` VALUES ('13', 'pdf_invoice_template', 'default');
-INSERT INTO `settings` VALUES ('14', 'pdf_invoice_template_paid', 'default');
-INSERT INTO `settings` VALUES ('15', 'pdf_invoice_template_overdue', 'default');
-INSERT INTO `settings` VALUES ('16', 'pdf_quote_template', 'default');
-INSERT INTO `settings` VALUES ('17', 'public_invoice_template', 'default');
-INSERT INTO `settings` VALUES ('18', 'public_quote_template', 'default');
-
--- ----------------------------
--- Table structure for tag
+-- Table structure for `tag`
 -- ----------------------------
 DROP TABLE IF EXISTS `tag`;
 CREATE TABLE `tag` (
