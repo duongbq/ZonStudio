@@ -47,7 +47,7 @@ class MY_Model extends CI_Model {
             $this->db->update($this->_table_name, $data, array('id' => $data['id']));
     }
 
-    function delete($id) {
+    function delete($id = 0) {
         $this->db->where('id', $id);
         $this->db->delete($this->_table_name);
     }

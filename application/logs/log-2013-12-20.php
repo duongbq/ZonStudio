@@ -14999,3 +14999,1189 @@ DEBUG - 2013-12-20 19:41:57 --> File loaded: application/views/layouts/admin/men
 DEBUG - 2013-12-20 19:41:57 --> File loaded: application/views/layouts/admin/layout.php
 DEBUG - 2013-12-20 19:41:57 --> Final output sent to browser
 DEBUG - 2013-12-20 19:41:57 --> Total execution time: 0.1092
+DEBUG - 2013-12-20 19:49:52 --> Config Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:49:52 --> URI Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Router Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Output Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Security Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Input Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:49:52 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:49:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:49:52 --> Language Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Language Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Config Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:49:52 --> Session Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:49:52 --> Session routines successfully run
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:49:52 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:49:52 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:49:52 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:49:52 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:49:52 --> Model Class Initialized
+DEBUG - 2013-12-20 19:49:52 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:49:52 --> Model Class Initialized
+ERROR - 2013-12-20 19:49:52 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 19:49:52 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:49:52 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:49:52 --> Could not find the language line "delete_record_warning"
+DEBUG - 2013-12-20 19:49:52 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 19:49:52 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:49:52 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:49:52 --> Final output sent to browser
+DEBUG - 2013-12-20 19:49:52 --> Total execution time: 0.1220
+DEBUG - 2013-12-20 19:50:30 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:50:30 --> URI Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Router Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Output Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Security Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Input Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:30 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:50:30 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:50:30 --> Session Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:50:30 --> Session routines successfully run
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:50:30 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:50:30 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:50:30 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:50:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:50:30 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:30 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:50:30 --> Model Class Initialized
+ERROR - 2013-12-20 19:50:30 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 19:50:30 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:50:30 --> Could not find the language line "options"
+DEBUG - 2013-12-20 19:50:30 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 19:50:30 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:50:30 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:50:30 --> Final output sent to browser
+DEBUG - 2013-12-20 19:50:30 --> Total execution time: 0.1420
+DEBUG - 2013-12-20 19:50:54 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:50:54 --> URI Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Router Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Output Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Security Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Input Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:54 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:50:54 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:50:54 --> Session Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:50:54 --> Session routines successfully run
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:50:54 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:50:54 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:50:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:50:54 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:50:54 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:50:54 --> URI Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Router Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Output Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Security Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Input Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:54 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:50:54 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:50:54 --> Session Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:50:54 --> Session routines successfully run
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:50:54 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:50:54 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:50:54 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:50:54 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:50:54 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:50:54 --> Model Class Initialized
+ERROR - 2013-12-20 19:50:54 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:50:54 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:50:54 --> Final output sent to browser
+DEBUG - 2013-12-20 19:50:54 --> Total execution time: 0.1000
+DEBUG - 2013-12-20 19:50:57 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:50:57 --> URI Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Router Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Output Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Security Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Input Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:57 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:50:57 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:50:57 --> Session Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:50:57 --> Session routines successfully run
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:50:57 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:50:57 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:50:57 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:50:57 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:50:57 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:57 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:50:57 --> Model Class Initialized
+ERROR - 2013-12-20 19:50:57 --> 404 Page Not Found --> 
+DEBUG - 2013-12-20 19:50:59 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:50:59 --> URI Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Router Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Output Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Security Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Input Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:59 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:50:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:50:59 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Language Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Config Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:50:59 --> Session Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:50:59 --> Session routines successfully run
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:50:59 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:50:59 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:50:59 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:50:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:50:59 --> Model Class Initialized
+DEBUG - 2013-12-20 19:50:59 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:50:59 --> Model Class Initialized
+ERROR - 2013-12-20 19:50:59 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 19:50:59 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 19:50:59 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 19:50:59 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:50:59 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:50:59 --> Final output sent to browser
+DEBUG - 2013-12-20 19:50:59 --> Total execution time: 0.1110
+DEBUG - 2013-12-20 19:52:37 --> Config Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:52:37 --> URI Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Router Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Output Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Security Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Input Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:52:37 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:52:37 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:52:37 --> Language Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Language Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Config Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:52:37 --> Session Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:52:37 --> Session routines successfully run
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:52:37 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:52:37 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:52:37 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:52:37 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:52:37 --> Model Class Initialized
+DEBUG - 2013-12-20 19:52:37 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:52:37 --> Model Class Initialized
+ERROR - 2013-12-20 19:52:37 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 19:52:37 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 19:52:37 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 19:52:37 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:52:37 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:52:37 --> Final output sent to browser
+DEBUG - 2013-12-20 19:52:37 --> Total execution time: 0.1120
+DEBUG - 2013-12-20 19:52:39 --> Config Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:52:39 --> URI Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Router Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Output Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Security Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Input Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:52:39 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:52:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:52:39 --> Language Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Language Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Config Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:52:39 --> Session Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:52:39 --> Session routines successfully run
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:52:39 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:52:39 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:52:39 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:52:39 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:52:39 --> Model Class Initialized
+DEBUG - 2013-12-20 19:52:39 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:52:39 --> Model Class Initialized
+ERROR - 2013-12-20 19:52:39 --> Could not find the language line "tax_rate_form"
+DEBUG - 2013-12-20 19:53:46 --> Config Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:53:46 --> URI Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Router Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Output Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Security Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Input Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:53:46 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:53:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:53:46 --> Language Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Language Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Config Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:53:46 --> Session Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:53:46 --> Session routines successfully run
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:53:46 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:53:46 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:53:46 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:53:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:53:46 --> Model Class Initialized
+DEBUG - 2013-12-20 19:53:46 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:53:46 --> Model Class Initialized
+ERROR - 2013-12-20 19:53:46 --> Could not find the language line "tax_rate_form"
+DEBUG - 2013-12-20 19:53:46 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 19:53:46 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:53:46 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 17
+ERROR - 2013-12-20 19:53:46 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 17
+DEBUG - 2013-12-20 19:57:00 --> Config Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:57:00 --> URI Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Router Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Output Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Security Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Input Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:57:00 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:57:00 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:57:00 --> Language Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Language Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Config Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:57:00 --> Session Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:57:00 --> Session routines successfully run
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:57:00 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:57:00 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:57:00 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:57:00 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:57:00 --> Model Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:57:00 --> Model Class Initialized
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:57:00 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 25
+ERROR - 2013-12-20 19:57:00 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 25
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:57:00 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:57:00 --> Final output sent to browser
+DEBUG - 2013-12-20 19:57:00 --> Total execution time: 0.1100
+DEBUG - 2013-12-20 19:58:30 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:58:30 --> URI Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Router Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Output Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Security Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Input Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:30 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:58:30 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Services MX_Controller Initialized
+DEBUG - 2013-12-20 19:58:30 --> Session Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:58:30 --> Session routines successfully run
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:58:30 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:58:30 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:58:30 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:58:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:58:30 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/modules/services/models/mdl_services.php
+DEBUG - 2013-12-20 19:58:30 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:30 --> Could not find the language line "options"
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/modules/services/views/partial_services_table.php
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/modules/services/views/index.php
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:58:30 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:58:30 --> Final output sent to browser
+DEBUG - 2013-12-20 19:58:30 --> Total execution time: 0.1100
+DEBUG - 2013-12-20 19:58:32 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:58:32 --> URI Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Router Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Output Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Security Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Input Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:32 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:58:32 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Services MX_Controller Initialized
+DEBUG - 2013-12-20 19:58:32 --> Session Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:58:32 --> Session routines successfully run
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:58:32 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:58:32 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:58:32 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:58:32 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:58:32 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/modules/services/models/mdl_services.php
+DEBUG - 2013-12-20 19:58:32 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/modules/services/views/form.php
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:58:32 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:58:32 --> Final output sent to browser
+DEBUG - 2013-12-20 19:58:32 --> Total execution time: 0.1090
+DEBUG - 2013-12-20 19:58:35 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:58:35 --> URI Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Router Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Output Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Security Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Input Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:35 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:58:35 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Services MX_Controller Initialized
+DEBUG - 2013-12-20 19:58:35 --> Session Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:58:35 --> Session routines successfully run
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:58:35 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:58:35 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:58:35 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:58:35 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:58:35 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/modules/services/models/mdl_services.php
+DEBUG - 2013-12-20 19:58:35 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+ERROR - 2013-12-20 19:58:35 --> Could not find the language line "options"
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/modules/services/views/partial_services_table.php
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/modules/services/views/index.php
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:58:35 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:58:35 --> Final output sent to browser
+DEBUG - 2013-12-20 19:58:35 --> Total execution time: 0.1100
+DEBUG - 2013-12-20 19:58:38 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Hooks Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 19:58:38 --> URI Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Router Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Output Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Security Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Input Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:38 --> XSS Filtering completed
+DEBUG - 2013-12-20 19:58:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 19:58:38 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Language Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Config Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Loader Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Controller Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 19:58:38 --> Session Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 19:58:38 --> Session routines successfully run
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 19:58:38 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Pagination Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 19:58:38 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 19:58:38 --> Database Driver Class Initialized
+ERROR - 2013-12-20 19:58:38 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 19:58:38 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 19:58:38 --> Model Class Initialized
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 19:58:38 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 25
+ERROR - 2013-12-20 19:58:38 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 25
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 19:58:38 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 19:58:38 --> Final output sent to browser
+DEBUG - 2013-12-20 19:58:38 --> Total execution time: 0.1140
+DEBUG - 2013-12-20 20:01:43 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:43 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:43 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:43 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Dashboard MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:43 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:43 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:43 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:43 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:43 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:43 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:43 --> File loaded: application/modules/dashboard/views/index.php
+DEBUG - 2013-12-20 20:01:43 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:43 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:43 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:43 --> Total execution time: 0.1100
+DEBUG - 2013-12-20 20:01:47 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:47 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:47 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:47 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:47 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:47 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:47 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:48 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:48 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:48 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:48 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:48 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:48 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:48 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:48 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:48 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:48 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:01:48 --> Model Class Initialized
+ERROR - 2013-12-20 20:01:48 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 20:01:48 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:01:48 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 20:01:48 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:48 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:48 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:48 --> Total execution time: 0.1220
+DEBUG - 2013-12-20 20:01:50 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:50 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:50 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:50 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:50 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:50 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:50 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:50 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:50 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:50 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:50 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:01:50 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 20:01:50 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+ERROR - 2013-12-20 20:01:50 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:50 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:50 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:50 --> Total execution time: 0.1120
+DEBUG - 2013-12-20 20:01:55 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:55 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:55 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:55 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:55 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:55 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:55 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:55 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:55 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:55 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:55 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:55 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:55 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:01:55 --> Model Class Initialized
+ERROR - 2013-12-20 20:01:55 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 20:01:55 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:01:55 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 20:01:55 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:55 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:55 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:55 --> Total execution time: 0.1000
+DEBUG - 2013-12-20 20:01:58 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:58 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:58 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:58 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:58 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:58 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:58 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:58 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:58 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:58 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:58 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:01:58 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 20:01:58 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+ERROR - 2013-12-20 20:01:58 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:58 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:58 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:58 --> Total execution time: 0.1120
+DEBUG - 2013-12-20 20:01:59 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:01:59 --> URI Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Router Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Output Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Security Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Input Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:59 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:01:59 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:01:59 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Language Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Config Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:01:59 --> Session Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:01:59 --> Session routines successfully run
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:01:59 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:01:59 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:01:59 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:01:59 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:01:59 --> Model Class Initialized
+DEBUG - 2013-12-20 20:01:59 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:01:59 --> Model Class Initialized
+ERROR - 2013-12-20 20:01:59 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 20:01:59 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:01:59 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 20:01:59 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:01:59 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:01:59 --> Final output sent to browser
+DEBUG - 2013-12-20 20:01:59 --> Total execution time: 0.1170
+DEBUG - 2013-12-20 20:02:15 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:15 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:15 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:15 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Dashboard MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:15 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:15 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:15 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:15 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:15 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:15 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:15 --> File loaded: application/modules/dashboard/views/index.php
+DEBUG - 2013-12-20 20:02:15 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:15 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:15 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:15 --> Total execution time: 0.1120
+DEBUG - 2013-12-20 20:02:17 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:17 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:17 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:17 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Services MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:17 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:17 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:17 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:17 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:18 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:18 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:18 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:18 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:18 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/modules/services/models/mdl_services.php
+DEBUG - 2013-12-20 20:02:18 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/modules/services/views/form.php
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:18 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:18 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:18 --> Total execution time: 0.1240
+DEBUG - 2013-12-20 20:02:20 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:20 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:20 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:20 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:20 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Services MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:20 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:20 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:20 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:20 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:20 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:20 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:20 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/modules/services/models/mdl_services.php
+DEBUG - 2013-12-20 20:02:20 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+ERROR - 2013-12-20 20:02:20 --> Could not find the language line "options"
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/modules/services/views/partial_services_table.php
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/modules/services/views/index.php
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:20 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:20 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:20 --> Total execution time: 0.1220
+DEBUG - 2013-12-20 20:02:24 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:24 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:24 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:24 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:24 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:24 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:24 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:24 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:24 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:24 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:24 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:24 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:02:24 --> Model Class Initialized
+ERROR - 2013-12-20 20:02:24 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 20:02:24 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:02:24 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 20:02:24 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:24 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:24 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:24 --> Total execution time: 0.1220
+DEBUG - 2013-12-20 20:02:26 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:26 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:26 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:26 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:26 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:26 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:26 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:26 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:26 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:26 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:26 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:02:26 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 20:02:26 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+ERROR - 2013-12-20 20:02:26 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:26 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:26 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:26 --> Total execution time: 0.1140
+DEBUG - 2013-12-20 20:02:29 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:29 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:29 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:29 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:29 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:30 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:30 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:30 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:30 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:30 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:30 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:30 --> Model Class Initialized
+DEBUG - 2013-12-20 20:02:30 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:02:30 --> Model Class Initialized
+ERROR - 2013-12-20 20:02:30 --> Could not find the language line "packages"
+DEBUG - 2013-12-20 20:02:30 --> File loaded: application/views/layouts/admin/alerts.php
+DEBUG - 2013-12-20 20:02:30 --> File loaded: application/modules/packages/views/index.php
+DEBUG - 2013-12-20 20:02:30 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:30 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:30 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:30 --> Total execution time: 0.1120
+DEBUG - 2013-12-20 20:02:33 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:02:33 --> URI Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Router Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Output Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Security Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Input Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:33 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:02:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:02:33 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Language Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Config Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Dashboard MX_Controller Initialized
+DEBUG - 2013-12-20 20:02:33 --> Session Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:02:33 --> Session routines successfully run
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:02:33 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:02:33 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:02:33 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:02:33 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:02:33 --> File loaded: application/modules/dashboard/views/index.php
+DEBUG - 2013-12-20 20:02:33 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:02:33 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:02:33 --> Final output sent to browser
+DEBUG - 2013-12-20 20:02:33 --> Total execution time: 0.1020

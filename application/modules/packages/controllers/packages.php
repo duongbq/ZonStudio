@@ -29,28 +29,23 @@ class Packages extends Admin_Controller {
         $packages = $this->mdl_packages->get_all();
         $this->layout->view('index', array('packages' => $packages));
     }
-
-    public function form($id = NULL) {
-        if ($this->input->post('btn_cancel')) {
-            redirect('packages');
-        }
-
-        if ($this->mdl_packages->run_validation()) {
-            $this->mdl_packages->save($id);
-            redirect('packages');
-        }
-
-        if ($id and !$this->input->post('btn_submit')) {
-            if (!$this->mdl_packages->prep_form($id)) {
-                show_404();
+    
+    function create()
+    {
+        $view_data = array();
+        if ($this->is_postback()) {
+            if (!$this->mdl_packages->run_validation()) {
+                $view_data['error'] = $this->mdl_packages->get_last_messages();
+            } else {
+                $this->mdl_packages->add_new_package();
+                redirect('packages');
             }
         }
-        $services = $this->mdl_services->result();
-        $this->layout->set('services', $services);
-        $this->layout->buffer('content', 'packages/form');
-        $this->layout->render();
+
+        $this->layout->view('form', $view_data);
     }
 
+    
     public function delete($id) {
         $this->mdl_packages->delete($id);
         redirect('packages');

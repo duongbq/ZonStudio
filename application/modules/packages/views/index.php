@@ -2,7 +2,7 @@
     <h1><?php echo lang('packages'); ?></h1>
 
     <div class="pull-right">
-        <a class="btn btn-primary" href="<?php echo site_url('packages/form'); ?>"><i class="icon-plus icon-white"></i> Tạo gói dịch vụ mới</a>
+        <a class="btn btn-primary" href="<?php echo site_url('packages/create'); ?>"><i class="icon-plus icon-white"></i> Tạo gói dịch vụ mới</a>
     </div>
 
 </div>
@@ -38,7 +38,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo site_url('packages/delete/' . $package->id); ?>" onclick="return confirm('<?php echo lang('delete_record_warning'); ?>');">
+                                    <a href="<?php echo site_url('packages/delete/' . $package->id); ?>" onclick="return confirm('Chắc chắn xóa?');">
                                         <i class="icon-trash"></i> Xóa
                                     </a>
                                 </li>
