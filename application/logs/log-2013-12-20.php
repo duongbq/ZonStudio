@@ -16185,3 +16185,49 @@ DEBUG - 2013-12-20 20:02:33 --> File loaded: application/views/layouts/admin/men
 DEBUG - 2013-12-20 20:02:33 --> File loaded: application/views/layouts/admin/layout.php
 DEBUG - 2013-12-20 20:02:33 --> Final output sent to browser
 DEBUG - 2013-12-20 20:02:33 --> Total execution time: 0.1020
+DEBUG - 2013-12-20 20:05:46 --> Config Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Hooks Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Utf8 Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> UTF-8 Support Enabled
+DEBUG - 2013-12-20 20:05:46 --> URI Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Router Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Output Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Security Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Input Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:05:46 --> XSS Filtering completed
+DEBUG - 2013-12-20 20:05:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-12-20 20:05:46 --> Language Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Language Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Config Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Loader Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Controller Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Packages MX_Controller Initialized
+DEBUG - 2013-12-20 20:05:46 --> Session Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: string_helper
+DEBUG - 2013-12-20 20:05:46 --> Session routines successfully run
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: form_helper
+DEBUG - 2013-12-20 20:05:46 --> Form Validation Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Pagination Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Encrypt Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: html_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: url_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: text_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: language_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: security_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: paging_helper
+DEBUG - 2013-12-20 20:05:46 --> Helper loaded: friendly_url_helper
+DEBUG - 2013-12-20 20:05:46 --> Database Driver Class Initialized
+ERROR - 2013-12-20 20:05:46 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\projects\zonstudio.com\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-12-20 20:05:46 --> Model Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/modules/packages/models/mdl_packages.php
+DEBUG - 2013-12-20 20:05:46 --> Model Class Initialized
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/views/layouts/admin/header_buttons.php
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/views/layouts/admin/alerts.php
+ERROR - 2013-12-20 20:05:46 --> Severity: Notice  --> Undefined variable: services D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+ERROR - 2013-12-20 20:05:46 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\projects\zonstudio.com\application\modules\packages\views\form.php 27
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/modules/packages/views/form.php
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/views/layouts/admin/menu.php
+DEBUG - 2013-12-20 20:05:46 --> File loaded: application/views/layouts/admin/layout.php
+DEBUG - 2013-12-20 20:05:46 --> Final output sent to browser
+DEBUG - 2013-12-20 20:05:46 --> Total execution time: 0.1220

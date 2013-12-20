@@ -65,5 +65,45 @@ class MY_Model extends CI_Model {
         }
         return TRUE;
     }
+    
+    function get_combo($options = array())
+    {
+        // Default categories name
+        if ( ! isset($options['combo_name']))
+        {
+            $options['combo_name'] = $this->_table_name;
+        }
+
+        if ( ! isset($options['extra']))
+        {
+            $options['extra'] = '';
+        }
+        
+        if (isset($options['order'])){
+            
+            $this->db->order_by($options['order']);
+        }
+        
+        $objects = $this->get_all();
+
+        $data_options = array();
+
+        if (isset($options['ALL']))
+            $data_options[-1] = 'Tất cả';
+
+        foreach($objects as $obj)
+        {
+            if (isset($options['FULL']))
+                $data_options[$obj->id] = $obj->fullname;
+            else
+                $data_options[$obj->id] = $obj->alias_name;
+        }
+
+        if ( ! isset($options[$options['combo_name']]))
+        {
+            $options[$options['combo_name']] = -1;
+        }
+        return form_dropdown($options['combo_name'], $data_options, $options[$options['combo_name']], $options['extra']);
+    }
 
 }
