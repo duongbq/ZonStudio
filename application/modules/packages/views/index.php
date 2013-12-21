@@ -33,8 +33,13 @@
                             <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="<?php echo site_url('packages/form/' . $package->id); ?>">
-                                        <i class="icon-pencil"></i> Sửa
+                                    <a href="<?php echo site_url('packages/edit/' . $package->id); ?>">
+                                        <i class="icon-pencil"></i> Sửa thông tin
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url('packages/upload/' . $package->id); ?>">
+                                        <i class="icon-plus"></i> Thêm ảnh
                                     </a>
                                 </li>
                                 <li>

@@ -57,7 +57,7 @@ class Services extends Admin_Controller {
             if (!$this->mdl_services->run_validation()) {
                 $view_data['error'] = $this->mdl_services->get_last_messages();
             } else {
-                $this->mdl_services->add_new_service();
+                $this->mdl_services->update_service();
                 redirect('services');
             }
         }

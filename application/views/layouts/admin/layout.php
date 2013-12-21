@@ -14,11 +14,26 @@
 
         <title><?php echo isset($title_for_layout) ? $title_for_layout : 'Zon Studio'; ?></title>
         <?php echo link_tag('assets/default/css/style.css'); ?>
+        <?php echo link_tag('assets/fancybox/jquery.fancybox-1.3.4.css'); ?>
+
         <script src="<?php echo base_url(); ?>assets/default/js/libs/modernizr-2.0.6.js"></script>
         <script src="<?php echo base_url(); ?>assets/default/js/libs/jquery-1.7.1.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/default/js/libs/jquery-ui-1.10.3.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/default/js/libs/bootstrap.min.js"></script>
 
+        <script src="<?php echo base_url(); ?>assets/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script src="<?php echo base_url(); ?>assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $(".fancybox").fancybox();
+
+                
+
+                
+            });
+        </script>
 <!--        <script type="text/javascript">
 
             $(function()
@@ -29,42 +44,42 @@
                 $('.datepicker').datepicker({format: 'd/m/Y'});
 
                 $('.create-service').click(function() {
-                    $('#modal-placeholder').load("<?php //echo site_url('service/ajax/modal_create_service'); ?>");
+                    $('#modal-placeholder').load("<?php //echo site_url('service/ajax/modal_create_service');  ?>");
                 });
 
                 $('.create-quote').click(function() {
-                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_create_quote'); ?>");
+                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_create_quote');  ?>");
                 });
 
                 $('#btn_quote_to_invoice').click(function() {
                     quote_id = $(this).data('quote-id');
-                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_quote_to_invoice'); ?>/" + quote_id);
+                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_quote_to_invoice');  ?>/" + quote_id);
                 });
 
                 $('#btn_copy_invoice').click(function() {
                     invoice_id = $(this).data('invoice-id');
-                    $('#modal-placeholder').load("<?php //echo site_url('invoices/ajax/modal_copy_invoice'); ?>", {invoice_id: invoice_id});
+                    $('#modal-placeholder').load("<?php //echo site_url('invoices/ajax/modal_copy_invoice');  ?>", {invoice_id: invoice_id});
                 });
 
                 $('#btn_copy_quote').click(function() {
                     quote_id = $(this).data('quote-id');
-                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_copy_quote'); ?>", {quote_id: quote_id});
+                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_copy_quote');  ?>", {quote_id: quote_id});
                 });
 
                 $('.client-create-invoice').click(function() {
-                    $('#modal-placeholder').load("<?php //echo site_url('invoices/ajax/modal_create_invoice'); ?>", {
+                    $('#modal-placeholder').load("<?php //echo site_url('invoices/ajax/modal_create_invoice');  ?>", {
                         client_name: $(this).data('client-name')
                     });
                 });
                 $('.client-create-quote').click(function() {
-                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_create_quote'); ?>", {
+                    $('#modal-placeholder').load("<?php //echo site_url('quotes/ajax/modal_create_quote');  ?>", {
                         client_name: $(this).data('client-name')
                     });
                 });
                 $(document).on('click', '.invoice-add-payment', function() {
                     invoice_id = $(this).data('invoice-id');
                     invoice_balance = $(this).data('invoice-balance');
-                    $('#modal-placeholder').load("<?php //echo site_url('services/ajax/modal_add_payment'); ?>", {invoice_id: invoice_id, invoice_balance: invoice_balance});
+                    $('#modal-placeholder').load("<?php //echo site_url('services/ajax/modal_add_payment');  ?>", {invoice_id: invoice_id, invoice_balance: invoice_balance});
                 });
 
             });
@@ -75,16 +90,16 @@
 
     <body>
 
-        <?php $this->load->view('layouts/admin/menu');?>
+        <?php $this->load->view('layouts/admin/menu'); ?>
 
         <div class="sidebar">
 
             <ul>
                 <li><a href="<?php echo site_url('dashboard'); ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/dashboard24x24.png" title="Trang quản trị" /></a></li>
                 <li><a href="<?php echo site_url('users/index'); ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/clients24x24.png" title="Tài khoản" /></a></li>
-                <!--<li><a href="<?php //echo site_url('quotes/index');    ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/quotes24x24.png" title="<?php //echo lang('quotes');    ?>" /></a></li>-->
-                <!--<li><a href="<?php //echo site_url('invoices/index');    ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/invoices24x24.png" title="<?php //echo lang('invoices');    ?>" /></a></li>-->
-                <!--<li><a href="<?php //echo site_url('services/index');    ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/payments24x24.png" title="<?php //echo lang('services');    ?>" /></a></li>-->
+                <!--<li><a href="<?php //echo site_url('quotes/index');     ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/quotes24x24.png" title="<?php //echo lang('quotes');     ?>" /></a></li>-->
+                <!--<li><a href="<?php //echo site_url('invoices/index');     ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/invoices24x24.png" title="<?php //echo lang('invoices');     ?>" /></a></li>-->
+                <!--<li><a href="<?php //echo site_url('services/index');     ?>"><img alt="" src="<?php echo base_url(); ?>assets/default/img/icons/payments24x24.png" title="<?php //echo lang('services');     ?>" /></a></li>-->
             </ul>
 
         </div>

@@ -1,14 +1,14 @@
 <div class="headerbar">
-	<h1><?php echo lang('quote'); ?> #<?php echo $quote->quote_number; ?></h1>
+	<h1><?php echo lang('quote'); ?> #<?php echo $album->quote_number; ?></h1>
 	
 	<div class="pull-right">
         
-        <?php if (in_array($quote->quote_status_id, array(2,3))) { ?>
-        <a href="<?php echo site_url('guest/quotes/approve/' . $quote->quote_id); ?>" class="btn btn-success"><i class="icon-white icon-check"></i> <?php echo lang('approve_this_quote'); ?></a>
-        <a href="<?php echo site_url('guest/quotes/reject/' . $quote->quote_id); ?>" class="btn btn-danger"><i class="icon-white icon-ban-circle"></i> <?php echo lang('reject_this_quote'); ?></a>
-        <?php } elseif ($quote->quote_status_id == 4) { ?>
+        <?php if (in_array($album->quote_status_id, array(2,3))) { ?>
+        <a href="<?php echo site_url('guest/quotes/approve/' . $album->quote_id); ?>" class="btn btn-success"><i class="icon-white icon-check"></i> <?php echo lang('approve_this_quote'); ?></a>
+        <a href="<?php echo site_url('guest/quotes/reject/' . $album->quote_id); ?>" class="btn btn-danger"><i class="icon-white icon-ban-circle"></i> <?php echo lang('reject_this_quote'); ?></a>
+        <?php } elseif ($album->quote_status_id == 4) { ?>
         <a href="#" class="btn btn-success"><?php echo lang('quote_approved'); ?></a>
-        <?php } elseif ($quote->quote_status_id == 5) { ?>
+        <?php } elseif ($album->quote_status_id == 5) { ?>
         <a href="#" class="btn btn-danger"><?php echo lang('quote_rejected'); ?></a>
         <?php } ?>
         
@@ -27,21 +27,21 @@
 
             <div class="pull-left">
 
-                <h2><?php echo $quote->client_name; ?></h2><br>
+                <h2><?php echo $album->client_name; ?></h2><br>
                 <span>
-                    <?php echo ($quote->client_address_1) ? $quote->client_address_1 . '<br>' : ''; ?>
-                    <?php echo ($quote->client_address_2) ? $quote->client_address_2 . '<br>' : ''; ?>
-                    <?php echo ($quote->client_city) ? $quote->client_city : ''; ?>
-                    <?php echo ($quote->client_state) ? $quote->client_state : ''; ?>
-                    <?php echo ($quote->client_zip) ? $quote->client_zip : ''; ?>
-                    <?php echo ($quote->client_country) ? '<br>' . $quote->client_country : ''; ?>
+                    <?php echo ($album->client_address_1) ? $album->client_address_1 . '<br>' : ''; ?>
+                    <?php echo ($album->client_address_2) ? $album->client_address_2 . '<br>' : ''; ?>
+                    <?php echo ($album->client_city) ? $album->client_city : ''; ?>
+                    <?php echo ($album->client_state) ? $album->client_state : ''; ?>
+                    <?php echo ($album->client_zip) ? $album->client_zip : ''; ?>
+                    <?php echo ($album->client_country) ? '<br>' . $album->client_country : ''; ?>
                 </span>
                 <br><br>
-                <?php if ($quote->client_phone) { ?>
-                <span><strong><?php echo lang('phone'); ?>:</strong> <?php echo $quote->client_phone; ?></span><br>
+                <?php if ($album->client_phone) { ?>
+                <span><strong><?php echo lang('phone'); ?>:</strong> <?php echo $album->client_phone; ?></span><br>
                 <?php } ?>
-                <?php if ($quote->client_email) { ?>
-                <span><strong><?php echo lang('email'); ?>:</strong> <?php echo $quote->client_email; ?></span>
+                <?php if ($album->client_email) { ?>
+                <span><strong><?php echo lang('email'); ?>:</strong> <?php echo $album->client_email; ?></span>
                 <?php } ?>
 
             </div>
@@ -51,15 +51,15 @@
                 <tbody>
                     <tr>
                         <td scope="row" style="border-top: none"><strong><?php echo lang('quote'); ?> #</strong></td>
-                        <td style="border-top: none"><?php echo $quote->quote_number; ?></td>
+                        <td style="border-top: none"><?php echo $album->quote_number; ?></td>
                     </tr>
                     <tr>
                         <td scope="row"><strong><?php echo lang('date'); ?></strong></td>
-                        <td><?php echo date_from_mysql($quote->quote_date_created); ?></td>
+                        <td><?php echo date_from_mysql($album->quote_date_created); ?></td>
                     </tr>
                     <tr>
                         <td scope="row"><strong><?php echo lang('expires'); ?></strong></td>
-                        <td><?php echo date_from_mysql($quote->quote_date_expires); ?></td>
+                        <td><?php echo date_from_mysql($album->quote_date_expires); ?></td>
                     </tr>
                 </tbody>
 
@@ -110,15 +110,15 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><?php echo format_currency($quote->quote_item_subtotal); ?></td>
-                    <td><?php echo format_currency($quote->quote_item_tax_total); ?></td>
+                    <td><?php echo format_currency($album->quote_item_subtotal); ?></td>
+                    <td><?php echo format_currency($album->quote_item_tax_total); ?></td>
                     <td>
                         <?php if ($quote_tax_rates) { foreach ($quote_tax_rates as $quote_tax_rate) { ?>
                             <strong><?php echo $quote_tax_rate->quote_tax_rate_name . ' ' . $quote_tax_rate->quote_tax_rate_percent; ?>%:</strong>				
                             <?php echo format_currency($quote_tax_rate->quote_tax_rate_amount); ?><br>
                         <?php } } else { echo format_currency('0'); }?>
                     </td>
-                    <td><?php echo format_currency($quote->quote_total); ?></td>
+                    <td><?php echo format_currency($album->quote_total); ?></td>
                 </tr>
             </tbody>
         </table>

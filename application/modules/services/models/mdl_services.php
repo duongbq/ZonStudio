@@ -16,9 +16,11 @@ if (!defined('BASEPATH'))
  * 
  */
 
-class Mdl_Services extends MY_Model {
+class Mdl_Services extends MY_Model
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
 
         $this->_table_name = 'service';
@@ -31,17 +33,55 @@ class Mdl_Services extends MY_Model {
         );
     }
 
-    function add_new_service() {
+    function add_new_service()
+    {
         $data = array('service_name' => $this->input->post('service_name'));
         return parent::add_new($data);
     }
 
-    function update_service() {
+    function update_service()
+    {
         $data = array(
             'service_name' => $this->input->post('service_name'),
             'id' => $this->input->post('id')
         );
         return parent::update($data);
+    }
+
+
+    function get_combo($options = array())
+    {
+        // Default categories name
+        if (!isset($options['combo_name'])) {
+            $options['combo_name'] = $this->_table_name;
+        }
+
+        if (!isset($options['extra'])) {
+            $options['extra'] = '';
+        }
+
+        if (isset($options['order'])) {
+
+            $this->db->order_by($options['order']);
+        }
+
+        $objects = parent::get_all();
+
+        $data_options = array();
+
+        if (isset($options['ALL']))
+            $data_options[-1] = 'Tất cả';
+
+        foreach ($objects as $obj) {
+
+            $data_options[$obj->id] = $obj->service_name;
+
+        }
+
+        if (!isset($options[$options['combo_name']])) {
+            $options[$options['combo_name']] = -1;
+        }
+        return form_dropdown($options['combo_name'], $data_options, $options[$options['combo_name']], $options['extra']);
     }
 
 }

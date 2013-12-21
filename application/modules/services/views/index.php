@@ -12,7 +12,7 @@
     <?php $this->load->view('layouts/admin/alerts'); ?>
 
     <div id="filter_results">
-        <?php $this->load->view('services/partial_services_table'); ?>
+        <?php $this->load->view('partial_services_table'); ?>
     </div>
 
 </div>

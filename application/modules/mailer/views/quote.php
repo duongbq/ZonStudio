@@ -37,21 +37,21 @@
         <div class="control-group">
             <label class="control-label"><?php echo lang('from_name'); ?>: </label>
             <div class="controls">
-                <input type="text" name="from_name" id="from_name" value="<?php echo $quote->user_name; ?>">
+                <input type="text" name="from_name" id="from_name" value="<?php echo $album->user_name; ?>">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label"><?php echo lang('from_email'); ?>: </label>
             <div class="controls">
-                <input type="text" name="from_email" id="from_email" value="<?php echo $quote->user_email; ?>">
+                <input type="text" name="from_email" id="from_email" value="<?php echo $album->user_email; ?>">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label"><?php echo lang('to_email'); ?>: </label>
             <div class="controls">
-                <input type="text" name="to_email" id="to_email" value="<?php echo $quote->client_email; ?>">
+                <input type="text" name="to_email" id="to_email" value="<?php echo $album->client_email; ?>">
             </div>
         </div>
 
@@ -72,7 +72,7 @@
         <div class="control-group">
             <label class="control-label"><?php echo lang('subject'); ?>: </label>
             <div class="controls">
-                <input type="text" name="subject" id="subject" value="<?php echo lang('quote'); ?> #<?php echo $quote->quote_number; ?>">
+                <input type="text" name="subject" id="subject" value="<?php echo lang('quote'); ?> #<?php echo $album->quote_number; ?>">
             </div>
         </div>
         
@@ -110,7 +110,7 @@
         <div class="control-group">
             <label class="control-label"><?php echo lang('guest_url'); ?>: </label>
             <div class="controls">
-                <?php echo auto_link(site_url('guest/view/quote/' . $quote->quote_url_key)); ?>
+                <?php echo auto_link(site_url('guest/view/quote/' . $album->quote_url_key)); ?>
             </div>
         </div>
 
