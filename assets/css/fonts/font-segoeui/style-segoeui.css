@@ -1,0 +1,19 @@
+/*
+Template Name: ZonStudio
+File: Main CSS
+Author: Duy Liem
+Author MAIL: duyliemapt@gmail.com
+Licence: <a href="duyliemapt@gmail.com">Duyliem Template Licence</a>
+*/
+
+@font-face{
+  font-family:'FontSegoeui';
+  src:url('font/UVF-Assassin.ttf');
+  src:url('font/seguisb.ttf');
+  src:url('font/segoeui.ttf'),
+  url('font/segoeuib.ttf') format('truetype'),
+  url('font/segoeuii.ttf') format('truetype'),
+  url('font/segoeuil.ttf') format('truetype'),
+  url('font/segoeuiz.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal }

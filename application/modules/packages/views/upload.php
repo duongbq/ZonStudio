@@ -1,7 +1,7 @@
-<form method="post" enctype="multipart/form-data" action="<?php echo site_url('packages/upload/' . $id); ?>" class="form-horizontal">
+<form method="post" enctype="multipart/form-data" action="<?php echo site_url('packages/upload/' . $package_id); ?>" class="form-horizontal">
 
     <div class="headerbar">
-        <h1>Thêm ảnh</h1>
+        <h1>Thêm ảnh vào <?php echo $package_name; ?></h1>
         <?php $this->load->view('layouts/admin/header_buttons'); ?>
     </div>
 
@@ -25,7 +25,7 @@
             </div>
 
         </div>
-        
+
         <div class="control-group">
 
             <label class="control-label">Hiện Slide</label>
@@ -60,7 +60,7 @@
                                 <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="<?php echo site_url('packages/remove_image/' . $image->id); ?>" onclick="return confirm('Chắc chắn xóa?');">
+                                        <a href="<?php echo site_url('packages/remove_image/' . $package_id . '/' . $image->id); ?>" onclick="return confirm('Chắc chắn xóa?');">
                                             <i class="icon-trash"></i> Xóa ảnh
                                         </a>
                                     </li>

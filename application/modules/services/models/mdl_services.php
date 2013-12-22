@@ -43,7 +43,7 @@ class Mdl_Services extends MY_Model
     {
         $data = array(
             'service_name' => $this->input->post('service_name'),
-            'id' => $this->input->post('id')
+            'id' => $this->input->post('service_id')
         );
         return parent::update($data);
     }

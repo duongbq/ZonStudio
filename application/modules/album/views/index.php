@@ -3,7 +3,7 @@
     <h1>Album ảnh</h1>
 
     <div class="pull-right">
-        <a class="create-album btn btn-primary" href="#"><i class="icon-plus icon-white"></i> Album mới</a>
+        <a class="btn btn-primary" href="/album/create"><i class="icon-plus icon-white"></i> Album mới</a>
     </div>
 
 
@@ -34,6 +34,12 @@
                                 <li>
                                     <a href="<?php echo site_url('album/edit/' . $album->id); ?>">
                                         <i class="icon-pencil"></i> Sửa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="<?php echo site_url('album/upload/' . $album->id); ?>">
+                                        <i class="icon-pencil"></i> Thêm ảnh
                                     </a>
                                 </li>
 

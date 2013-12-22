@@ -38,11 +38,12 @@
 |
 */
 
-$route['default_controller'] = "dashboard";
+$route['default_controller'] = "home";
 $route['404_override'] = 'error';
 
-$route['^services$'] = 'services/index/1';
-$route['^services/page-(\d+)$'] = 'services/index/$1';
+$route['zudio'] = "dashboard";
+
+$route['lien-he'] = "home/contact";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

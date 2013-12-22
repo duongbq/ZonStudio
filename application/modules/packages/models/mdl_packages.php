@@ -62,7 +62,7 @@ class Mdl_Packages extends MY_Model {
             'summary' => $this->input->post('summary'),
             'description' => $this->input->post('description'),
             'price' => $this->input->post('price'),
-            'id' => $this->input->post('id')
+            'id' => $this->input->post('package_id')
         );
         return parent::update($data);
     }
@@ -81,7 +81,8 @@ class Mdl_Packages extends MY_Model {
         if (is_numeric($return_val) && $return_val > 0) {
 
             $data = array(
-                'package_id' => $id, 'id' => $return_val,
+                'package_id' => $id, 
+                'id' => $return_val,
                 'uploaded_date' => date('Y-m-d H:i:s'),
             );
             
@@ -99,6 +100,18 @@ class Mdl_Packages extends MY_Model {
         $this->load->model('file/mdl_file');
 
         return $this->mdl_file->get_files(array('package_id' => $id));
+    }
+    
+    function remove_img($img_id = 0) {
+        
+        $this->load->model('file/mdl_file');
+        
+        $options = array(
+            'file_id' => $img_id,
+            'folder_name'=>  $this->_table_name
+        );
+
+        return $this->mdl_file->delete_file($options);
     }
 
 }

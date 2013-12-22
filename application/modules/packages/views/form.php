@@ -3,7 +3,7 @@
     if (isset($id)) {
         $form_header = 'Chỉnh sửa gói dịch vụ';
         ?>
-        <input type="hidden" name="service_id" value="<?php echo $id; ?>"/>
+        <input type="hidden" name="package_id" value="<?php echo $id; ?>"/>
         <?php
     } else {
         $form_header = 'Thêm gói dịch vụ mới';

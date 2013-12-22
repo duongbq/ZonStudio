@@ -35,7 +35,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Album ảnh<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><?php echo anchor('album/#', 'Tạo album mới', 'class="create-album"'); ?></li>
+                        <li><?php echo anchor('album/create', 'Tạo album mới'); ?></li>
                         <li><?php echo anchor('album/index', 'Album ảnh'); ?></li>
                     </ul>
                 </li>

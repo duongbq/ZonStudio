@@ -11,12 +11,14 @@ class Layout
     private $obj;
     private $layout_view;
     private $title = '';
+    private $meta_description = '';
+    private $meta_keywords = '';
+    
     private $css_list = array(), $js_list = array();
 
     function __construct()
     {
         $this->obj = & get_instance();
-        $this->render_layout("");
     }
 
     /**
@@ -49,6 +51,8 @@ class Layout
         // Render template
         $data['content_for_layout'] = $this->obj->load->view($view, $data, true);
         $data['title_for_layout'] = $this->title;
+        $data['meta_description'] = $this->meta_description;
+        $data['meta_keywords'] = $this->meta_keywords;
 
         // Render resources
         $data['js_for_layout'] = '';
@@ -70,6 +74,16 @@ class Layout
      *
      * @param $title
      */
+    function meta_description($meta_description)
+    {
+        $this->meta_description = $meta_description;
+    }
+    
+    function meta_keywords($meta_keywords)
+    {
+        $this->meta_keywords = $meta_keywords;
+    }
+    
     function title($title)
     {
         $this->title = $title;

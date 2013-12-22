@@ -1,0 +1,229 @@
+/*
+Template Name: ZonStudio
+File: Main CSS
+Author: Duy Liem
+Author MAIL: duyliemapt@gmail.com
+Licence: <a href="duyliemapt@gmail.com">Duyliem Template Licence</a>
+*/
+
+/*----------------------------------------------Style Common-------------------------------------*/
+
+*{ margin: 0; padding: 0; }
+html{ overflow-y:scroll; }
+body{ margin:0; padding:0; font-size:14px; background-color: #000000;}
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.uppercase{text-transform:uppercase;}
+.hidden{display:none;}
+
+.clear{display:block; clear:both;}
+.clear:after{display:block; visibility:hidden; height:0; clear:both; font-size:0; content:"";}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.boxholder{padding:9px; border:1px solid #D6D6D6;}
+.imgl{float:left; margin:0 15px 10px 0; clear:left;}
+.imgr{float:right; margin:0 0 10px 15px; clear:right;}
+address, article, aside, figcaption, figure, footer, header, hgroup, nav, section{display:block; margin:0; padding:0;}
+
+/* ----------------------------------------------Container-------------------------------------*/
+
+div#container{display:block; width:100%; height: auto; margin:auto; padding:0; background: url("img/bg.gif") no-repeat center #000000;}
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper, .wrapper100{display:block; width:74%; margin: auto; padding:0; text-align:left; word-wrap:break-word;}
+
+/*----------------------------------------------Header-------------------------------------*/
+
+ul, ol {padding: 0;}
+a:hover{color: #FFC423;}
+
+/** Menu */
+#menu{width: auto; float: left; margin: -10px auto 0 190px; padding:0; color:#C0BAB6; clear:both; word-wrap:normal; white-space:nowrap;}
+#menu ul{margin:0; padding:0; list-style:none; text-transform:uppercase; font-size:12px;}
+#menu ul ul{z-index:9999; position:absolute; width:190px; text-transform:none;}
+#menu ul ul ul, #menu ul ul ul ul{left:190px; top:0;}
+#menu ul:first-child li:last-child > ul{right:0;}
+#menu ul:first-child > li:last-child li > ul{left:-190px;}
+#menu li{position:relative; display:block; float:left; margin:0px; padding:0;}
+#menu li:first-child{}
+#menu ul:first-child li:last-child{margin-right:0;}
+#menu li li{width:100%; margin:0;}
+#menu li a{display:block; padding: 12px 20px;}
+#menu li li a{display:block; margin:0; padding:12px 15px; font-size: 14px !important;}
+#menu ul ul{display:none;}
+#menu ul li:hover > ul{display:block;}
+#menu a{color:#FFFFFF; font-weight:bold;}
+#menu li li a, #menu li.active li a{background:#000000; font-weight:normal;}
+#menu li.active a{background-color: #00aeef;}
+#menu a:hover{background-color: #00aeef;}
+#menu ul li li:hover > a{color:#FFFFFF; background-color:#00aeef;}
+#menu li a.drop, #menu li.active a.drop{padding-left:15px; background-image:url("img/dropdown_side.gif"); background-position:5px center; background-repeat:no-repeat;}
+
+/* Top menu for smaller resolutions */
+#menu form{display:block; height:30px; margin:0 auto; padding:20px 0;}
+#menu form select{display:block; width:100%; padding:8px; color:#FFFFFF; background-color:#232323; border:1px solid #494949; cursor:pointer; outline:none;}
+#menu form select option{display:block; margin:10px; padding:0; cursor:pointer; outline:none; border:none;}
+
+/** Social */
+.social{height: auto; padding-top: 10px !important;}
+.social-icons {margin:0; float: right;margin-right: 40px;}
+.social-icons li { float:left; display:inline; list-style:none; margin-right:5px; text-indent:-9999px; background-color: #222221; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+.social-icons li.last{ margin-right: 0px;}
+.social-icons li a, a.social-icon {
+    width:28px;
+    height:28px;
+    display:block;
+    background-position:0 0;
+    background-repeat:no-repeat;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.social-icons li:hover a {background-position:0 -38px;}
+.social_amazon {background: url(img/icons/social/amazon.png) no-repeat;}
+.social_behance {background: url(img/icons/social/behance.png) no-repeat;}
+.social_blogger {background: url(img/icons/social/blogger.png) no-repeat;}
+.social_deviantart {background: url(img/icons/social/deviantart.png) no-repeat;}
+.social_dribbble {background: url(img/icons/social/dribbble.png) no-repeat;}
+.social_dropbox {background: url(img/icons/social/dropbox.png) no-repeat;}
+.social_evernote {background: url(img/icons/social/evernote.png) no-repeat;}
+.social_facebook {background: url(img/icons/social/facebook.png) no-repeat;}
+.social_forrst {background: url(img/icons/social/forrst.png) no-repeat;}
+.social_github {background: url(img/icons/social/github.png) no-repeat;}
+.social_googleplus {background: url(img/icons/social/googleplus.png) no-repeat;}
+.social_jolicloud {background: url(img/icons/social/jolicloud.png) no-repeat;}
+.social_last-fm {background: url(img/icons/social/last-fm.png) no-repeat;}
+.social_linkedin {background: url(img/icons/social/linkedin.png) no-repeat;}
+.social_picasa {background: url(img/icons/social/picasa.png) no-repeat;}
+.social_pintrest {background: url(img/icons/social/pintrest.png) no-repeat;}
+.social_rss {background: url(img/icons/social/rss.png) no-repeat;}
+.social_skype {background: url(img/icons/social/skype.png) no-repeat;}
+.social_spotify {background: url(img/icons/social/spotify.png) no-repeat;}
+.social_stumbleupon {background: url(img/icons/social/stumbleupon.png) no-repeat;}
+.social_tumblr {background: url(img/icons/social/tumblr.png) no-repeat;}
+.social_twitter {background: url(img/icons/social/twitter.png) no-repeat;}
+.social_vimeo {background: url(img/icons/social/vimeo.png) no-repeat;}
+.social_wordpress {background: url(img/icons/social/wordpress.png) no-repeat;}
+.social_xing {background: url(img/icons/social/xing.png) no-repeat;}
+.social_yahoo {background: url(img/icons/social/yahoo.png) no-repeat;}
+.social_youtube {background: url(img/icons/social/youtube.png) no-repeat;}
+.social_flickr {background: url(img/icons/social/flickr.png) no-repeat;}
+
+/*----------------------------------------------Logo-------------------------------------*/
+
+div.logo{margin-top: 10px;}
+div.logo a{display: block; text-decoration: none; width: 100%;}
+div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
+
+/*----------------------------------------------Navigator-------------------------------------*/
+
+.topnav{height: auto; margin-top: 55px !important; margin-bottom: 0px !important;}
+.nav{margin-left: 30px;}
+.nav li{float: left; display: inline; list-style: none; margin-left: 30px; margin-right: 20px; height: 410px; width: 250px;}
+.nav li.last{margin-right: 0px;}
+.nav li a{
+    width: 250px;
+    display:block;
+    background-position:0 0;
+    background-repeat:no-repeat;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+.nav li span{font-family: "FontSegoeui", Arial, Helvetica, sans-serif; text-transform: uppercase; color: #FFFFFF; font-size: 15px;
+    display: block; position: absolute; padding: 5px 15px; font-weight: bold;}
+.nav li:hover a {
+    background-position:0 -10px;
+    -webkit-box-shadow: 2px 2px 12px rgba(190, 194, 182, 0.75);
+    -moz-box-shadow:    2px 2px 12px rgba(190, 194, 182, 0.75);
+    box-shadow:         2px 2px 12px rgba(190, 194, 182, 0.75);
+}
+.nav li:hover a span {color: #ff9441;}
+/** Fashion Navigator */
+.nav_fashion a {height: 410px;background: url(img/fashion.png) no-repeat;}
+.nav_fashion a span { top: 625px; }
+/** Wedding Navigator */
+.nav_weeding {height: 350px !important; padding-top: 60px;}
+.nav_weeding a {height: 335px; background: url(img/wedding.png) no-repeat;}
+.nav_weeding a span { top: 275px; float: right !important; text-align: right; width: 235px; padding-right: 0px; }
+/** Product Navigator */
+.nav_product {height: 290px !important; padding-top: 25px;}
+.nav_product a {height: 290px; background: url(img/product.png) no-repeat;}
+.nav_product a span {top: 241px; padding-left: 0px;}
+/** Contact Navigator */
+.nav_contact {height: 76px !important; margin-top: 10px;}
+.nav_contact a {height: 58px; background: url(img/contact.png) no-repeat #0296E1;}
+.nav_contact a span {top: 591px; padding-left: 124px;}
+
+/*----------------------------------------------Slider-------------------------------------*/
+
+.slide{margin-top: 20px !important;}
+
+/*----------------------------------------------Service-------------------------------------*/
+.service{margin-top: 60px !important; margin-bottom: 50px !important; width: 67% !important;}
+.one_third {float: left; margin-right: 4%; width: 30%;}
+.infofield {color: #555555; font-family: Arial; font-size: 12px; line-height: 22px;}
+.infofield ul {list-style: none outside none;}
+.infofield ul li {color: #FFFFFF; font-family: 'Open Sans',sans-serif; font-size: 13px; line-height: 20px; text-align: justify;}
+.infofield ul li span {line-height: 15px; font-weight: bold; font-size: 13px; color: #0197d0;}
+.service_last {margin-right: 0;}
+
+/*----------------------------------------------Contact-------------------------------------*/
+
+.address {margin-top: 60px !important;}
+.address .frame_address {width: 43% !important; float: right;}
+.address .frame_address p {color: #FFFFFF; font-size: 14px;}
+.address .frame_address p span {color: #0197d0; font-weight: bold;}
+
+/* Contact form */
+.form_contact {margin-top: 25px !important; margin-bottom: 100px !important;}
+.form_contact .frame_contact {width: 57%; float: left;}
+.form_contact .frame_contact .field {height: auto; float: right; clear: both; margin-bottom: 20px;}
+.form_contact .frame_contact .field input, textarea {background-color: #919191; border: 1px solid #7d7d7d; width: 250px; margin-left: 20px;}
+.form_contact .frame_contact .field img {margin-left: 20px;}
+.form_contact .frame_contact .field input {height: 32px;}
+.form_contact .frame_contact .field input[type=submit] {background-color: #00aeef; color: #FFFFFF; margin-top: 30px; border: 1px solid #008cc0; width: 60px; font-weight: bold; margin-right: 192px; font-size: 16px; cursor: pointer;}
+.form_contact .frame_contact .field input.captcha_field {width: 140px; margin-left: 10px;}
+.form_contact .frame_contact .field img.captcha_image {height: 34px; width: 100px;}
+.form_contact .frame_contact .field textarea {height: 180px;}
+.form_contact .frame_contact .field label {color: #009eda; font-weight: bold; text-align: right; font-size: 14px;}
+
+/*----------------------------------------------Model-------------------------------------*/
+
+.model {margin-top: 55px !important;}
+.cate_model {width: 17%; float: left; margin-left: 10%;}
+.cate_model h3 {color: #00aeef; font-size: 15px; font-weight: bold; margin-bottom: 15px;}
+.cate_model li {line-height: 24px;}
+.cate_model li a {color: #9f9f9f; font-size: 14px; font-weight: bold;}
+.cate_model li.active a,
+.cate_model li:hover a {color: #FFFFFF;}
+.cate_model .female_model {margin-bottom: 40px;}
+.cate_model .female_model h3 {text-align: right;}
+.cate_model .female_model li a {float: right;}
+.cate_model .male_model {margin-top: 40px;}
+.cate_model a.model_more {display: block; height: 9px; width: 19px; background: url("img/bg_more.png") no-repeat scroll; margin-top: 10px;}
+
+/* Model Slider */
+.model_show{height: 360px !important; width: 680px !important; float: right;}
+
+/* Model Detail */
+.model_detail {width: 50%; margin-top: 15px; margin-left: 32%; margin-bottom: 90px; height: auto;}
+.model_detail p {color: #FFFFFF; font-size: 14px;}
+.model_detail p span {font-weight: bold; text-transform: uppercase; font-size: 16px; line-height: 50px;}
+
+

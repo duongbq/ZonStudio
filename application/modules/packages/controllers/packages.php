@@ -89,7 +89,7 @@ class Packages extends Admin_Controller {
         
         $package = $this->mdl_packages->get_by_id($id);
         $view_data['package_name'] = $package->package_name;
-        $view_data['id'] = $id;
+        $view_data['package_id'] = $id;
         $view_data['images'] = $this->mdl_packages->get_all_images_by_package_id($id);
 
         $this->layout->view('upload', $view_data);
@@ -98,6 +98,12 @@ class Packages extends Admin_Controller {
     public function delete($id) {
         $this->mdl_packages->delete($id);
         redirect('packages');
+    }
+    
+    function remove_image($package_id , $image_id = 0) {
+        $this->mdl_packages->remove_img($image_id);
+        
+        redirect('packages/upload/'.$package_id);
     }
 
 }

@@ -34,7 +34,21 @@ define('FOPEN_READ_WRITE_CREATE_DESTRUCTIVE',	'w+b'); // truncates existing file
 define('FOPEN_WRITE_CREATE',					'ab');
 define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
-define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
+define('FOPEN_READ_WRITE_CREATE_STRICT', 'x+b');
+
+
+define('DEFAULT_DESCRIPTION', 'Zon Studio');
+define('DEFAULT_KEYWORDS', 'Zon Studio');
+
+
+
+
+
+
+
+
+
+
 
 
 /* End of file constants.php */

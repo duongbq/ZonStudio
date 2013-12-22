@@ -1,5 +1,5 @@
 <div class="headerbar">
-    <h1><?php echo lang('packages'); ?></h1>
+    <h1>Gói dịch vụ</h1>
 
     <div class="pull-right">
         <a class="btn btn-primary" href="<?php echo site_url('packages/create'); ?>"><i class="icon-plus icon-white"></i> Tạo gói dịch vụ mới</a>
