@@ -6,7 +6,7 @@
 
             <ul class="nav">
 
-                <li><?php echo anchor('dashboard', 'Trang quản trị'); ?></li>
+                <li><?php echo anchor(base_url(), 'Trang chủ', 'target="_blank"'); ?></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tài khoản<b class="caret"></b></a>
@@ -45,7 +45,7 @@
 
             <ul class="nav pull-right settings">
                 <li>
-                    <?php echo anchor('users/form/' . $this->session->userdata('user_id'), $this->session->userdata('full_name')); ?>
+                    <?php echo anchor('users/form/' . $this->csession->get('user_id'), $this->csession->get('full_name')); ?>
                 </li>
                 <li><a href="<?php echo site_url('settings'); ?>" class="tip icon dropdown-toggle" data-original-title="Thiết lập" data-placement="bottom"><i class="icon-cog"></i></a></li>
                 <li class="divider-vertical"></li>

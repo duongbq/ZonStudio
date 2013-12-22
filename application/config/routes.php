@@ -41,9 +41,10 @@
 $route['default_controller'] = "home";
 $route['404_override'] = 'error';
 
-$route['zudio'] = "dashboard";
+$route['^ma-bao-mat$'] = "captcha/random_sercurity_image";
+$route['^zudio$'] = "dashboard";
 
-$route['lien-he'] = "home/contact";
+$route['^lien-he$'] = "home/contact";
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

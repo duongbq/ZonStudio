@@ -33,7 +33,7 @@
             </div>
             <div class="field">
                 <label for="captcha">Mã xác thực</label>
-                <img src="/assets/images/captcha.png" class="captcha_image" alt="Captcha Code"/>
+                <img src="/ma-bao-mat" class="captcha_image" alt="Captcha Code"/>
                 <input type="text" id="captcha" class="captcha_field" name="captcha"/>
             </div>
             <div class="field submit">

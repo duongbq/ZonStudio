@@ -190,7 +190,7 @@ if (defined('ENVIRONMENT'))
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
-
+session_start();
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

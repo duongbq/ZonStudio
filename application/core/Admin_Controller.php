@@ -21,7 +21,7 @@ class Admin_Controller extends Base_Controller {
     public function __construct() {
         parent::__construct();
 
-        if (!$this->session->userdata('user_id')) {
+        if (!$this->csession->get('user_id')) {
             redirect('sessions/login');
         }
         

@@ -25,7 +25,7 @@ class Sessions extends Base_Controller {
 
     public function login()
     {
-        if ($this->session->userdata('user_id'))
+        if ($this->csession->get('user_id'))
         {
             redirect('dashboard');
         }
@@ -51,7 +51,7 @@ class Sessions extends Base_Controller {
 
     public function logout()
     {
-        $this->session->sess_destroy();
+         $this->csession->clear();
 
         redirect('sessions/login');
     }

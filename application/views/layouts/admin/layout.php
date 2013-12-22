@@ -85,17 +85,7 @@
 
         <?php $this->load->view('layouts/admin/menu'); ?>
 
-        <div class="sidebar">
-
-            <ul>
-                <li><a href="/"><img alt="" src="/assets/default/img/icons/dashboard24x24.png" title="Trang quản trị" /></a></li>
-                <li><a href="#"><img alt="" src="/assets/default/img/icons/clients24x24.png" title="Tài khoản" /></a></li>
-                <li><a href="#"><img alt="" src="/assets/default/img/icons/quotes24x24.png" title="" /></a></li>
-                <li><a href="#"><img alt="" src="/assets/default/img/icons/invoices24x24.png" title="" /></a></li>
-                <li><a href="#"><img alt="" src="/assets/default/img/icons/payments24x24.png" title="" /></a></li>
-            </ul>
-
-        </div>
+        <?php $this->load->view('layouts/admin/sidebar'); ?>
 
         <div class="main-area">
 

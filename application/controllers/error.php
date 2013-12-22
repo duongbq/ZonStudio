@@ -11,10 +11,10 @@
  *
  * @author duongbq
  */
-class Error  extends CI_Controller{
-    
-    public function __construct(){
+class Error extends CI_Controller {
+
+    public function __construct() {
         show_404();
     }
-    
+
 }

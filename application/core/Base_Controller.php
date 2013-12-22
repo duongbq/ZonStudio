@@ -19,7 +19,6 @@ if (!defined('BASEPATH'))
 class Base_Controller extends MX_Controller {
 
     private $_libraries = array(
-        'session',
         'csession',
         'form_validation',
         'pagination',

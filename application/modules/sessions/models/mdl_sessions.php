@@ -37,12 +37,9 @@ class Mdl_Sessions extends CI_Model {
 
             if (md5($password) == $user->password)
             {
-                $session_data = array(
-                    'user_id'   => $user->id,
-                    'user_name' => $user->user_name,
-                    'full_name' => $user->first_name . $user->last_name
-                );
-                $this->session->set_userdata($session_data);
+                $this->csession->save('user_id', $user->id);
+                $this->csession->save('user_name', $user->user_name);
+                $this->csession->save('full_name', $user->first_name . $user->last_name);
                 return TRUE;
             }
             $this->_login_msg = 'Tên đăng nhập hoặc mật khẩu không đúng';

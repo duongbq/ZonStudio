@@ -27,7 +27,7 @@ class Home extends Zon_Controller {
     }
 
     public function index() {
-        $this->layout->view('index');
+        $this->layout->view('home');
     }
 
 }

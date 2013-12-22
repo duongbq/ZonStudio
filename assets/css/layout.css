@@ -199,7 +199,7 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 .form_contact .frame_contact .field input {height: 32px;}
 .form_contact .frame_contact .field input[type=submit] {background-color: #00aeef; color: #FFFFFF; margin-top: 30px; border: 1px solid #008cc0; width: 60px; font-weight: bold; margin-right: 192px; font-size: 16px; cursor: pointer;}
 .form_contact .frame_contact .field input.captcha_field {width: 140px; margin-left: 10px;}
-.form_contact .frame_contact .field img.captcha_image {height: 34px; width: 100px;}
+.form_contact .frame_contact .field img.captcha_image {height: 34px; width: 95px;}
 .form_contact .frame_contact .field textarea {height: 180px;}
 .form_contact .frame_contact .field label {color: #009eda; font-weight: bold; text-align: right; font-size: 14px;}
 
