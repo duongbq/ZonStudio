@@ -1,7 +1,7 @@
-<form method="post" enctype="multipart/form-data" action="<?php echo site_url('album/upload/' . $album_id); ?>" class="form-horizontal">
+<form method="post" enctype="multipart/form-data" action="<?php echo site_url('model/upload/' . $model_id); ?>" class="form-horizontal">
 
     <div class="headerbar">
-        <h1>Thêm ảnh vào album <?php echo $album_caption; ?></h1>
+        <h1>Upload ảnh cho model <?php echo $model_name; ?></h1>
         <?php $this->load->view('layouts/admin/header_buttons'); ?>
     </div>
 
@@ -19,7 +19,7 @@
 
         </div>
         
-        <div class="control-group">
+<!--        <div class="control-group">
 
             <label class="control-label">Tag ảnh</label>
 
@@ -27,7 +27,7 @@
                 <input type="text" name="tag" />
             </div>
 
-        </div>
+        </div>-->
 
         <div class="control-group">
 
@@ -44,7 +44,7 @@
             <label class="control-label">Hiện Slide</label>
 
             <div class="controls">
-                <input type="checkbox" name="is_slide" value="1" />
+                <input type="checkbox" name="is_slide" value="1" checked="checked"/>
             </div>
 
         </div>
@@ -83,8 +83,8 @@
                 <?php foreach ($images as $image) { ?>
                     <tr>
                         <td>
-                            <a class="fancybox" href="/uploads/album/<?php echo $image->file_name; ?>">
-                                <img style="width: 100px; height: 75px;" src="/uploads/album/thumb/<?php echo $image->file_name; ?>"/>
+                            <a class="fancybox" href="/uploads/model/<?php echo $image->file_name; ?>">
+                                <img style="width: 100px; height: 75px;" src="/uploads/model/<?php echo $image->file_name; ?>"/>
                             </a>
                         </td>
                         <td><?php echo $image->uploaded_date; ?></td>
@@ -93,7 +93,7 @@
                                 <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="/album/remove_image/<?php echo $album_id . '/' . $image->file_id . '/' . $image->photo_id; ?>" onclick="return confirm('Chắc chắn xóa?');">
+                                        <a href="/model/remove_image/<?php echo $model_id . '/' . $image->file_id . '/' . $image->photo_id; ?>" onclick="return confirm('Chắc chắn xóa?');">
                                             <i class="icon-trash"></i> Xóa ảnh
                                         </a>
                                     </li>

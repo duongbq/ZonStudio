@@ -51,7 +51,7 @@
                     <tr>
                         <td>
                             <a class="fancybox" href="/uploads/package/<?php echo $image->file_name; ?>">
-                                <img style="width: 100px; height: 75px;" src="/uploads/package/thumb/<?php echo $image->file_name; ?>"/>
+                                <img style="width: 100px; height: 75px;" src="/uploads/package/<?php echo $image->file_name; ?>"/>
                             </a>
                         </td>
                         <td><?php echo $image->uploaded_date; ?></td>

@@ -40,8 +40,8 @@ class Base_Controller extends MX_Controller {
     public function __construct() {
         parent::__construct();
 
-        $this->load->library($this->_libraries);
-        $this->load->helper($this->_helpers);
+//        $this->load->library($this->_libraries);
+//        $this->load->helper($this->_helpers);
         
         
     }

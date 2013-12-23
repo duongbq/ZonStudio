@@ -46,7 +46,16 @@ ul, ol {padding: 0;}
 a:hover{color: #FFC423;}
 
 /** Menu */
-#menu{width: auto; float: left; margin: -10px auto 0 190px; padding:0; color:#C0BAB6; clear:both; word-wrap:normal; white-space:nowrap;}
+#menu {
+    clear: both;
+    color: #C0BAB6;
+    float: left;
+    margin: -10px auto 0 130px;
+    padding: 0;
+    white-space: nowrap;
+    width: auto;
+    word-wrap: normal;
+}
 #menu ul{margin:0; padding:0; list-style:none; text-transform:uppercase; font-size:12px;}
 #menu ul ul{z-index:9999; position:absolute; width:190px; text-transform:none;}
 #menu ul ul ul, #menu ul ul ul ul{left:190px; top:0;}
@@ -147,13 +156,8 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 }
 .nav li span{font-family: "FontSegoeui", Arial, Helvetica, sans-serif; text-transform: uppercase; color: #FFFFFF; font-size: 15px;
     display: block; position: absolute; padding: 5px 15px; font-weight: bold;}
-.nav li:hover a {
-    background-position:0 -10px;
-    -webkit-box-shadow: 2px 2px 12px rgba(190, 194, 182, 0.75);
-    -moz-box-shadow:    2px 2px 12px rgba(190, 194, 182, 0.75);
-    box-shadow:         2px 2px 12px rgba(190, 194, 182, 0.75);
-}
-.nav li:hover a span {color: #ff9441;}
+.nav li a:hover { background-position:0 -10px; -webkit-box-shadow: 2px 2px 12px rgba(190, 194, 182, 0.75); -moz-box-shadow:    2px 2px 12px rgba(190, 194, 182, 0.75); box-shadow:         2px 2px 12px rgba(190, 194, 182, 0.75);}
+.nav li a:hover span {color: #ff9441;}
 /** Fashion Navigator */
 .nav_fashion a {height: 410px;background: url(img/fashion.png) no-repeat;}
 .nav_fashion a span { top: 625px; }
@@ -162,21 +166,24 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 .nav_weeding a {height: 335px; background: url(img/wedding.png) no-repeat;}
 .nav_weeding a span { top: 275px; float: right !important; text-align: right; width: 235px; padding-right: 0px; }
 /** Product Navigator */
-.nav_product {height: 290px !important; padding-top: 25px;}
+.nav_product {height: 290px !important; padding-top: 18px;}
 .nav_product a {height: 290px; background: url(img/product.png) no-repeat;}
 .nav_product a span {top: 241px; padding-left: 0px;}
-/** Contact Navigator */
-.nav_contact {height: 76px !important; margin-top: 10px;}
-.nav_contact a {height: 58px; background: url(img/contact.png) no-repeat #0296E1;}
-.nav_contact a span {top: 591px; padding-left: 124px;}
 
+/** Contact Navigator */
+/*.nav_contact {height: 76px !important; margin-top: 10px;}
+.nav_contact a {height: 58px; background: url(img/contact.png) no-repeat #0296E1;}
+.nav_contact a span {top: 591px; padding-left: 124px;}*/
+
+.nav_product {height: 76px !important; margin-top: 10px;}
+.nav_product a.contact_link {height: 58px; background: url(img/contact.png) no-repeat #0296E1; margin-top: 10px;}
+.nav_product a.contact_link span {top: 591px; padding-left: 124px;}
 /*----------------------------------------------Slider-------------------------------------*/
 
-.slide{margin-top: 20px !important;}
-
+.slide{margin-top: 20px !important;width: 67% !important;}
 /*----------------------------------------------Service-------------------------------------*/
 .service{margin-top: 60px !important; margin-bottom: 50px !important; width: 67% !important;}
-.one_third {float: left; margin-right: 4%; width: 30%;}
+.one_third {float: left; margin-right: 4%; width: 30%; margin-bottom: 60px !important;}
 .infofield {color: #555555; font-family: Arial; font-size: 12px; line-height: 22px;}
 .infofield ul {list-style: none outside none;}
 .infofield ul li {color: #FFFFFF; font-family: 'Open Sans',sans-serif; font-size: 13px; line-height: 20px; text-align: justify;}
@@ -206,7 +213,7 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 /*----------------------------------------------Model-------------------------------------*/
 
 .model {margin-top: 55px !important;}
-.cate_model {width: 17%; float: left; margin-left: 10%;}
+.cate_model {width: 17%; float: left; margin-left: 10%; margin-right: 5%;}
 .cate_model h3 {color: #00aeef; font-size: 15px; font-weight: bold; margin-bottom: 15px;}
 .cate_model li {line-height: 24px;}
 .cate_model li a {color: #9f9f9f; font-size: 14px; font-weight: bold;}

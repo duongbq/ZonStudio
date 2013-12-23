@@ -16,49 +16,51 @@ if (!defined('BASEPATH'))
  * 
  */
 
-class Mdl_album extends MY_Model {
+class Mdl_model extends MY_Model {
 
     function __construct() {
         parent::__construct();
 
-        $this->_table_name = 'album';
+        $this->_table_name = 'model';
         $this->_rules = array(
-            'album_caption' => array(
-                'field' => 'album_caption',
-                'label' => 'Tên album',
+            'model_name' => array(
+                'field' => 'model_name',
+                'label' => 'Tên model',
                 'rules' => 'required'
             )
         );
     }
 
-    function add_new_album() {
+    function add_new_model() {
+        //TODO: FIXME
         $data = array(
-            'album_caption' => $this->input->post('album_caption'),
+            'model_name' => $this->input->post('model_name'),
             'summary' => $this->input->post('summary'),
             'description' => $this->input->post('description'),
+            'sex' => $this->input->post('sex'),
         );
         return parent::add_new($data);
     }
     
-    function update_album()
+    function update_model()
     {
         $data = array(
-            'album_caption' => $this->input->post('album_caption'),
+            'model_name' => $this->input->post('model_name'),
             'summary' => $this->input->post('summary'),
             'description' => $this->input->post('description'),
-            'id' => $this->input->post('album_id'),
+            'id' => $this->input->post('model_id'),
         );
         return parent::update($data);
     }
     
-    function upload_images_for_album($id = 0) {
+    function upload_photos_for_model($model_id = 0) {
 
         $this->load->model('file/mdl_file');
 
         $options = array(
             'folder_name' => $this->_table_name,
-            'img_process' => TRUE,
-            'thumbnail' => TRUE
+//            'img_process' => TRUE,
+//            'thumbnail' => TRUE
         );
         //Upload image file with options above
         $return_val = $this->mdl_file->upload_file($options);
@@ -67,7 +69,7 @@ class Mdl_album extends MY_Model {
             $this->load->model('photos/mdl_photo');
                                     
             $photo_data = array(
-                'album_id' => $id,
+                'model_id' => $model_id,
                 'photo_caption' => $this->input->post('photo_caption'),
                 'summary' => $this->input->post('summary'),
                 'description' => $this->input->post('description'),
@@ -88,11 +90,11 @@ class Mdl_album extends MY_Model {
         return $return_val;
     }
     
-    function get_all_images_by_album_id($id) {
+    function get_all_photos_by_model_id($model_id) {
         
         $this->load->model('photos/mdl_photo');
         
-        return $this->mdl_photo->get_photos(array('album_id' => $id));
+        return $this->mdl_photo->get_photos(array('model_id' => $model_id));
     }
     
     function remove_img($img_id, $photo_id) {

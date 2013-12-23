@@ -8,21 +8,21 @@
 
                 <li><?php echo anchor(base_url(), 'Trang chủ', 'target="_blank"'); ?></li>
 
-                <li class="dropdown">
+<!--                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tài khoản<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><?php echo anchor('users/form', 'Tạo tài khoản'); ?></li>
-                        <li><?php echo anchor('users/index', 'Danh sách tài khoản'); ?></li>
+                        <li><?php //echo anchor('users/form', 'Tạo tài khoản'); ?></li>
+                        <li><?php //echo anchor('users/index', 'Danh sách tài khoản'); ?></li>
                     </ul>
-                </li>
+                </li>-->
 
-                <li class="dropdown">
+<!--                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dịch vụ<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><?php echo anchor('services/create', 'Mở dịch vụ mới'); ?></li>
-                        <li><?php echo anchor('services/index', 'Danh sách dịch vụ'); ?></li>
+                        <li><?php //echo anchor('services/create', 'Mở dịch vụ mới'); ?></li>
+                        <li><?php //echo anchor('services/index', 'Danh sách dịch vụ'); ?></li>
                     </ul>
-                </li>
+                </li>-->
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gói dịch vụ<b class="caret"></b></a>
@@ -33,10 +33,10 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Album ảnh<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Models<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><?php echo anchor('album/create', 'Tạo album mới'); ?></li>
-                        <li><?php echo anchor('album/index', 'Album ảnh'); ?></li>
+                        <li><?php echo anchor('model/create', 'Thêm model'); ?></li>
+                        <li><?php echo anchor('model/index', 'Danh sách model'); ?></li>
                     </ul>
                 </li>
 

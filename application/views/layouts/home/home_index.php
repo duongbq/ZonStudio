@@ -59,7 +59,11 @@
                 <!--=== End Navigator ===-->
             </div>
             <!--=== End Container ===-->
-
+            
+            <!--Footer-->
+            <?php // $this->load->view('layouts/home/home_footer'); ?>
+            <!--/Footer-->
+            
             <!--=== Scripts ===-->
             <script src="/assets/js/custom.js"></script>
             <script type="text/javascript">

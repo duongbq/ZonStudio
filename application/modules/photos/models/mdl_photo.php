@@ -28,8 +28,8 @@ class Mdl_photo extends MY_Model {
         if (isset($params['id'])) {
             $this->db->where('id', $params['id']);
         }
-        if (isset($params['album_id'])) {
-            $this->db->where('album_id', $params['album_id']);
+        if (isset($params['model_id'])) {
+            $this->db->where('model_id', $params['model_id']);
         }
         if (isset($params['file_name'])) {
             $this->db->where('file_name', $params['file_name']);

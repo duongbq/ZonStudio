@@ -38,9 +38,10 @@ class Mdl_Packages extends MY_Model {
     }
 
     function get_all() {
-        $this->db->select(' service.service_name, package.*');
+        $this->db->select('service.service_name, package.*');
         $this->db->join('service', 'service.id = package.service_id', 'left');
-
+        $this->db->order_by('service.service_name'); 
+        
         return parent::get_all();
     }
 
@@ -73,8 +74,8 @@ class Mdl_Packages extends MY_Model {
 
         $options = array(
             'folder_name' => $this->_table_name,
-            'img_process' => TRUE,
-            'thumbnail' => TRUE
+//            'img_process' => TRUE,
+//            'thumbnail' => TRUE
         );
         //Upload image file with options above
         $return_val = $this->mdl_file->upload_file($options);
