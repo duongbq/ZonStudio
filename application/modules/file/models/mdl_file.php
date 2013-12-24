@@ -27,6 +27,12 @@ class Mdl_file extends MY_Model
         if (isset($params['package_id'])) {
             $this->db->where('package_id', $params['package_id']);
         }
+        if (isset($params['is_slide'])) {
+            $this->db->where('is_slide', $params['is_slide']);
+        }
+        if (isset($params['is_home_display'])) {
+            $this->db->where('is_home_display', $params['is_home_display']);
+        }
         if (isset($params['file_name'])) {
             $this->db->where('file_name', $params['file_name']);
         }

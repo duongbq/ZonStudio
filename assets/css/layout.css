@@ -159,15 +159,24 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 .nav li a:hover { background-position:0 -10px; -webkit-box-shadow: 2px 2px 12px rgba(190, 194, 182, 0.75); -moz-box-shadow:    2px 2px 12px rgba(190, 194, 182, 0.75); box-shadow:         2px 2px 12px rgba(190, 194, 182, 0.75);}
 .nav li a:hover span {color: #ff9441;}
 /** Fashion Navigator */
-.nav_fashion a {height: 410px;background: url(img/fashion.png) no-repeat;}
+.nav_fashion a {
+    height: 410px;
+    /*background: url(img/fashion.png) no-repeat;*/
+}
 .nav_fashion a span { top: 625px; }
 /** Wedding Navigator */
 .nav_weeding {height: 350px !important; padding-top: 60px;}
-.nav_weeding a {height: 335px; background: url(img/wedding.png) no-repeat;}
+.nav_weeding a {
+    height: 335px; 
+    /*background: url(img/wedding.png) no-repeat;*/
+}
 .nav_weeding a span { top: 275px; float: right !important; text-align: right; width: 235px; padding-right: 0px; }
 /** Product Navigator */
 .nav_product {height: 290px !important; padding-top: 18px;}
-.nav_product a {height: 290px; background: url(img/product.png) no-repeat;}
+.nav_product a {
+    height: 290px; 
+    /*background: url(img/product.png) no-repeat;*/
+}
 .nav_product a span {top: 241px; padding-left: 0px;}
 
 /** Contact Navigator */

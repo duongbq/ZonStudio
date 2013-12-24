@@ -95,8 +95,8 @@ class Packages extends Admin_Controller {
         $this->layout->view('upload', $view_data);
     }
 
-    public function delete($id) {
-        $this->mdl_packages->delete($id);
+    public function delete($package_id) {
+        $this->mdl_packages->delete($package_id);
         redirect('packages');
     }
     

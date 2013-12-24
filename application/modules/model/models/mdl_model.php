@@ -110,5 +110,27 @@ class Mdl_model extends MY_Model {
         
         $this->mdl_photo->delete($photo_id);
     }
+    
+    function delete($model_id) {
+        
+        $this->load->model('photos/mdl_photo');
+        $this->load->model('file/mdl_file');
+        
+        $images = $this->get_all_photos_by_model_id($model_id);
+        foreach ($images as $image) {
+            
+            $options = array(
+                'file_id' => $image->file_id,
+                'photo_id' => $image->photo_id,
+                'folder_name' => $this->_table_name
+            );
+            
+            $this->mdl_file->delete_file($options);
+            
+            $this->mdl_photo->delete($image->photo_id);
+        }
+        
+        parent::delete($model_id);
+    }
 
 }

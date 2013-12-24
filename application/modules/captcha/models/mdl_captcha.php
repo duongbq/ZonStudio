@@ -24,7 +24,7 @@ class Mdl_captcha extends CI_Model {
         if (!isset($options['height']))
             $options['height'] = 25;
         if (!isset($options['fontsize']))
-            $options['fontsize'] = 15;
+            $options['fontsize'] = 16;
 
         $code = '';
         $charset = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -37,7 +37,7 @@ class Mdl_captcha extends CI_Model {
 
         $bg_color = ImageColorAllocate($img, 0, 0, 0);
         $text_color = ImageColorAllocate($img, 255, 255, 255);
-        $grid_color = ImageColorAllocate($img, 255, 0, 0);
+        $grid_color = ImageColorAllocate($img, 150, 200, 200);
         // fill the background
         ImageFilledRectangle($img, 0, 0, $options['width'], $options['height'], $bg_color);
 

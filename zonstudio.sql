@@ -1,24 +1,32 @@
-/*
-Navicat MySQL Data Transfer
+-- phpMyAdmin SQL Dump
+-- version 3.4.10.1deb1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Dec 24, 2013 at 04:15 PM
+-- Server version: 5.5.34
+-- PHP Version: 5.3.10-1ubuntu3.9
 
-Source Server         : localhost
-Source Server Version : 50614
-Source Host           : localhost:3306
-Source Database       : zonstudio
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-Target Server Type    : MYSQL
-Target Server Version : 50614
-File Encoding         : 65001
 
-Date: 2013-12-23 00:03:04
-*/
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
--- ----------------------------
--- Table structure for `account`
--- ----------------------------
-DROP TABLE IF EXISTS `account`;
-CREATE TABLE `account` (
+--
+-- Database: `zonstudio`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account`
+--
+
+CREATE TABLE IF NOT EXISTS `account` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
@@ -27,55 +35,53 @@ CREATE TABLE `account` (
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
--- ----------------------------
--- Records of account
--- ----------------------------
-INSERT INTO `account` VALUES ('1', 'zudio', 'e10adc3949ba59abbe56e057f20f883e', '1', '2013-12-08 00:00:00', 'Zon ', 'Studio');
+--
+-- Dumping data for table `account`
+--
 
--- ----------------------------
--- Table structure for `album`
--- ----------------------------
-DROP TABLE IF EXISTS `album`;
-CREATE TABLE `album` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `album_caption` varchar(255) DEFAULT NULL,
-  `summary` varchar(255) DEFAULT NULL,
-  `description` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+INSERT INTO `account` (`id`, `user_name`, `password`, `is_active`, `last_sign_on`, `first_name`, `last_name`) VALUES
+(1, 'zudio', 'e10adc3949ba59abbe56e057f20f883e', 1, '2013-12-08 00:00:00', 'Zon ', 'Studio');
 
--- ----------------------------
--- Records of album
--- ----------------------------
-INSERT INTO `album` VALUES ('1', 'Ảnh cưới ', 'Ảnh cưới ', 'Ảnh cưới ');
-INSERT INTO `album` VALUES ('3', 'Mùa xuân', '', '');
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `file`
--- ----------------------------
-DROP TABLE IF EXISTS `file`;
-CREATE TABLE `file` (
+--
+-- Table structure for table `file`
+--
+
+CREATE TABLE IF NOT EXISTS `file` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `file_name` varchar(255) DEFAULT NULL,
   `package_id` int(11) DEFAULT '0' COMMENT 'its value is zero if this file is a photo.. Otherwise, is photo of package',
   `is_slide` tinyint(1) DEFAULT '0',
   `uploaded_date` datetime DEFAULT NULL,
+  `is_home_display` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of file
--- ----------------------------
-INSERT INTO `file` VALUES ('4', 'ba63b52c6812c91ad9895790f0691669.jpg', '0', '0', '2013-12-22 07:38:39');
-INSERT INTO `file` VALUES ('5', '2de26f19482a98daec4d79742b5895d7.png', '0', '0', '2013-12-22 17:04:37');
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `news`
--- ----------------------------
-DROP TABLE IF EXISTS `news`;
-CREATE TABLE `news` (
+--
+-- Table structure for table `model`
+--
+
+CREATE TABLE IF NOT EXISTS `model` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `model_name` varchar(255) DEFAULT NULL,
+  `summary` varchar(255) DEFAULT NULL,
+  `description` text,
+  `sex` tinyint(1) DEFAULT '0' COMMENT '0~Nu 1~Nam',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text,
   `summary` text,
@@ -86,17 +92,15 @@ CREATE TABLE `news` (
   `updated_at` datetime DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of news
--- ----------------------------
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `package`
--- ----------------------------
-DROP TABLE IF EXISTS `package`;
-CREATE TABLE `package` (
+--
+-- Table structure for table `package`
+--
+
+CREATE TABLE IF NOT EXISTS `package` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `service_id` int(11) DEFAULT NULL,
   `package_name` varchar(255) DEFAULT NULL,
@@ -104,78 +108,71 @@ CREATE TABLE `package` (
   `description` text,
   `price` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of package
--- ----------------------------
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `photo`
--- ----------------------------
-DROP TABLE IF EXISTS `photo`;
-CREATE TABLE `photo` (
+--
+-- Table structure for table `photo`
+--
+
+CREATE TABLE IF NOT EXISTS `photo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `album_id` int(11) DEFAULT '0',
+  `model_id` int(11) DEFAULT NULL,
   `photo_caption` varchar(255) DEFAULT NULL,
   `summary` varchar(255) DEFAULT NULL,
   `description` text,
   `file_id` int(11) DEFAULT NULL,
-  `is_slide` tinyint(1) DEFAULT '0',
-  `is_product` tinyint(1) DEFAULT '0',
+  `is_slide` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of photo
--- ----------------------------
-INSERT INTO `photo` VALUES ('3', '3', 'Zon', '', '', '4', '0', '0');
-INSERT INTO `photo` VALUES ('4', '3', 'Zon', '', '', '5', '0', '0');
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `photo_tag`
--- ----------------------------
-DROP TABLE IF EXISTS `photo_tag`;
-CREATE TABLE `photo_tag` (
+--
+-- Table structure for table `photo_tag`
+--
+
+CREATE TABLE IF NOT EXISTS `photo_tag` (
   `photo_id` int(11) NOT NULL,
   `tag_id` int(11) NOT NULL,
   PRIMARY KEY (`photo_id`,`tag_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of photo_tag
--- ----------------------------
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for `service`
--- ----------------------------
-DROP TABLE IF EXISTS `service`;
-CREATE TABLE `service` (
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE IF NOT EXISTS `service` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `service_name` varchar(255) DEFAULT NULL,
   `summary` varchar(255) DEFAULT NULL,
   `description` text,
-  `created_at` datetime DEFAULT NULL,
-  `created_by` int(11) DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  `updated_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
--- ----------------------------
--- Records of service
--- ----------------------------
+--
+-- Dumping data for table `service`
+--
 
--- ----------------------------
--- Table structure for `tag`
--- ----------------------------
-DROP TABLE IF EXISTS `tag`;
-CREATE TABLE `tag` (
+INSERT INTO `service` (`id`, `service_name`, `summary`, `description`) VALUES
+(1, 'Thời trang ', '', ''),
+(2, 'Ảnh cưới ', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tag`
+--
+
+CREATE TABLE IF NOT EXISTS `tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- ----------------------------
--- Records of tag
--- ----------------------------
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

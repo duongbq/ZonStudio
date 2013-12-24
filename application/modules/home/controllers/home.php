@@ -17,17 +17,19 @@ if (!defined('BASEPATH'))
  */
 
 class Home extends Zon_Controller {
-    
+
     public function __construct() {
-        
+
         $this->_page_title = 'ZonStudio';
         $this->_layout = 'layouts/home/home_index';
-        
+
         parent::__construct();
     }
 
     public function index() {
-        $this->layout->view('home');
+        $this->load->model('file/mdl_file');
+        $home_files = $this->mdl_file->get_files(array('is_home_display' => 1));
+        $this->layout->view('home', array('home_files' => $home_files));
     }
 
 }

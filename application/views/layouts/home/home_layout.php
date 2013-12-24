@@ -33,36 +33,8 @@
             <link rel="stylesheet" href="/assets/js/plugins/jquery-cycle-slideshows/css/slideshows.css" />
             <script src="/assets/js/plugins/jquery-cycle-slideshows/js/jquery.cycle.all.js"></script>
             <script src="/assets/js/plugins/jquery-cycle-slideshows/js/jquery.easing.1.3.js"></script>
-
-            <script type="text/javascript">
-                $(function() {
-                    $('#slideshow_2').cycle({
-                        fx: 'fade',
-                        speed: 900,
-                        timeout: 5000,
-                        prev: '.ss2_wrapper .slideshow_prev',
-                        next: '.ss2_wrapper .slideshow_next',
-                        before: function(currSlideElement, nextSlideElement) {
-                            var data = $('.data', $(nextSlideElement)).html();
-                            $('.ss2_wrapper .slideshow_box').stop(true, true).animate({bottom: '-110px'}, 400, function() {
-                                $('.ss2_wrapper .slideshow_box .data').html(data);
-                            });
-                            $('.ss2_wrapper .slideshow_box').delay(100).animate({bottom: '0'}, 400);
-                        }
-                    });
-
-                    $('.ss2_wrapper').mouseenter(function() {
-                        $('#slideshow_2').cycle('pause');
-                        $('.ss2_wrapper .slideshow_prev').stop(true, true).animate({left: '20px'}, 200);
-                        $('.ss2_wrapper .slideshow_next').stop(true, true).animate({right: '20px'}, 200);
-                    }).mouseleave(function() {
-                        $('#slideshow_2').cycle('resume');
-                        $('.ss2_wrapper .slideshow_prev').stop(true, true).animate({left: '-40px'}, 200);
-                        $('.ss2_wrapper .slideshow_next').stop(true, true).animate({right: '-40px'}, 200);
-                    });
-                });
-            </script>
         </head>
+        
         <body class="">
 
             <!--=== Container ===-->
@@ -90,63 +62,13 @@
                 
                 
                 <?php echo $content_for_layout; ?>
-                
-                
-                <!--=== Slider ===-->
-                <?php // $this->load->view('layouts/home/home_slider'); ?>
-                <!--=== End Slider ===-->
-
-                <!--=== Service ===-->
-<!--                <div class="wrapper service">
-                    <div class="one_third">
-                        <div class="infofield">
-                            <ul>
-                                <li><span>Chụp ảnh thời trang trong studio</span></li>
-                                <li>Chụp sản phẩm: Quần áo, giầy dép, mũ nón, phụ kiện thời trang, có người mẫu nam - nữ trong studio phông màu</li>
-                                <li>Số lượng 25 bộ sản phẩm (tính thêm phụ phí từ bộ sản phẩm thứ 26)</li>
-                                <li>Quy cách: 4 ảnh đã qua xử lý hậu kỳ/bộ sản phẩm</li>
-                                <li>Kích thước file trả theo mục đích sử dụng của khách hàng</li>
-                                <li>Nhận giao đồ tận nơi khách hàng</li>
-                                <li><span>1.600.000đ</span> giá đã bao gồm người mẫu và makeup</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="one_third">
-                        <div class="infofield">
-                            <ul>
-                                <li><span>Chụp ảnh thời ngoài trời</span></li>
-                                <li>Chụp sản phẩm: Quần áo, giầy dép, mũ nón, phụ kiện thời trang, có người mẫu nam - nữ trong studio phông màu</li>
-                                <li>Số lượng 25 bộ sản phẩm (tính thêm phụ phí từ bộ sản phẩm thứ 26)</li>
-                                <li>Quy cách: 4 ảnh đã qua xử lý hậu kỳ/bộ sản phẩm</li>
-                                <li>Kích thước file trả theo mục đích sử dụng của khách hàng</li>
-                                <li>Nhận giao đồ tận nơi khách hàng</li>
-                                <li><span>1.600.000đ</span> giá đã bao gồm người mẫu và makeup</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="one_third service_last">
-                        <div class="infofield">
-                            <ul>
-                                <li><span>Bộ sưu tập thời trang</span></li>
-                                <li>Chụp sản phẩm: Quần áo, giầy dép, mũ nón, phụ kiện thời trang, có người mẫu nam - nữ trong studio phông màu</li>
-                                <li>Số lượng 25 bộ sản phẩm (tính thêm phụ phí từ bộ sản phẩm thứ 26)</li>
-                                <li>Quy cách: 4 ảnh đã qua xử lý hậu kỳ/bộ sản phẩm</li>
-                                <li>Kích thước file trả theo mục đích sử dụng của khách hàng</li>
-                                <li>Nhận giao đồ tận nơi khách hàng</li>
-                                <li><span>1.600.000đ</span> giá đã bao gồm người mẫu và makeup</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                </div>-->
-                <!--=== /Service ===-->
 
             </div>
             <!--=== End Container ===-->
 
             <!--=== Scripts ===-->
-            <script src="js/custom.js"></script>
+            <script src="/assets/js/custom.js"></script>
+            
             <script type="text/javascript">
                 var _gaq = [
                     ['_setAccount', 'UA-XXXXX-X'],
