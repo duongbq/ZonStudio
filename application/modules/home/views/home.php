@@ -11,24 +11,21 @@ $product_img = isset($home_files[2]) && file_exists('./uploads/home/' . $home_fi
 
     <li class="nav_fashion" >
 
-        <a href="<?php echo site_url('thoi-trang'); ?>">
+        <a href="<?php echo site_url('thoi-trang'); ?>" style="background: url(<?php echo $fashion_img; ?>) no-repeat;">
             <span>Fashion</span>
-            <img src="<?php echo $fashion_img; ?>" />
         </a>
 
     </li>
 
     <li class="nav_weeding">
-        <a href="<?php echo site_url('anh-cuoi'); ?>">
+        <a href="<?php echo site_url('anh-cuoi'); ?>" style="background: url(<?php echo $wedding_img; ?>) no-repeat;">
             <span>Wedding</span>
-            <img src="<?php echo $wedding_img; ?>" />
         </a>
     </li>
 
     <li class="nav_product">
-        <a class="product_link" href="<?php echo site_url('san-pham'); ?>">
+        <a class="product_link" href="<?php echo site_url('san-pham'); ?>" style="background: url(<?php echo $product_img; ?>) no-repeat;">
             <span>Product</span>
-            <img src="<?php echo $product_img; ?>" />
         </a>
         <a class="contact_link" href="<?php echo site_url('lien-he'); ?>"><span>Contact</span></a>
     </li>

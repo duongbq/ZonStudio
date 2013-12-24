@@ -89,11 +89,15 @@ class Mdl_file extends MY_Model
             // physically delete image file
             $config = $this->_config_upload();
             //Delete origin file
-            if (file_exists($config['upload_path'] . $options['folder_name'] . '/' . $files[0]->file_name))
+            if (file_exists($config['upload_path'] . $options['folder_name'] . '/' . $files[0]->file_name)){
                 unlink($config['upload_path'] . $options['folder_name'] . '/' . $files[0]->file_name);
+            }
+                
             //Delete thumbnail file
-            if (file_exists($config['upload_path'] . $options['folder_name'] . '/thumb/' . $files[0]->file_name))
+            if (file_exists($config['upload_path'] . $options['folder_name'] . '/thumb/' . $files[0]->file_name)){
                 unlink($config['upload_path'] . $options['folder_name'] . '/thumb/' . $files[0]->file_name);
+            }
+                
         }
     }
 

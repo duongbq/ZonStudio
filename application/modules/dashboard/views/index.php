@@ -19,10 +19,11 @@
                 <table class="table no-margin">
                     <tbody>
                         <tr>
-                            <td><a href="<?php //echo site_url('clients/form');      ?>"><i class="icon-user"></i><?php //echo lang('add_client');      ?></a></td>
-                            <td><a href="javascript:void(0);" class="create-quote"><i class="icon-file-text"></i><?php //echo lang('create_quote');      ?></a></td>
-                            <td><a href="javascript:void(0);" class="create-invoice"><i class="icon-money"></i><?php //echo lang('create_invoice');      ?></a></td>
-                            <td><a href="#modal-placeholder" data-toggle="modal" onclick="load_modal();"><i class="icon-credit-card"></i><?php //echo lang('enter_payment');      ?></a></td>
+                            <td><a href="#modal-placeholder" data-toggle="modal" onclick="load_modal();"><i class="icon-credit-card"></i>Tải ảnh lên trang chủ</a></td>
+                            <td><a href="<?php echo site_url('model/create'); ?>"><i class="icon-user"></i>Thêm model mới</a></td>
+                            <td><a href="javascript:void(0);"><i class="icon-file-text"></i>Đăng tin mới</a></td>
+                            <!--<td><a href="javascript:void(0);" class="create-invoice"><i class="icon-money"></i><?php //echo lang('create_invoice');      ?></a></td>-->
+                            
                         </tr>
                     </tbody>
                 </table>

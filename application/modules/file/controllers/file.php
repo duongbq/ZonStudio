@@ -42,7 +42,7 @@ class File extends Admin_Controller {
     }
     
     function remove_home_image($image_id = 0) {
-        $this->mdl_file->delete_file(array('file_id' => $image_id));
+        $this->mdl_file->delete_file(array('file_id' => $image_id, 'folder_name' => 'home'));
         redirect('dashboard');
     }
 
