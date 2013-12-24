@@ -89,9 +89,11 @@
 
         <!--=== Detail Model ===-->
         <div class="model_detail">
-            <p><span><?php echo $model_for_slider->model_name; ?></span></p>
-            <p><?php echo $model_for_slider->sex == 0 ? 'Nữ' : 'Nam'; ?></p>
-            <p><?php echo $model_for_slider->description; ?></p>
+            <?php if (is_object($model_for_slider)): ?>
+                <p><span><?php echo $model_for_slider->model_name; ?></span></p>
+                <p><?php echo $model_for_slider->sex == 0 ? 'Nữ' : 'Nam'; ?></p>
+                <p><?php echo $model_for_slider->description; ?></p>
+            <?php endif; ?>
         </div>
         <div class="clear"></div>
         <!--=== /Detail Model ===-->

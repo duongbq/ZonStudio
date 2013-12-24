@@ -35,7 +35,7 @@ class Models extends Zon_Controller {
         $male_models = $this->mdl_home->get_models(1);
 
         $model_for_slider = $this->mdl_home->get_model_for_slider(array('rand' => TRUE));
-        $images_for_slider_model = $this->mdl_home->get_images_for_slider_model($model_for_slider->id);
+        $images_for_slider_model = $this->mdl_home->get_images_for_slider_model(is_object($model_for_slider) ? $model_for_slider->id : 0);
 
         $view_data = array(
             'female_models' => $female_models,
@@ -57,7 +57,7 @@ class Models extends Zon_Controller {
             $model_id = $this->input->post('model_id');
             $images_for_slider_model = $this->mdl_home->get_images_for_slider_model($model_id);
             $model_for_slider = $this->mdl_home->get_model_for_slider(array('model_id' => $model_id));
-            
+
             $view_data = array(
                 'images_for_slider_model' => $images_for_slider_model,
                 'model_for_slider' => $model_for_slider,
