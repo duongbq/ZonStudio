@@ -46,7 +46,7 @@
 
             <ul class="nav pull-right settings">
                 <li>
-                    <?php echo anchor('users/form/' . $this->csession->get('user_id'), $this->csession->get('full_name')); ?>
+                    <a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('sessions/profile'); ?>');"><?php echo $this->csession->get('full_name'); ?></a>
                 </li>
                 <li><a href="<?php echo site_url('settings'); ?>" class="tip icon dropdown-toggle" data-original-title="Thiết lập" data-placement="bottom"><i class="icon-cog"></i></a></li>
                 <li class="divider-vertical"></li>

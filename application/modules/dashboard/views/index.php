@@ -19,7 +19,7 @@
                 <table class="table no-margin">
                     <tbody>
                         <tr>
-                            <td><a href="#modal-placeholder" data-toggle="modal" onclick="load_modal();"><i class="icon-credit-card"></i>Tải ảnh lên trang chủ</a></td>
+                            <td><a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('file/home_img_upload'); ?>');"><i class="icon-credit-card"></i>Tải ảnh lên trang chủ</a></td>
                             <td><a href="<?php echo site_url('model/create'); ?>"><i class="icon-user"></i>Thêm model mới</a></td>
                             <td><a href="javascript:void(0);"><i class="icon-file-text"></i>Đăng tin mới</a></td>
                             <!--<td><a href="javascript:void(0);" class="create-invoice"><i class="icon-money"></i><?php //echo lang('create_invoice');      ?></a></td>-->
@@ -195,11 +195,3 @@
     </div>
 
 </div>
-
-<script>
-
-    function load_modal() {
-        $('#modal-placeholder').load("<?php echo site_url('file/home_img_upload'); ?>");
-    }
-
-</script>
