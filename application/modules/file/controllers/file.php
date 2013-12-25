@@ -28,19 +28,26 @@ class File extends Admin_Controller {
         $this->load->view('home_img_upload', array('home_files' => $home_files));
     }
 
-    function upload_home_image() {
-        $options = array(
-            'folder_name' => 'home'
-        );
-        //Upload image file with options above
-        $return_val = $this->mdl_file->upload_file($options);
-        if (is_numeric($return_val) && $return_val > 0) {
+//    function upload_home_image() {
+//        $options = array(
+//            'folder_name' => 'home'
+//        );
+//        //Upload image file with options above
+//        $return_val = $this->mdl_file->upload_file($options);
+//        if (is_numeric($return_val) && $return_val > 0) {
+//
+//            $this->mdl_file->update(array('id' => $return_val, 'is_home_display' => 1, 'uploaded_date' => date('Y-m-d h:i:s')));
+//            redirect('dashboard');
+//        }
+//    }
 
-            $this->mdl_file->update(array('id' => $return_val, 'is_home_display' => 1, 'uploaded_date' =>date('Y-m-d h:i:s')));
-            redirect('dashboard');
-        }
+    function upload_home_image() {
+
+        $this->mdl_file->upload_multi_files(array('folder_name' => 'home'));
+
+        echo "Tải ảnh thành công";
     }
-    
+
     function remove_home_image($image_id = 0) {
         $this->mdl_file->delete_file(array('file_id' => $image_id, 'folder_name' => 'home'));
         redirect('dashboard');
