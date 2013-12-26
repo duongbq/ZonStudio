@@ -25,6 +25,21 @@
         <script src="<?php echo base_url(); ?>assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 
 
+        
+
+    </head>
+
+    <body>
+        <div id="modal-placeholder" class="modal hide fade"></div>
+
+        <?php $this->load->view('layouts/admin/menu'); ?>
+
+        <?php $this->load->view('layouts/admin/sidebar'); ?>
+
+        <div class="main-area">
+            <?php echo $content_for_layout; ?>
+        </div>
+        
         <script type="text/javascript">
 
             $(function()
@@ -82,24 +97,6 @@
             }
 
         </script>
-
-    </head>
-
-    <body>
-        <div id="modal-placeholder" class="modal hide fade"></div>
-
-        <?php $this->load->view('layouts/admin/menu'); ?>
-
-        <?php $this->load->view('layouts/admin/sidebar'); ?>
-
-        <div class="main-area">
-
-            <!--<div id="modal-placeholder"></div>-->
-
-            <?php echo $content_for_layout; ?>
-
-        </div><!--end.content-->
-
         <script defer src="<?php echo base_url(); ?>assets/default/js/plugins.js"></script>
         <script defer src="<?php echo base_url(); ?>assets/default/js/script.js"></script>
         <script src="<?php echo base_url(); ?>assets/default/js/bootstrap-datepicker.js"></script>
