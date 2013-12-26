@@ -29,8 +29,8 @@ class Mdl_file extends MY_Model {
         if (isset($params['is_slide'])) {
             $this->db->where('is_slide', $params['is_slide']);
         }
-        if (isset($params['is_home_display'])) {
-            $this->db->where('is_home_display', $params['is_home_display']);
+        if (isset($params['home_display_index'])) {
+            $this->db->where('home_display_index', $params['home_display_index']);
         }
         if (isset($params['file_name'])) {
             $this->db->where('file_name', $params['file_name']);
@@ -43,6 +43,13 @@ class Mdl_file extends MY_Model {
      */
     function get_files($params = array()) {
         $this->_set_where($params);
+        
+        if (isset($params['order_by'])) {
+            
+            $this->db->order_by($params['order_by']); 
+        } else {
+            $this->db->order_by('uploaded_date', 'desc'); 
+        }
         return $this->db->get($this->_table_name)->result();
     }
 
@@ -126,64 +133,11 @@ class Mdl_file extends MY_Model {
                 }
             }
             //Delete origin file from upload path
-            if (file_exists($uploaded_file)) {
-                unlink($uploaded_file);
-            }
+            unlink($uploaded_file);
             //save to DB and return File ID
             return $this->add_file(array('file_name' => $new_file_name));
         }
     }
-
-//    function upload_multi_files($options = array()) {
-//
-//        $config = $this->_config_upload($options);
-//        $this->load->library('upload', $config);
-//        $uploaded_files = array();
-//        
-//        foreach ($_FILES as $field => $file) {
-//            // No problems with the file
-//            if ($file['error'] == 0) {
-//
-//                // So lets upload
-//                if (!$this->upload->do_upload($field)) {
-//                    return $this->upload->display_errors();
-//                } else {
-//
-//                    //Upload file to server
-//                    $data = $this->upload->data();
-//                    //Create directory if not existed
-//                    $spec_dir = $config['upload_path'] . $options['folder_name'];
-//                    $this->_create_directory($spec_dir);
-//                    //Upload file is located by default in upload path
-//                    $uploaded_file = $config['upload_path'] . $data['file_name'];
-//                    //Rename with unique string
-//                    $new_file_name = random_string('unique', date('YmdHis')) . $data['file_ext'];
-//                    //Copy to specify folder
-//                    copy($uploaded_file, $spec_dir . '/' . $new_file_name);
-////                    //If params['img_process'] is set
-////                    if (isset($options['img_process'])) {
-////                        $this->_process_image($spec_dir . '/' . $new_file_name, $options);
-////                        if (isset($options['thumbnail'])) {
-////                            $thumb_dir = $spec_dir . '/thumb';
-////                            $this->_create_directory($thumb_dir);
-////                            copy($spec_dir . '/' . $new_file_name, $thumb_dir . '/' . $new_file_name);
-////                            $this->_process_image($thumb_dir . '/' . $new_file_name, $options);
-////                        }
-////                    }
-//                    //Delete origin file from upload path
-//                    if (file_exists($uploaded_file)) {
-//                        unlink($uploaded_file);
-//                    }
-//                    //save to DB and return File ID
-//                    $add_file_id =  $this->add_file(array('file_name' => $new_file_name));
-//                    $uploaded_files[$add_file_id] = $new_file_name;
-//                }
-//            }
-//        }
-//        
-//        return $uploaded_files;
-//        
-//    }
 
     function upload_multi_files($options = array()) {
 
@@ -207,13 +161,14 @@ class Mdl_file extends MY_Model {
 
                 copy($uploaded_file, $spec_dir . '/' . $new_file_name);
                 unlink($uploaded_file);
-                
+
                 $file_id = $this->add_file(array('file_name' => $new_file_name));
 
-                $uploaded_files[$file_id] = $new_file_name;
+//                $uploaded_files[$file_id] = $new_file_name;
+                array_push($uploaded_files, $file_id);
             }
         }
-        
+
         return $uploaded_files;
     }
 

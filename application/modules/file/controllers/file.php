@@ -28,29 +28,30 @@ class File extends Admin_Controller {
         $this->load->view('home_img_upload', array('home_files' => $home_files));
     }
 
-//    function upload_home_image() {
-//        $options = array(
-//            'folder_name' => 'home'
-//        );
-//        //Upload image file with options above
-//        $return_val = $this->mdl_file->upload_file($options);
-//        if (is_numeric($return_val) && $return_val > 0) {
-//
-//            $this->mdl_file->update(array('id' => $return_val, 'is_home_display' => 1, 'uploaded_date' => date('Y-m-d h:i:s')));
-//            redirect('dashboard');
-//        }
-//    }
-
     function upload_home_image() {
 
-        $this->mdl_file->upload_multi_files(array('folder_name' => 'home'));
+        $return_val = $this->mdl_file->upload_file(array('folder_name' => 'home'));
+        if (is_numeric($return_val) && $return_val > 0) {
 
-        echo "Tải ảnh thành công";
+            $this->mdl_file->update(array('id' => $return_val, 'is_home_display' => 1, 'uploaded_date' => date('Y-m-d h:i:s')));
+
+            $home_files = $this->mdl_file->get_files(array('is_home_display' => 1));
+            echo $this->load->view('home_images_list', array('home_files' => $home_files));
+        } else {
+            echo '0';
+        }
     }
 
-    function remove_home_image($image_id = 0) {
-        $this->mdl_file->delete_file(array('file_id' => $image_id, 'folder_name' => 'home'));
-        redirect('dashboard');
+    function remove_home_image() {
+
+        if ($this->is_postback() && $this->input->is_ajax_request()) {
+            $image_id = $this->input->post('img_id');
+            $this->mdl_file->delete_file(array('file_id' => $image_id, 'folder_name' => 'home'));
+
+            echo '1';
+        } else {
+            redirect(base_url());
+        }
     }
 
 }
