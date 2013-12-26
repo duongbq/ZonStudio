@@ -191,7 +191,8 @@ class Mdl_file extends MY_Model {
         //Config images processing
         $config['image_library'] = 'gd2';
 //        $config['source_image'] = $config['upload_path'] . $image['file_name'];
-        $config['maintain_ratio'] = isset($options['maintain_ratio']) ? TRUE : FALSE;
+        $config['maintain_ratio'] = TRUE;
+//        $config['maintain_ratio'] = isset($options['maintain_ratio']) ? TRUE : FALSE;
 
         $config['width'] = isset($options['width']) ? $options['width'] : 400;
         $config['height'] = isset($options['height']) ? $options['height'] : 300;
@@ -234,7 +235,7 @@ class Mdl_file extends MY_Model {
         if (count($image) == 1) {
             $this->update(array('id' => $image[0]->id, 'home_display_index' => 0));
         }
-        
+
         $this->update(array('id' => $image_id, 'home_display_index' => $index));
     }
 
