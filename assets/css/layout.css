@@ -155,7 +155,7 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
     -webkit-transition: all 0.3s ease-in-out;
 }
 .nav li span{font-family: "FontSegoeui", Arial, Helvetica, sans-serif; text-transform: uppercase; color: #FFFFFF; font-size: 15px;
-    display: block; position: absolute; padding: 5px 15px; font-weight: bold;}
+             display: block; position: absolute; padding: 5px 15px; font-weight: bold;}
 .nav li a:hover { background-position:0 -10px; -webkit-box-shadow: 2px 2px 12px rgba(190, 194, 182, 0.75); -moz-box-shadow:    2px 2px 12px rgba(190, 194, 182, 0.75); box-shadow:         2px 2px 12px rgba(190, 194, 182, 0.75);}
 .nav li a:hover span {color: #ff9441;}
 /** Fashion Navigator */
@@ -235,7 +235,11 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 .cate_model a.model_more {display: block; height: 9px; width: 19px; background: url("img/bg_more.png") no-repeat scroll; margin-top: 10px;}
 
 /* Model Slider */
-.model_show{height: 360px !important; width: 680px !important; float: right;}
+.model_show {
+    float: right;
+    height: 360px !important;
+    width: 677px !important;
+}
 
 /* Model Detail */
 .model_detail {width: 50%; margin-top: 15px; margin-left: 32%; margin-bottom: 90px; height: auto;}

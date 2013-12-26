@@ -2,9 +2,9 @@
 <div class="wrapper address">
     <div class="frame_address">
         <p><span>Zon Studio</span></p>
-        <p>Phone: 0988.564.445</p>
-        <p>Địa chỉ: Số 1 ngách 1 ngõ An Dương, Tây Hồ, Hà Nội</p>
-        <p>Email: zonstudio@gmail.com</p>
+        <p>Phone: 0988.530.520</p>
+        <p>Địa chỉ: Số 6 ngõ 54 An Dương, Hà Nội</p>
+        <p>Email: <a href="mailto:zonstudio368@gmail.com?subject=To Zon Studio">zonstudio368@gmail.com</a></p>
     </div>
     <div class="clear"></div>
 </div>
