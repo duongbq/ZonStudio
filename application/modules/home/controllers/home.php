@@ -27,9 +27,20 @@ class Home extends Zon_Controller {
     }
 
     public function index() {
+        
         $this->load->model('file/mdl_file');
-        $home_files = $this->mdl_file->get_files(array('is_home_display' => 1));
-        $this->layout->view('home', array('home_files' => $home_files));
+        
+        $fashion_image = $this->mdl_file->get_files(array('home_display_index' => 1));
+        $wedding_image = $this->mdl_file->get_files(array('home_display_index' => 2));
+        $product_image = $this->mdl_file->get_files(array('home_display_index' => 3));
+        
+        $view_data = array(
+            'fashion_image' => count($fashion_image) == 1 ? $fashion_image[0] : NULL,
+            'wedding_image' => count($wedding_image) == 1 ? $wedding_image[0] : NULL,
+            'product_image' => count($product_image) == 1 ? $product_image[0] : NULL
+        );
+        
+        $this->layout->view('home', $view_data);
     }
 
 }

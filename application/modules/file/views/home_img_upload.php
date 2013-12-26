@@ -19,8 +19,25 @@
 </div>
 
 <script>
+    
+    function set_home_display_index($img_id, $index){
+        
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('file/set_home_display_index'); ?>",
+            data: {
+                img_id: $img_id,
+                index: $index
+            },
+            success: function(response) {
+                
+                $('#list').html(response);
+            }
+        });
+    }
 
     function remove_img($img_id) {
+        
         if (!confirm('Bạn có thực sự muốn xóa ảnh này không?'))
             return;
 

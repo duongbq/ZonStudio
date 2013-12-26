@@ -29,6 +29,9 @@ class Mdl_file extends MY_Model {
         if (isset($params['is_slide'])) {
             $this->db->where('is_slide', $params['is_slide']);
         }
+        if (isset($params['is_home_display'])) {
+            $this->db->where('is_home_display', $params['is_home_display']);
+        }
         if (isset($params['home_display_index'])) {
             $this->db->where('home_display_index', $params['home_display_index']);
         }
@@ -43,12 +46,12 @@ class Mdl_file extends MY_Model {
      */
     function get_files($params = array()) {
         $this->_set_where($params);
-        
+
         if (isset($params['order_by'])) {
-            
-            $this->db->order_by($params['order_by']); 
+
+            $this->db->order_by($params['order_by']);
         } else {
-            $this->db->order_by('uploaded_date', 'desc'); 
+            $this->db->order_by('uploaded_date', 'desc');
         }
         return $this->db->get($this->_table_name)->result();
     }
@@ -223,6 +226,16 @@ class Mdl_file extends MY_Model {
         $this->image_lib->initialize($config);
         $this->image_lib->resize();
         $this->image_lib->clear();
+    }
+
+    function update_home_display_index($image_id = 0, $index = 0) {
+
+        $image = $this->get_files(array('home_display_index' => $index));
+        if (count($image) == 1) {
+            $this->update(array('id' => $image[0]->id, 'home_display_index' => 0));
+        }
+        
+        $this->update(array('id' => $image_id, 'home_display_index' => $index));
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
-$fashion_img = isset($home_files[0]) && file_exists('./uploads/home/' . $home_files[0]->file_name) ? '/uploads/home/' . $home_files[0]->file_name : '';
-$wedding_img = isset($home_files[1]) && file_exists('./uploads/home/' . $home_files[1]->file_name) ? '/uploads/home/' . $home_files[1]->file_name : '';
-$product_img = isset($home_files[2]) && file_exists('./uploads/home/' . $home_files[2]->file_name) ? '/uploads/home/' . $home_files[2]->file_name : '';
+$fashion_img = is_object($fashion_image) && file_exists('./uploads/home/' . $fashion_image->file_name) ? '/uploads/home/' . $fashion_image->file_name : '';
+$wedding_img = is_object($wedding_image) && file_exists('./uploads/home/' . $wedding_image->file_name) ? '/uploads/home/' . $wedding_image->file_name : '';
+$product_img = is_object($product_image) && file_exists('./uploads/home/' . $product_image->file_name) ? '/uploads/home/' . $product_image->file_name : '';
 
 
 

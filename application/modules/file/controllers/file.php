@@ -53,5 +53,23 @@ class File extends Admin_Controller {
             redirect(base_url());
         }
     }
+    
+    function set_home_display_index() {
+
+        if ($this->is_postback() && $this->input->is_ajax_request()) {
+            
+            $image_id = $this->input->post('img_id');
+            $index = $this->input->post('index');
+            
+            $this->mdl_file->update_home_display_index($image_id, $index);
+
+            $home_files = $this->mdl_file->get_files(array('is_home_display' => 1));
+            echo $this->load->view('home_images_list', array('home_files' => $home_files));
+        } else {
+            redirect(base_url());
+        }
+    }
+    
+    
 
 }
