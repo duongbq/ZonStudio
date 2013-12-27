@@ -1,9 +1,9 @@
 <form method="post" class="form-horizontal">
     <?php
-    if (isset($id)) {
+    if (isset($package_id)) {
         $form_header = 'Chỉnh sửa gói dịch vụ';
         ?>
-        <input type="hidden" name="package_id" value="<?php echo $id; ?>"/>
+        <input type="hidden" name="package_id" value="<?php echo $package_id; ?>"/>
         <?php
     } else {
         $form_header = 'Thêm gói dịch vụ mới';

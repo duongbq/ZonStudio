@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 27, 2013 at 11:18 AM
+-- Generation Time: Dec 27, 2013 at 05:43 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -56,16 +56,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `is_home_display` tinyint(1) DEFAULT '0',
   `home_display_index` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
-
---
--- Dumping data for table `files`
---
-
-INSERT INTO `files` (`id`, `file_name`, `uploaded_date`, `is_home_display`, `home_display_index`) VALUES
-(7, '70bb94cd94138011b624f665de465796.jpg', '2013-12-27 02:31:34', 1, 2),
-(8, '73ba2506a96d58539325385fd102aca0.jpg', '2013-12-27 02:31:39', 1, 0),
-(9, 'cfce116cc798d8908536829ca4b84a16.jpg', '2013-12-27 02:31:43', 1, 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 -- --------------------------------------------------------
 
@@ -87,7 +78,14 @@ CREATE TABLE IF NOT EXISTS `models` (
   `shoes_size` varchar(45) DEFAULT NULL,
   `photo_shoot_fee` varchar(45) DEFAULT NULL COMMENT 'Phí chụp hình. Ex: 300K/ca ',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `models`
+--
+
+INSERT INTO `models` (`id`, `model_name`, `nick_name`, `description`, `sex`, `height`, `weight`, `body_measure`, `trousers_size`, `shirt_size`, `shoes_size`, `photo_shoot_fee`) VALUES
+(1, 'Thúy An', '', '', 0, '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -98,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `models` (
 CREATE TABLE IF NOT EXISTS `models_files` (
   `model_id` int(11) NOT NULL,
   `file_id` int(11) NOT NULL,
-  `is_slide` tinyint(1) DEFAULT '0',
+  `is_slide` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`model_id`,`file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -135,7 +133,16 @@ CREATE TABLE IF NOT EXISTS `packages` (
   `description` text,
   `price` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id`, `service_id`, `package_name`, `summary`, `description`, `price`) VALUES
+(1, 1, 'Gold package ', '', '', ''),
+(5, 1, 'Men Fashion', '', '', ''),
+(6, 1, 'Teen fashion', 'Teen fashionTeen fashionTeen fashion', 'Teen fashionTeen fashionTeen fashion', 'Free');
 
 -- --------------------------------------------------------
 
@@ -146,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `packages` (
 CREATE TABLE IF NOT EXISTS `packages_files` (
   `package_id` int(11) NOT NULL,
   `file_id` int(11) NOT NULL,
-  `is_slide` tinyint(1) DEFAULT '0',
+  `is_slide` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`package_id`,`file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

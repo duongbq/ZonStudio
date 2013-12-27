@@ -1,81 +1,128 @@
-<form method="post" enctype="multipart/form-data" action="<?php echo site_url('packages/upload/' . $package_id); ?>" class="form-horizontal">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><?php echo $package_name; ?></h3>
+</div>
 
-    <div class="headerbar">
-        <h1>Thêm ảnh vào <?php echo $package_name; ?></h1>
-        <?php $this->load->view('layouts/admin/header_buttons'); ?>
+<div class="modal-body">
+
+    <form method="post" enctype="multipart/form-data" class="form-inline">
+        <input type="file" name="userfile" id="userfile" multiple accept="image/*"/>  
+        <button type="submit" id="btn"></button>  
+    </form> 
+
+    <div class="clear">&nbsp;</div>
+
+    <div id="response"></div>
+    <div id="list">
+        <?php $this->load->view('images_list'); ?>
     </div>
+</div>
 
-    <div class="content">
+<script>
 
-        <?php $this->load->view('layouts/admin/alerts'); ?>
+    function set_package_slider($image_id, $package_id) {
 
-        <div class="control-group">
-            <label class="control-label">Tên gói dịch vụ</label>
-            <div class="controls">
-                <?php echo $package_name; ?>
-            </div>
-        </div>
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('packages/set_package_slider'); ?>",
+            data: {
+                image_id: $image_id,
+                package_id: $package_id
+            },
+            success: function(response) {
 
-        <div class="control-group">
+                $('#list').html(response);
+                
+            }
+        });
+    }
 
-            <label class="control-label">Ảnh</label>
+    function remove_image($image_id, $package_id) {
 
-            <div class="controls">
-                <input type="file" name="userfile" accept="image/*"/>
-            </div>
+        if (!confirm('Bạn có thực sự muốn xóa ảnh này không?'))
+            return;
 
-        </div>
-
-        <div class="control-group">
-
-            <label class="control-label">Hiện Slide</label>
-
-            <div class="controls">
-                <input type="checkbox" name="is_slide" value="1" />
-            </div>
-
-        </div>
-
-        <table class="table table-striped">
-
-            <thead>
-                <tr>
-                    <th>Ảnh</th>
-                    <th>Tải lên ngày</th>
-                    <th>Tùy chọn</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php foreach ($images as $image) { ?>
-                    <tr>
-                        <td>
-                            <a class="fancybox" href="/uploads/package/<?php echo $image->file_name; ?>">
-                                <img style="width: 100px; height: 75px;" src="/uploads/package/<?php echo $image->file_name; ?>"/>
-                            </a>
-                        </td>
-                        <td><?php echo $image->uploaded_date; ?></td>
-                        <td>
-                            <div class="options btn-group">
-                                <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="<?php echo site_url('packages/remove_image/' . $package_id . '/' . $image->id); ?>" onclick="return confirm('Chắc chắn xóa?');">
-                                            <i class="icon-trash"></i> Xóa ảnh
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-
-        </table>
-
-    </div>
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('packages/remove_package_image'); ?>",
+            data: {
+                image_id: $image_id,
+                package_id: $package_id
+        
+            },
+            success: function(response) {
+                $('#response').html('Đã xóa ảnh...');
+                $('#response').addClass('alert alert-info');
+                $('#list').html(response);
+            }
+        });
 
 
+    }
 
-</form>
+    (function() {
 
+
+        var input = document.getElementById("userfile");
+        var formdata = false;
+        var btn = document.getElementById("btn");
+
+        if (window.FormData) {
+            formdata = new FormData();
+            btn.style.display = "none";
+        }
+
+        input.addEventListener("change", function(evt) {
+
+            var list = document.getElementById("list");
+            var response = document.getElementById("response");
+            response.innerHTML = 'Đang tải ảnh lên...';
+            response.className = 'alert alert-info';
+
+            var reader;
+            var file;
+            for (i = 0; i < this.files.length; i++) {
+
+                file = this.files[i];
+
+                if (!!file.type.match(/image.*/)) {
+                    if (window.FileReader) {
+                        reader = new FileReader();
+                        reader.readAsDataURL(file);
+                    }
+                    if (formdata) {
+                        formdata.append("userfile", file);
+                    }
+                }
+            }
+
+            if (formdata) {
+                $.ajax({
+                    url: '<?php echo site_url('packages/upload_package_image/'.  $package_id); ?>',
+                    type: 'POST',
+                    data: formdata,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function() {
+                        $('.form-inline').attr('style', 'display: none;');
+                    },
+                    success: function(res) {
+                        if (res == '0') {
+                            response.innerHTML = 'Có lỗi trong quá trình tải ảnh >.<';
+                            response.className = 'alert alert-error';
+                        } else {
+                            response.innerHTML = 'Tải ảnh thành công';
+                            response.className = 'alert alert-success';
+                            list.innerHTML = res;
+                        }
+                        $('.form-inline').removeAttr('style');
+                    }
+                });
+            }
+
+        }, false);
+    }());
+
+
+
+</script>

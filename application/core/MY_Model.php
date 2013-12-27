@@ -14,16 +14,29 @@ class MY_Model extends CI_Model {
         parent::__construct();
     }
 
-    function get_join_condition() {
+    private function get_join_condition() {
         return $this->_join_table_name . '.id' . '=' . $this->_table_name . '.' . $this->_foreign_key;
+    }
+    
+    function join($option = '') {
+        
+        $this->db->join($this->_join_table_name, $this->get_join_condition(), $option);
+    }
+    
+    function select($columns = array()) {
+        $select = '';
+        foreach ($columns as $column) {
+            if ($select == '') {
+                $select = $column;
+            } else {
+                $select .= ', ' . $column;
+            }
+        }
+        $this->db->select($select);
     }
 
     function get_last_messages() {
         return $this->_last_message;
-    }
-
-    private function _set_where($key, $value) {
-        $this->_where->$key = $value;
     }
 
     function get_all_with_paging($options = array()) {
@@ -71,6 +84,10 @@ class MY_Model extends CI_Model {
             return FALSE;
         }
         return TRUE;
+    }
+    
+    function is_postback() {
+        return empty($_POST) ? FALSE : TRUE;
     }
 
 }

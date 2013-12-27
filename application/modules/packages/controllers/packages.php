@@ -23,6 +23,8 @@ class Packages extends Admin_Controller {
 
         $this->load->model('mdl_packages');
         $this->load->model('services/mdl_services');
+
+//        $this->output->enable_profiler();
     }
 
     public function index() {
@@ -32,79 +34,91 @@ class Packages extends Admin_Controller {
     }
 
     function create() {
-        
-        $view_data = array();
-        if ($this->is_postback()) {
-            if (!$this->mdl_packages->run_validation()) {
-                $view_data['error'] = $this->mdl_packages->get_last_messages();
-            } else {
-                $this->mdl_packages->add_new_package();
-                redirect('packages');
-            }
+
+        $view_data = $this->mdl_packages->get_view_data();
+        if ($this->is_postback() && !isset($view_data['error'])) {
+            $this->mdl_packages->add_new_package();
+            redirect('packages');
         }
-        $view_data['services_combo'] = $this->mdl_services->get_combo(array('combo_name' => 'service', 'service' => $this->input->post('service')));
         $this->layout->view('form', $view_data);
     }
 
-    function edit($id) {
+    function edit($package_id) {
 
-        if ($id <= 0) {
+        if ($package_id <= 0) {
             redirect('packages/create');
         }
 
-        $view_data = array();
-        if ($this->is_postback()) {
-            if (!$this->mdl_packages->run_validation()) {
-                $view_data['error'] = $this->mdl_packages->get_last_messages();
-            } else {
-                $this->mdl_packages->update_package();
-                redirect('packages');
-            }
+        $view_data = $this->mdl_packages->get_view_data($package_id);
+        if ($this->is_postback() && !isset($view_data['error'])) {
+            $this->mdl_packages->update_package();
+            redirect('packages');
         }
-        $package = $this->mdl_packages->get_by_id($id);
-        $view_data['services_combo'] = $this->mdl_services->get_combo(array('combo_name' => 'service', 'service' => $package->service_id));
-        $view_data['id'] = $package->id;
-        $view_data['package_name'] = $package->package_name;
-        $view_data['summary'] = $package->summary;
-        $view_data['description'] = $package->description;
-        $view_data['price'] = $package->price;
         $this->layout->view('form', $view_data);
     }
 
-    function upload($id) {
-        if ($id <= 0) {
+    function upload($package_id) {
+
+        if ($package_id <= 0) {
             redirect('packages');
         }
 
-        $view_data = array();
-        if ($this->is_postback()) {
+        $view_data = $this->mdl_packages->get_view_data($package_id);
+        $view_data['images'] = $this->mdl_packages->get_all_images_by_package_id($package_id);
+        $this->load->view('upload', $view_data);
+    }
 
-            $return_val = $this->mdl_packages->upload_images_for_package($id);
-            if ($return_val != NULL && !is_numeric($return_val)) {
-                $view_data['error'] = $return_val;
-            } else {
-                redirect('packages/upload/'.$id);
-            }
+    function upload_package_image($package_id) {
 
+        $return_val = $this->mdl_packages->upload_images_for_package($package_id);
+
+        if (is_numeric($return_val) && $return_val > 0) {
+            $images = $this->mdl_packages->get_all_images_by_package_id($package_id);
+            echo $this->load->view('images_list', array('images' => $images));
+        } else {
+            echo '0';
         }
-        
-        $package = $this->mdl_packages->get_by_id($id);
-        $view_data['package_name'] = $package->package_name;
-        $view_data['package_id'] = $id;
-        $view_data['images'] = $this->mdl_packages->get_all_images_by_package_id($id);
-
-        $this->layout->view('upload', $view_data);
     }
 
     public function delete($package_id) {
         $this->mdl_packages->delete($package_id);
         redirect('packages');
     }
-    
-    function remove_image($package_id , $image_id = 0) {
-        $this->mdl_packages->remove_img($image_id);
+
+    function remove_package_image() {
         
-        redirect('packages/upload/'.$package_id);
+        if ($this->is_postback() && $this->input->is_ajax_request()) {
+
+            $image_id = $this->input->post('image_id');
+            $package_id = $this->input->post('package_id');
+            
+            $this->load->model('mdl_packages_files');
+
+            $this->mdl_packages_files->remove_package_image($image_id, $package_id);
+
+            $images = $this->mdl_packages->get_all_images_by_package_id($package_id);
+            echo $this->load->view('images_list', array('images' => $images));
+            
+        } else {
+            redirect(base_url());
+        }
+    }
+
+    function set_package_slider() {
+
+        if ($this->is_postback() && $this->input->is_ajax_request()) {
+
+            $image_id = $this->input->post('image_id');
+            $package_id = $this->input->post('package_id');
+            $this->load->model('mdl_packages_files');
+
+            $this->mdl_packages_files->set_package_slider($image_id, $package_id);
+
+            $images = $this->mdl_packages->get_all_images_by_package_id($package_id);
+            echo $this->load->view('images_list', array('images' => $images));
+        } else {
+            redirect(base_url());
+        }
     }
 
 }

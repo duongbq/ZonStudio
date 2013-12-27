@@ -1,114 +1,128 @@
-<form method="post" enctype="multipart/form-data" action="<?php echo site_url('model/upload/' . $model_id); ?>" class="form-horizontal">
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><?php echo $model_name; ?></h3>
+</div>
 
-    <div class="headerbar">
-        <h1>Upload ảnh cho model <?php echo $model_name; ?></h1>
-        <?php $this->load->view('layouts/admin/header_buttons'); ?>
+<div class="modal-body">
+
+    <form method="post" enctype="multipart/form-data" class="form-inline">
+        <input type="file" name="userfile" id="userfile" multiple accept="image/*"/>  
+        <button type="submit" id="btn"></button>  
+    </form> 
+
+    <div class="clear">&nbsp;</div>
+
+    <div id="response"></div>
+    <div id="list">
+        <?php $this->load->view('images_list'); ?>
     </div>
+</div>
 
-    <div class="content">
+<script>
 
-        <?php $this->load->view('layouts/admin/alerts'); ?>
+    function set_model_slider($image_id, $model_id) {
 
-        <div class="control-group">
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('models/set_model_slider'); ?>",
+            data: {
+                image_id: $image_id,
+                model_id: $model_id
+            },
+            success: function(response) {
 
-            <label class="control-label">Tên ảnh</label>
+                $('#list').html(response);
+                
+            }
+        });
+    }
 
-            <div class="controls">
-                <input type="text" name="photo_caption" />
-            </div>
+    function remove_image($image_id, $model_id) {
 
-        </div>
+        if (!confirm('Bạn có thực sự muốn xóa ảnh này không?'))
+            return;
+
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('models/remove_model_image'); ?>",
+            data: {
+                image_id: $image_id,
+                model_id: $model_id
         
-<!--        <div class="control-group">
+            },
+            success: function(response) {
+                $('#response').html('Đã xóa ảnh...');
+                $('#response').addClass('alert alert-info');
+                $('#list').html(response);
+            }
+        });
 
-            <label class="control-label">Tag ảnh</label>
 
-            <div class="controls">
-                <input type="text" name="tag" />
-            </div>
+    }
 
-        </div>-->
+    (function() {
 
-        <div class="control-group">
 
-            <label class="control-label">Ảnh</label>
+        var input = document.getElementById("userfile");
+        var formdata = false;
+        var btn = document.getElementById("btn");
 
-            <div class="controls">
-                <input type="file" name="userfile" accept="image/*"/>
-            </div>
+        if (window.FormData) {
+            formdata = new FormData();
+            btn.style.display = "none";
+        }
 
-        </div>
+        input.addEventListener("change", function(evt) {
 
-        <div class="control-group">
+            var list = document.getElementById("list");
+            var response = document.getElementById("response");
+            response.innerHTML = 'Đang tải ảnh lên...';
+            response.className = 'alert alert-info';
 
-            <label class="control-label">Hiện Slide</label>
+            var reader;
+            var file;
+            for (i = 0; i < this.files.length; i++) {
 
-            <div class="controls">
-                <input type="checkbox" name="is_slide" value="1" checked="checked"/>
-            </div>
+                file = this.files[i];
 
-        </div>
+                if (!!file.type.match(/image.*/)) {
+                    if (window.FileReader) {
+                        reader = new FileReader();
+                        reader.readAsDataURL(file);
+                    }
+                    if (formdata) {
+                        formdata.append("userfile", file);
+                    }
+                }
+            }
 
-        <div class="control-group">
+            if (formdata) {
+                $.ajax({
+                    url: '<?php echo site_url('models/upload_model_image/'.  $model_id); ?>',
+                    type: 'POST',
+                    data: formdata,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function() {
+                        $('.form-inline').attr('style', 'display: none;');
+                    },
+                    success: function(res) {
+                        if (res == '0') {
+                            response.innerHTML = 'Có lỗi trong quá trình tải ảnh >.<';
+                            response.className = 'alert alert-error';
+                        } else {
+                            response.innerHTML = 'Tải ảnh thành công';
+                            response.className = 'alert alert-success';
+                            list.innerHTML = res;
+                        }
+                        $('.form-inline').removeAttr('style');
+                    }
+                });
+            }
 
-            <label class="control-label">Mô tả tóm tắt</label>
-
-            <div class="controls">
-                <textarea name="summary"><?php echo set_value('summary', isset($summary) ? $summary : NULL); ?></textarea>
-            </div>
-
-        </div>
-
-        <div class="control-group">
-
-            <label class="control-label">Mô tả chi tiết</label>
-
-            <div class="controls">
-                <textarea name="description"><?php echo set_value('description', isset($description) ? $description : NULL); ?></textarea>
-            </div>
-
-        </div>
-
-        <table class="table table-striped">
-
-            <thead>
-                <tr>
-                    <th>Ảnh</th>
-                    <th>Tải lên ngày</th>
-                    <th>Tùy chọn</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php foreach ($images as $image) { ?>
-                    <tr>
-                        <td>
-                            <a class="fancybox" href="/uploads/model/<?php echo $image->file_name; ?>">
-                                <img style="width: 100px; height: 75px;" src="/uploads/model/<?php echo $image->file_name; ?>"/>
-                            </a>
-                        </td>
-                        <td><?php echo $image->uploaded_date; ?></td>
-                        <td>
-                            <div class="options btn-group">
-                                <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="/model/remove_image/<?php echo $model_id . '/' . $image->file_id . '/' . $image->photo_id; ?>" onclick="return confirm('Chắc chắn xóa?');">
-                                            <i class="icon-trash"></i> Xóa ảnh
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-
-        </table>
-
-    </div>
+        }, false);
+    }());
 
 
 
-</form>
-
+</script>
