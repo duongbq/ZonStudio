@@ -5,7 +5,7 @@
 
 <div class="modal-body">
 
-    <form method="post" enctype="multipart/form-data"  class="form-inline">
+    <form method="post" enctype="multipart/form-data" class="form-inline">
         <input type="file" name="userfile" id="userfile" multiple accept="image/*"/>  
         <button type="submit" id="btn"></button>  
     </form> 
@@ -19,9 +19,9 @@
 </div>
 
 <script>
-    
-    function set_home_display_index($img_id, $index){
-        
+
+    function set_home_display_index($img_id, $index) {
+
         $.ajax({
             type: "post",
             url: "<?php echo site_url('file/set_home_display_index'); ?>",
@@ -30,14 +30,14 @@
                 index: $index
             },
             success: function(response) {
-                
+
                 $('#list').html(response);
             }
         });
     }
 
     function remove_img($img_id) {
-        
+
         if (!confirm('Bạn có thực sự muốn xóa ảnh này không?'))
             return;
 
@@ -71,15 +71,15 @@
         }
 
         input.addEventListener("change", function(evt) {
-
+            
             var list = document.getElementById("list");
             var response = document.getElementById("response");
             response.innerHTML = 'Đang tải ảnh lên...';
             response.className = 'alert alert-info';
 
-            var i = 0, len = this.files.length, reader, file;
-
-            for (; i < len; i++) {
+            var reader;
+            var file;
+            for (i = 0; i < this.files.length; i++) {
 
                 file = this.files[i];
 
@@ -96,11 +96,14 @@
 
             if (formdata) {
                 $.ajax({
-                    url: "<?php echo site_url('file/upload_home_image'); ?>",
-                    type: "POST",
+                    url: '<?php echo site_url('file/upload_home_image'); ?>',
+                    type: 'POST',
                     data: formdata,
                     processData: false,
                     contentType: false,
+                    beforeSend: function() {
+                        $('.form-inline').attr('style', 'display: none;');
+                    },
                     success: function(res) {
                         if (res == '0') {
                             response.innerHTML = 'Có lỗi trong quá trình tải ảnh >.<';
@@ -110,7 +113,7 @@
                             response.className = 'alert alert-success';
                             list.innerHTML = res;
                         }
-
+                        $('.form-inline').removeAttr('style');
                     }
                 });
             }
