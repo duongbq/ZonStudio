@@ -2,7 +2,7 @@
     <ul class="clear">
         <li><a href="<?php echo site_url('thoi-trang');?>">Thời trang</a></li>
         <li><a href="<?php echo site_url('anh-cuoi');?>">Ảnh cưới</a></li>
-        <li><a href="<?php echo site_url('san-pham');?>">Chân dung</a></li>
+        <li><a href="<?php echo site_url('chan-dung');?>">Chân dung</a></li>
 <!--        <li><a class="drop" href="#" title="Sản phẩm">Sản phẩm</a>
             <ul>
                 <li><a href="#" title="Sản phẩm 1">Sản phẩm 1</a></li>

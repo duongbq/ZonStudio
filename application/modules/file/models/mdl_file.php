@@ -13,7 +13,7 @@ class Mdl_file extends MY_Model {
         parent::__construct();
         $this->load->helper('file');
 
-        $this->_table_name = 'file';
+        $this->_table_name = 'files';
     }
 
     /**

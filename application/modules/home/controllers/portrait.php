@@ -16,18 +16,18 @@ if (!defined('BASEPATH'))
  * 
  */
 
-class Product extends Zon_Controller {
+class Portrait extends Zon_Controller {
     
     public function __construct() {
         
-        $this->_page_title = 'ZonStudio - Sản phẩm';
+        $this->_page_title = 'ZonStudio - Ảnh chân dung';
         $this->_layout = 'layouts/home/home_layout';
         
         parent::__construct();
     }
 
     public function index() {
-        $this->layout->view('product');
+        $this->layout->view('portrait');
     }
 
 }

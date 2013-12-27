@@ -21,7 +21,9 @@ class Mdl_Packages extends MY_Model {
     function __construct() {
         parent::__construct();
 
-        $this->_table_name = 'package';
+        $this->_table_name = 'packages';
+        $this->_join_table_name = 'services';
+        $this->_foreign_key = 'service_id';
 
         $this->_rules = array(
             'package_name' => array(
@@ -38,10 +40,11 @@ class Mdl_Packages extends MY_Model {
     }
 
     function get_all() {
-        $this->db->select('service.service_name, package.*');
-        $this->db->join('service', 'service.id = package.service_id', 'left');
-        $this->db->order_by('service.service_name'); 
-        
+//        $this->db->select('services.service_name, packages.*');
+        $this->db->select($this->_join_table_name . '.service_name' . ', ' . $this->_table_name . '.*');
+        $this->db->join($this->_join_table_name, $this->get_join_condition(), 'left');
+        $this->db->order_by($this->_join_table_name . '.service_name');
+
         return parent::get_all();
     }
 
@@ -82,15 +85,15 @@ class Mdl_Packages extends MY_Model {
         if (is_numeric($return_val) && $return_val > 0) {
 
             $data = array(
-                'package_id' => $id, 
+                'package_id' => $id,
                 'id' => $return_val,
                 'uploaded_date' => date('Y-m-d H:i:s'),
             );
-            
+
             if ($this->input->post('is_slide')) {
                 $data['is_slide'] = $this->input->post('is_slide');
             }
-            
+
             $this->mdl_file->update($data);
         }
 
@@ -102,24 +105,24 @@ class Mdl_Packages extends MY_Model {
 
         return $this->mdl_file->get_files(array('package_id' => $id));
     }
-    
+
     function remove_img($img_id = 0) {
-        
+
         $this->load->model('file/mdl_file');
-        
+
         $options = array(
             'file_id' => $img_id,
-            'folder_name'=>  $this->_table_name
+            'folder_name' => $this->_table_name
         );
 
         return $this->mdl_file->delete_file($options);
     }
-    
+
     function delete($package_id) {
         $this->load->model('file/mdl_file');
         $images = $this->get_all_images_by_package_id($package_id);
         foreach ($images as $image) {
-            
+
             $options = array(
                 'file_id' => $image->id,
                 'folder_name' => $this->_table_name

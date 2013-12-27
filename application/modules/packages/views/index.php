@@ -27,7 +27,7 @@
                 <tr>
                     <td><?php echo $package->service_name; ?></td>
                     <td><?php echo $package->package_name; ?></td>
-                    <td><?php echo number_format($package->price); ?></td>
+                    <td><?php echo $package->price; ?></td>
                     <td>
                         <div class="options btn-group">
                             <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 25, 2013 at 04:45 PM
+-- Generation Time: Dec 27, 2013 at 11:18 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -23,71 +23,84 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `account`
+-- Table structure for table `accounts`
 --
 
-CREATE TABLE IF NOT EXISTS `account` (
+CREATE TABLE IF NOT EXISTS `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
+  `user_name` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '0',
-  `last_sign_on` datetime DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `account`
+-- Dumping data for table `accounts`
 --
 
-INSERT INTO `account` (`id`, `user_name`, `password`, `is_active`, `last_sign_on`, `first_name`, `last_name`) VALUES
-(1, 'zudio', 'e10adc3949ba59abbe56e057f20f883e', 1, '2013-12-08 00:00:00', 'Lưu Danh ', 'Bất ');
+INSERT INTO `accounts` (`id`, `user_name`, `password`, `is_active`, `first_name`, `last_name`) VALUES
+(1, 'duongbq', 'e10adc3949ba59abbe56e057f20f883e', 1, 'Lưu Danh ', 'Bất ');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `file`
+-- Table structure for table `files`
 --
 
-CREATE TABLE IF NOT EXISTS `file` (
+CREATE TABLE IF NOT EXISTS `files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `file_name` varchar(255) DEFAULT NULL,
-  `package_id` int(11) DEFAULT '0' COMMENT 'its value is zero if this file is a photo.. Otherwise, is photo of package',
-  `is_slide` tinyint(1) DEFAULT '0',
-  `uploaded_date` datetime DEFAULT NULL,
+  `file_name` varchar(45) NOT NULL,
+  `uploaded_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `is_home_display` tinyint(1) DEFAULT '0',
   `home_display_index` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
--- Dumping data for table `file`
+-- Dumping data for table `files`
 --
 
-INSERT INTO `file` (`id`, `file_name`, `package_id`, `is_slide`, `uploaded_date`, `is_home_display`, `home_display_index`) VALUES
-(17, 'e4d33af0f5d21d2d0d7753fe8b78f26djpg', 0, 0, NULL, 0, 0),
-(18, 'ec0c5c6d64221dd58fbc5877b1e3bed1.jpg', 0, 0, NULL, 0, 0),
-(19, '8cb9034afd18d8279c6b5b58379d46d8.jpg', 0, 0, NULL, 0, 0),
-(20, '019b5aa7b791c50931c48df5e90542a7.jpg', 0, 0, NULL, 0, 0),
-(21, '1b23edc39ea081bd3d7db0afdc13c4c4.jpg', 0, 0, NULL, 0, 0),
-(22, '3dc74c10229d3321ebd303bbfd35517d.jpg', 0, 0, NULL, 0, 0),
-(23, 'adc2ffd3c9167cb3360edb613b9d0d0d.jpg', 0, 0, NULL, 0, 0);
+INSERT INTO `files` (`id`, `file_name`, `uploaded_date`, `is_home_display`, `home_display_index`) VALUES
+(7, '70bb94cd94138011b624f665de465796.jpg', '2013-12-27 02:31:34', 1, 2),
+(8, '73ba2506a96d58539325385fd102aca0.jpg', '2013-12-27 02:31:39', 1, 0),
+(9, 'cfce116cc798d8908536829ca4b84a16.jpg', '2013-12-27 02:31:43', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `model`
+-- Table structure for table `models`
 --
 
-CREATE TABLE IF NOT EXISTS `model` (
+CREATE TABLE IF NOT EXISTS `models` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `model_name` varchar(255) DEFAULT NULL,
-  `summary` varchar(255) DEFAULT NULL,
+  `model_name` varchar(45) NOT NULL,
+  `nick_name` varchar(45) DEFAULT NULL,
   `description` text,
   `sex` tinyint(1) DEFAULT '0' COMMENT '0~Nu 1~Nam',
+  `height` varchar(45) DEFAULT NULL,
+  `weight` varchar(45) DEFAULT NULL,
+  `body_measure` varchar(45) DEFAULT NULL COMMENT 'Số đo 3 vòng ',
+  `trousers_size` varchar(45) DEFAULT NULL COMMENT 'size quần ',
+  `shirt_size` varchar(45) DEFAULT NULL COMMENT 'size áo ',
+  `shoes_size` varchar(45) DEFAULT NULL,
+  `photo_shoot_fee` varchar(45) DEFAULT NULL COMMENT 'Phí chụp hình. Ex: 300K/ca ',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `models_files`
+--
+
+CREATE TABLE IF NOT EXISTS `models_files` (
+  `model_id` int(11) NOT NULL,
+  `file_id` int(11) NOT NULL,
+  `is_slide` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`model_id`,`file_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -101,65 +114,49 @@ CREATE TABLE IF NOT EXISTS `news` (
   `summary` text,
   `description` text,
   `is_active` tinyint(1) DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `created_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` int(11) DEFAULT '0',
   `updated_at` datetime DEFAULT NULL,
-  `updated_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `package`
+-- Table structure for table `packages`
 --
 
-CREATE TABLE IF NOT EXISTS `package` (
+CREATE TABLE IF NOT EXISTS `packages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `service_id` int(11) DEFAULT NULL,
-  `package_name` varchar(255) DEFAULT NULL,
-  `summary` varchar(255) DEFAULT NULL,
+  `package_name` varchar(45) DEFAULT NULL,
+  `summary` text,
   `description` text,
-  `price` float DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `photo`
+-- Table structure for table `packages_files`
 --
 
-CREATE TABLE IF NOT EXISTS `photo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `model_id` int(11) DEFAULT NULL,
-  `photo_caption` varchar(255) DEFAULT NULL,
-  `summary` varchar(255) DEFAULT NULL,
-  `description` text,
-  `file_id` int(11) DEFAULT NULL,
-  `is_slide` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `photo_tag`
---
-
-CREATE TABLE IF NOT EXISTS `photo_tag` (
-  `photo_id` int(11) NOT NULL,
-  `tag_id` int(11) NOT NULL,
-  PRIMARY KEY (`photo_id`,`tag_id`)
+CREATE TABLE IF NOT EXISTS `packages_files` (
+  `package_id` int(11) NOT NULL,
+  `file_id` int(11) NOT NULL,
+  `is_slide` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`package_id`,`file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `service`
+-- Table structure for table `services`
 --
 
-CREATE TABLE IF NOT EXISTS `service` (
+CREATE TABLE IF NOT EXISTS `services` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `service_name` varchar(255) DEFAULT NULL,
   `summary` varchar(255) DEFAULT NULL,
@@ -168,24 +165,12 @@ CREATE TABLE IF NOT EXISTS `service` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `service`
+-- Dumping data for table `services`
 --
 
-INSERT INTO `service` (`id`, `service_name`, `summary`, `description`) VALUES
+INSERT INTO `services` (`id`, `service_name`, `summary`, `description`) VALUES
 (1, 'Thời trang ', '', ''),
 (2, 'Ảnh cưới ', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tag`
---
-
-CREATE TABLE IF NOT EXISTS `tag` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tag_name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

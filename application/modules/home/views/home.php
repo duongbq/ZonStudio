@@ -24,10 +24,10 @@ $product_img = is_object($product_image) && file_exists('./uploads/home/' . $pro
     </li>
 
     <li class="nav_product">
-        <a class="product_link" href="<?php echo site_url('san-pham'); ?>" style="background: url(<?php echo $product_img; ?>) no-repeat;">
-            <span>Product</span>
+        <a class="product_link" href="<?php echo site_url('chan-dung'); ?>" style="background: url(<?php echo $product_img; ?>) no-repeat;">
+            <span>Portrait</span>
         </a>
-        <a class="contact_link" href="<?php echo site_url('lien-he'); ?>"><span>Contact</span></a>
+        <a class="contact_link" href="<?php echo site_url('lien-he'); ?>"><span>Contact us</span></a>
     </li>
 
 </ul>

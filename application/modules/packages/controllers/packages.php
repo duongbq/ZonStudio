@@ -32,6 +32,7 @@ class Packages extends Admin_Controller {
     }
 
     function create() {
+        
         $view_data = array();
         if ($this->is_postback()) {
             if (!$this->mdl_packages->run_validation()) {

@@ -23,7 +23,7 @@ class Mdl_Services extends MY_Model
     {
         parent::__construct();
 
-        $this->_table_name = 'service';
+        $this->_table_name = 'services';
         $this->_rules = array(
             'service_name' => array(
                 'field' => 'service_name',
