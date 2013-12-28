@@ -133,18 +133,6 @@ class Mdl_Packages extends MY_Model {
         return $this->mdl_packages_files->get_images_by_package_id($package_id);
     }
 
-    function remove_img($img_id = 0) {
-
-        $this->load->model('file/mdl_file');
-
-        $options = array(
-            'file_id' => $img_id,
-            'folder_name' => $this->_table_name
-        );
-
-        return $this->mdl_file->delete_file($options);
-    }
-
     function delete($package_id) {
         
         $this->load->model('mdl_packages_files');

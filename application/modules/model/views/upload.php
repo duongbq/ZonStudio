@@ -24,7 +24,7 @@
 
         $.ajax({
             type: "post",
-            url: "<?php echo site_url('models/set_model_slider'); ?>",
+            url: "<?php echo site_url('model/set_model_slider'); ?>",
             data: {
                 image_id: $image_id,
                 model_id: $model_id
@@ -44,7 +44,7 @@
 
         $.ajax({
             type: "post",
-            url: "<?php echo site_url('models/remove_model_image'); ?>",
+            url: "<?php echo site_url('model/remove_model_image'); ?>",
             data: {
                 image_id: $image_id,
                 model_id: $model_id
@@ -98,7 +98,7 @@
 
             if (formdata) {
                 $.ajax({
-                    url: '<?php echo site_url('models/upload_model_image/'.  $model_id); ?>',
+                    url: '<?php echo site_url('model/upload_model_image/'.  $model_id); ?>',
                     type: 'POST',
                     data: formdata,
                     processData: false,

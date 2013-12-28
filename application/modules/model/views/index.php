@@ -42,8 +42,8 @@
                                 </li>
                                 
                                 <li>
-                                    <a href="<?php echo site_url('model/upload/' . $model->id); ?>">
-                                        <i class="icon-pencil"></i> Thêm ảnh
+                                    <a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('model/upload/' . $model->id); ?>');">
+                                        <i class="icon-picture"></i> Thêm ảnh slider
                                     </a>
                                 </li>
 

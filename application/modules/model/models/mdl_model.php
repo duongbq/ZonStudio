@@ -113,7 +113,8 @@ class Mdl_model extends MY_Model {
         $data = $this->get_view_data();
         $data['id'] = $data['model_id'];
         unset($data['model_id']);
-        print_r($data);die;
+        print_r($data);
+        die;
         return parent::update($data);
     }
 
@@ -121,13 +122,10 @@ class Mdl_model extends MY_Model {
 
         $this->load->model('file/mdl_file');
 
-        $options = array(
-            'folder_name' => $this->_table_name,
-//            'img_process' => TRUE,
-//            'thumbnail' => TRUE
-        );
         //Upload image file with options above
-        $return_val = $this->mdl_file->upload_file($options);
+        $return_val = $this->mdl_file->upload_file(array(
+            'folder_name' => $this->_table_name,
+        ));
         if (is_numeric($return_val) && $return_val > 0) {
 
             $this->load->model('photos/mdl_photo');
@@ -158,42 +156,35 @@ class Mdl_model extends MY_Model {
 
         $this->load->model('mdl_models_files');
 
-        return $this->mdl_models_files->get_images_by_model_id($package_id);
+        return $this->mdl_models_files->get_images_by_model_id($model_id);
     }
 
-    function remove_img($img_id, $photo_id) {
+    function upload_images_for_model($model_id = 0) {
 
         $this->load->model('file/mdl_file');
+
         $options = array(
-            'file_id' => $img_id,
-            'folder_name' => $this->_table_name
+            'folder_name' => $this->_table_name,
         );
-        $this->mdl_file->delete_file($options);
+        //Upload image file with options above
+        $return_val = $this->mdl_file->upload_file($options);
+        if (is_numeric($return_val) && $return_val > 0) {
 
-        $this->load->model('photos/mdl_photo');
+            $this->mdl_file->update(array('id' => $return_val, 'uploaded_date' => date('Y-m-d h:i:s')));
+            $this->load->model('mdl_models_files');
+            $this->mdl_models_files->add_new(array('model_id' => $model_id, 'file_id' => $return_val));
+        }
 
-        $this->mdl_photo->delete($photo_id);
+        return $return_val;
     }
 
     function delete($model_id) {
-
-        $this->load->model('photos/mdl_photo');
-        $this->load->model('file/mdl_file');
-
-        $images = $this->get_all_photos_by_model_id($model_id);
+        
+        $this->load->model('mdl_models_files');
+        $images = $this->get_all_images_by_model_id($model_id);
         foreach ($images as $image) {
-
-            $options = array(
-                'file_id' => $image->file_id,
-                'photo_id' => $image->photo_id,
-                'folder_name' => $this->_table_name
-            );
-
-            $this->mdl_file->delete_file($options);
-
-            $this->mdl_photo->delete($image->photo_id);
+            $this->mdl_models_files->remove_model_image($image->id, $model_id);
         }
-
         parent::delete($model_id);
     }
 
