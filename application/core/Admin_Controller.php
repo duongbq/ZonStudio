@@ -24,8 +24,8 @@ class Admin_Controller extends Base_Controller {
         if (!$this->csession->get('user_id')) {
             redirect('sessions/login');
         }
-        
-       $this->layout->title('Trang quản trị - Zon Studio');
+
+        $this->layout->title('Trang quản trị - Zon Studio');
         $this->layout->render_layout('layouts/admin/layout');
     }
 

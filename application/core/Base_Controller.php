@@ -21,9 +21,6 @@ class Base_Controller extends MX_Controller {
     public function __construct() {
         parent::__construct();
 
-//        if (defined('ENVIRONMENT') && ENVIRONMENT == 'development'){
-//            $this->output->enable_profiler();
-//        }
         
     }
     
