@@ -37,7 +37,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tin tức<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Danh sách tin đã đăng</a></li>
-                        <li><a href="#">Đăng tin</a></li>
+                        <li><a href="<?php echo site_url('news/create')?>">Đăng tin</a></li>
                     </ul>
                 </li>
 
