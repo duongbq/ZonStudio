@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 27, 2013 at 05:43 PM
+-- Generation Time: Dec 30, 2013 at 03:23 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `is_home_display` tinyint(1) DEFAULT '0',
   `home_display_index` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 -- --------------------------------------------------------
 
@@ -78,14 +78,7 @@ CREATE TABLE IF NOT EXISTS `models` (
   `shoes_size` varchar(45) DEFAULT NULL,
   `photo_shoot_fee` varchar(45) DEFAULT NULL COMMENT 'Phí chụp hình. Ex: 300K/ca ',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `models`
---
-
-INSERT INTO `models` (`id`, `model_name`, `nick_name`, `description`, `sex`, `height`, `weight`, `body_measure`, `trousers_size`, `shirt_size`, `shoes_size`, `photo_shoot_fee`) VALUES
-(1, 'Thúy An', '', '', 0, '', '', '', '', '', '', '');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -133,16 +126,7 @@ CREATE TABLE IF NOT EXISTS `packages` (
   `description` text,
   `price` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
-
---
--- Dumping data for table `packages`
---
-
-INSERT INTO `packages` (`id`, `service_id`, `package_name`, `summary`, `description`, `price`) VALUES
-(1, 1, 'Gold package ', '', '', ''),
-(5, 1, 'Men Fashion', '', '', ''),
-(6, 1, 'Teen fashion', 'Teen fashionTeen fashionTeen fashion', 'Teen fashionTeen fashionTeen fashion', 'Free');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -155,6 +139,30 @@ CREATE TABLE IF NOT EXISTS `packages_files` (
   `file_id` int(11) NOT NULL,
   `is_slide` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`package_id`,`file_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portraits`
+--
+
+CREATE TABLE IF NOT EXISTS `portraits` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `portrait_name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `portraits_files`
+--
+
+CREATE TABLE IF NOT EXISTS `portraits_files` (
+  `portrait_id` int(11) NOT NULL,
+  `file_id` int(11) NOT NULL,
+  PRIMARY KEY (`portrait_id`,`file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
