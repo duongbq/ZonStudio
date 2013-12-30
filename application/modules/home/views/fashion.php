@@ -41,7 +41,7 @@
                     <div class="image">
 
                         <a href="#">
-                            <img src="/uploads/package/<?php echo $image->file_name; ?>" title="<?php echo $image->package_name; ?>" alt="<?php echo $image->package_name; ?>" />
+                            <img src="/uploads/packages/<?php echo $image->file_name; ?>" />
                         </a>
                     </div>
                     <div class="data">
@@ -67,7 +67,7 @@
                 <ul>
                     <li><span><?php echo $package->package_name; ?></span></li>
                     <li><?php echo $package->summary; ?> <a href="#">Xem thêm</a></li>
-                    <li>Giá: <span><?php echo number_format($package->price); ?> đ</li>
+                    <li>Giá: <span><?php echo $package->price; ?></li>
                 </ul>
             </div>
         </div>

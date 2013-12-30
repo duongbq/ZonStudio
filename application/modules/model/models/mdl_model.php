@@ -35,7 +35,28 @@ class Mdl_model extends MY_Model {
         $this->db->order_by('model_name');
         return parent::get_all();
     }
+    
+    function get_models_by_sex($sex) {
+        $this->db->order_by('model_name');
+        $this->db->where('sex', $sex);
+        return $this->db->get($this->_table_name)->result();        
+    }
+    
+    function get_model_for_home_slider($options = array()) {
 
+        if (isset($options['rand'])) {
+            $this->db->order_by('RAND()');
+        } elseif (isset($options['model_id'])) {
+            $this->db->where('id', $options['model_id']);
+        }
+
+        $this->db->limit(1);
+
+        $model = $this->db->get($this->_table_name)->row();
+
+        return $model;
+    }
+    
     function get_view_data($model_id = NULL) {
 
         $model_name = NULL;
@@ -67,6 +88,7 @@ class Mdl_model extends MY_Model {
             $shirt_size = $this->input->post('shirt_size');
             $shoes_size = $this->input->post('shoes_size');
             $photo_shoot_fee = $this->input->post('photo_shoot_fee');
+            $model_id = $this->input->post('model_id');
         } else {
 
             if ($model_id > 0) {
@@ -84,6 +106,7 @@ class Mdl_model extends MY_Model {
                 $shirt_size = $model->shirt_size;
                 $shoes_size = $model->shoes_size;
                 $photo_shoot_fee = $model->photo_shoot_fee;
+                $model_id = $model->id;
             }
         }
 
@@ -113,48 +136,12 @@ class Mdl_model extends MY_Model {
         $data = $this->get_view_data();
         $data['id'] = $data['model_id'];
         unset($data['model_id']);
-        print_r($data);
-        die;
         return parent::update($data);
-    }
-
-    function upload_photos_for_model($model_id = 0) {
-
-        $this->load->model('file/mdl_file');
-
-        //Upload image file with options above
-        $return_val = $this->mdl_file->upload_file(array(
-            'folder_name' => $this->_table_name,
-        ));
-        if (is_numeric($return_val) && $return_val > 0) {
-
-            $this->load->model('photos/mdl_photo');
-
-            $photo_data = array(
-                'model_id' => $model_id,
-                'photo_caption' => $this->input->post('photo_caption'),
-                'summary' => $this->input->post('summary'),
-                'description' => $this->input->post('description'),
-                'file_id' => $return_val,
-                'is_slide' => $this->input->post('is_slide'),
-            );
-
-            $this->mdl_photo->add_new($photo_data);
-
-            $file_data = array(
-                'id' => $return_val,
-                'uploaded_date' => date('Y-m-d H:i:s'),
-            );
-
-            $this->mdl_file->update($file_data);
-        }
-
-        return $return_val;
     }
 
     function get_all_images_by_model_id($model_id) {
 
-        $this->load->model('mdl_models_files');
+        $this->load->model('model/mdl_models_files');
 
         return $this->mdl_models_files->get_images_by_model_id($model_id);
     }

@@ -17,12 +17,12 @@ class MY_Model extends CI_Model {
     private function get_join_condition() {
         return $this->_join_table_name . '.id' . '=' . $this->_table_name . '.' . $this->_foreign_key;
     }
-    
+
     function join($option = '') {
-        
+
         $this->db->join($this->_join_table_name, $this->get_join_condition(), $option);
     }
-    
+
     function select($columns = array()) {
         $select = '';
         foreach ($columns as $column) {
@@ -49,6 +49,21 @@ class MY_Model extends CI_Model {
     }
 
     function get_all() {
+        return $this->db->get($this->_table_name)->result();
+    }
+
+    private function _set_where_conditions($options = array()) {
+        
+        while ($value = current($options)) {
+            if(isset($options[key($options)])){
+                $this->db->where(key($options), $value);
+            }
+            next($options);
+        }
+    }
+
+    function get_all_with_conditions($options = array()) {
+        $this->_set_where_conditions($options);
         return $this->db->get($this->_table_name)->result();
     }
 
@@ -85,7 +100,7 @@ class MY_Model extends CI_Model {
         }
         return TRUE;
     }
-    
+
     function is_postback() {
         return empty($_POST) ? FALSE : TRUE;
     }

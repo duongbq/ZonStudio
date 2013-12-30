@@ -27,15 +27,13 @@ class Fashion extends Zon_Controller {
         
         parent::__construct();
         
-        $this->load->model('mdl_home');
-        
-        
+        $this->load->model('packages/mdl_packages');
     }
 
     public function index() {
         
-        $images = $this->mdl_home->get_all_images_by_service_id(1);
-        $packages = $this->mdl_home->get_all_packages_by_service_id(1);
+        $images = $this->mdl_packages->get_all_images_by_service_id(1);
+        $packages = $this->mdl_packages->get_all_packages_by_service_id(1);
         $view_data = array('images' => $images, 'packages' => $packages);
         $this->layout->view('fashion', $view_data);
     }

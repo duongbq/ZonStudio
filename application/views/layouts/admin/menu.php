@@ -26,10 +26,10 @@
                 </li>
                 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chân dung<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Danh sách sản phẩm</a></li>
-                        <li><a href="#">Thêm sản phẩm</a></li>
+                        <li><a href="#">Danh sách</a></li>
+                        <li><a href="#">Chân dung mới</a></li>
                     </ul>
                 </li>
                 

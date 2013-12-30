@@ -25,13 +25,13 @@ class Wedding extends Zon_Controller {
         
         parent::__construct();
         
-        $this->load->model('mdl_home');
+        $this->load->model('packages/mdl_packages');
     }
 
     public function index() {
         
-        $images = $this->mdl_home->get_all_images_by_service_id(2);
-        $packages = $this->mdl_home->get_all_packages_by_service_id(2);
+        $images = $this->mdl_packages->get_all_images_by_service_id(2);
+        $packages = $this->mdl_packages->get_all_packages_by_service_id(2);
         $view_data = array('images' => $images, 'packages' => $packages);
         $this->layout->view('wedding', $view_data);
     }

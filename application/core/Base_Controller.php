@@ -18,31 +18,12 @@ if (!defined('BASEPATH'))
 
 class Base_Controller extends MX_Controller {
 
-    private $_libraries = array(
-        'csession',
-        'form_validation',
-        'pagination',
-        'encrypt',
-        'layout'
-    );
-    private $_helpers = array(
-        'html',
-        'form',
-        'url',
-        'string',
-        'text',
-        'language',
-        'security',
-        'paging',
-        'friendly_url'
-    );
-
     public function __construct() {
         parent::__construct();
 
-//        $this->load->library($this->_libraries);
-//        $this->load->helper($this->_helpers);
-        
+//        if (defined('ENVIRONMENT') && ENVIRONMENT == 'development'){
+//            $this->output->enable_profiler();
+//        }
         
     }
     

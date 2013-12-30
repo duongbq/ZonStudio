@@ -38,7 +38,7 @@
 
         <?php foreach ($images_for_slider_model as $image): ?>
             <div class="slideshow_item">
-                <div class="image"><a href="#"><img src="/uploads/model/<?php echo $image->file_name; ?>" /></a></div>
+                <div class="image"><a href="#"><img src="/uploads/models/<?php echo $image->file_name; ?>" /></a></div>
             </div>
         <?php endforeach; ?>
 

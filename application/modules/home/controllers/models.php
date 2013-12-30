@@ -25,18 +25,20 @@ class Models extends Zon_Controller {
 
         parent::__construct();
 
-        $this->load->model('mdl_home');
-//        $this->output->enable_profiler();
+        $this->load->model('model/mdl_model');
+        
     }
 
     public function index() {
-
-        $female_models = $this->mdl_home->get_models(0);
-        $male_models = $this->mdl_home->get_models(1);
-
-        $model_for_slider = $this->mdl_home->get_model_for_slider(array('rand' => TRUE));
-        $images_for_slider_model = $this->mdl_home->get_images_for_slider_model(is_object($model_for_slider) ? $model_for_slider->id : 0);
-
+        
+        $female_models = $this->mdl_model->get_models_by_sex(0);
+//        print_r($female_models);die;
+        $male_models = $this->mdl_model->get_models_by_sex(1);
+//        print_r($male_models);die;
+        $model_for_slider = $this->mdl_model->get_model_for_home_slider(array('rand' => TRUE));
+//        print_r($model_for_slider);die;
+        $images_for_slider_model = $this->mdl_model->get_all_images_by_model_id(is_object($model_for_slider) ? $model_for_slider->id : 0);
+//        print_r($images_for_slider_model);die;
         $view_data = array(
             'female_models' => $female_models,
             'male_models' => $male_models,
@@ -55,8 +57,9 @@ class Models extends Zon_Controller {
         if ($this->is_postback() && $this->input->is_ajax_request()) {
 
             $model_id = $this->input->post('model_id');
-            $images_for_slider_model = $this->mdl_home->get_images_for_slider_model($model_id);
-            $model_for_slider = $this->mdl_home->get_model_for_slider(array('model_id' => $model_id));
+            
+            $images_for_slider_model = $this->mdl_model->get_all_images_by_model_id($model_id);
+            $model_for_slider = $this->mdl_model->get_model_for_home_slider(array('model_id' => $model_id));
 
             $view_data = array(
                 'images_for_slider_model' => $images_for_slider_model,

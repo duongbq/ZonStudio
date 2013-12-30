@@ -62,6 +62,7 @@ class Mdl_Packages extends MY_Model {
             $summary = $this->input->post('summary');
             $description = $this->input->post('description');
             $price = $this->input->post('price');
+            $package_id = $this->input->post('package_id');
         } else {
 
             if ($package_id > 0) {
@@ -71,10 +72,12 @@ class Mdl_Packages extends MY_Model {
                 $summary = $package->summary;
                 $description = $package->description;
                 $price = $package->price;
+                $package_id = $package->id;
             }
         }
 
         $view_data['services_combo'] = $this->mdl_services->get_combo(array('combo_name' => 'service', 'service' => $service));
+        $view_data['service_id'] = $service;
         $view_data['package_name'] = $package_name;
         $view_data['summary'] = $summary;
         $view_data['description'] = $description;
@@ -85,25 +88,17 @@ class Mdl_Packages extends MY_Model {
     }
 
     function add_new_package() {
-        $data = array(
-            'service_id' => $this->input->post('service'),
-            'package_name' => $this->input->post('package_name'),
-            'summary' => $this->input->post('summary'),
-            'description' => $this->input->post('description'),
-            'price' => $this->input->post('price')
-        );
+        $data = $this->get_view_data();
+        unset($data['services_combo']);
+        unset($data['package_id']);
         return parent::add_new($data);
     }
 
     function update_package() {
-        $data = array(
-            'service_id' => $this->input->post('service'),
-            'package_name' => $this->input->post('package_name'),
-            'summary' => $this->input->post('summary'),
-            'description' => $this->input->post('description'),
-            'price' => $this->input->post('price'),
-            'id' => $this->input->post('package_id')
-        );
+        $data = $this->get_view_data();
+        $data['id'] = $data['package_id'];
+        unset($data['services_combo']);
+        unset($data['package_id']);
         return parent::update($data);
     }
 
@@ -143,4 +138,20 @@ class Mdl_Packages extends MY_Model {
         parent::delete($package_id);
     }
 
+    function get_all_images_by_service_id($service_id) {
+
+//        $this->db->select('packages.*, file.file_name');
+        $this->db->join('packages_files', 'packages_files.package_id = packages.id', 'left');
+        $this->db->join('files', 'files.id = packages_files.file_id', 'left');
+
+        $this->db->where('packages_files.is_slide', 1);
+        $this->db->where('packages.service_id', $service_id);
+
+        return $this->db->get($this->_table_name)->result();
+    }
+    
+    function get_all_packages_by_service_id($service_id) {
+
+        return parent::get_all_with_conditions(array('service_id' => $service_id));
+    }
 }

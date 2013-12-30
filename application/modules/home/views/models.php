@@ -14,8 +14,7 @@
             <h3>Nữ</h3>
             <ul>
                 <?php foreach ($female_models as $female_model): ?>
-                    <!--<li class="active"><a href="#">Thúy An</a></li>-->
-                    <li><a href="#" onclick="display_model(<?php echo $female_model->id; ?>)"><?php echo $female_model->model_name; ?></a></li>
+                    <li><a href="javascript:void(0);" onclick="display_model(<?php echo $female_model->id; ?>)"><?php echo $female_model->model_name; ?></a></li>
                 <?php endforeach; ?>
                 <li class="last" ><a href="#" class="model_more"></a></li>
             </ul>
@@ -26,7 +25,7 @@
             <ul>
                 <?php foreach ($male_models as $male_model): ?>
                     <!--<li class="active"><a href="#">Thúy An</a></li>-->
-                    <li><a href="#" onclick="display_model(<?php echo $male_model->id; ?>)"><?php echo $male_model->model_name; ?></a></li>
+                    <li><a href="javascript:void(0);" onclick="display_model(<?php echo $male_model->id; ?>)"><?php echo $male_model->model_name; ?></a></li>
                 <?php endforeach; ?>
                 <li class="last" ><a href="#" class="model_more"></a></li>
             </ul>
@@ -76,7 +75,7 @@
 
                 <?php foreach ($images_for_slider_model as $image): ?>
                     <div class="slideshow_item">
-                        <div class="image"><a href="#"><img src="/uploads/model/<?php echo $image->file_name; ?>" /></a></div>
+                        <div class="image"><a href="#"><img src="/uploads/models/<?php echo $image->file_name; ?>" /></a></div>
                     </div>
                 <?php endforeach; ?>
 
