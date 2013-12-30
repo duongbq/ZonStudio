@@ -2,7 +2,7 @@
 <div class="wrapper address">
     <div class="frame_address">
         <p><span>Zon Studio</span></p>
-        <p>Phone: 0988.530.520</p>
+        <p>Phone: 0904.530.520</p>
         <p>Địa chỉ: Số 6 ngõ 54 An Dương, Hà Nội</p>
         <p>Email: <a href="mailto:zonstudio368@gmail.com?subject=To Zon Studio">zonstudio368@gmail.com</a></p>
     </div>

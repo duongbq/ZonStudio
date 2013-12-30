@@ -10,7 +10,8 @@ class MY_Model extends CI_Model {
     protected $_rules = array();
     protected $_last_message;
     protected $pagination_link = NULL;
-                function __construct() {
+
+    function __construct() {
         parent::__construct();
     }
 
@@ -47,7 +48,7 @@ class MY_Model extends CI_Model {
         $this->db->limit($config['limit'], $config['offset']);
         return $this->db->get($this->_table_name)->result();
     }
-    
+
     function get_pagination_link() {
         return $this->pagination_link;
     }
