@@ -9,8 +9,8 @@ class MY_Model extends CI_Model {
     protected $_where = array();
     protected $_rules = array();
     protected $_last_message;
-
-    function __construct() {
+    protected $pagination_link = NULL;
+                function __construct() {
         parent::__construct();
     }
 
@@ -41,11 +41,15 @@ class MY_Model extends CI_Model {
 
     function get_all_with_paging($options = array()) {
         $total_row = $this->db->count_all($this->_table_name);
-        $config = get_config_paging(array('page' => $options['page'], 'total_rows' => $total_row));
+        $config = get_config_paging(array('page' => $options['page'], 'per_page' => $options['per_page'], 'total_rows' => $total_row));
         $this->pagination->initialize($config);
-        $pagination_link = $this->pagination->create_ajax_links();
+        $this->pagination_link = $this->pagination->create_ajax_links();
         $this->db->limit($config['limit'], $config['offset']);
-        return array($this->db->get($this->_table_name)->result(), $pagination_link);
+        return $this->db->get($this->_table_name)->result();
+    }
+    
+    function get_pagination_link() {
+        return $this->pagination_link;
     }
 
     function get_all() {
@@ -53,9 +57,9 @@ class MY_Model extends CI_Model {
     }
 
     private function _set_where_conditions($options = array()) {
-        
+
         while ($value = current($options)) {
-            if(isset($options[key($options)])){
+            if (isset($options[key($options)])) {
                 $this->db->where(key($options), $value);
             }
             next($options);

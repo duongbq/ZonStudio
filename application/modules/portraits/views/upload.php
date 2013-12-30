@@ -1,6 +1,6 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><?php echo $model_name; ?></h3>
+    <h3 id="myModalLabel"><?php echo $portrait_name; ?></h3>
 </div>
 
 <div class="modal-body">
@@ -20,34 +20,17 @@
 
 <script>
 
-    function set_model_slider($image_id, $model_id) {
-
-        $.ajax({
-            type: "post",
-            url: "<?php echo site_url('model/set_model_slider'); ?>",
-            data: {
-                image_id: $image_id,
-                model_id: $model_id
-            },
-            success: function(response) {
-
-                $('#list').html(response);
-                
-            }
-        });
-    }
-
-    function remove_image($image_id, $model_id) {
+    function remove_image($image_id, $portrait_id) {
 
         if (!confirm('Bạn có thực sự muốn xóa ảnh này không?'))
             return;
 
         $.ajax({
             type: "post",
-            url: "<?php echo site_url('model/remove_model_image'); ?>",
+            url: "<?php echo site_url('portraits/remove_portrait_image'); ?>",
             data: {
                 image_id: $image_id,
-                model_id: $model_id
+                portrait_id: $portrait_id
         
             },
             success: function(response) {
@@ -98,7 +81,7 @@
 
             if (formdata) {
                 $.ajax({
-                    url: '<?php echo site_url('model/upload_model_image/'.  $model_id); ?>',
+                    url: '<?php echo site_url('portraits/upload_portrait_image/'.  $portrait_id); ?>',
                     type: 'POST',
                     data: formdata,
                     processData: false,

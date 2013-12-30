@@ -49,7 +49,10 @@ $route['^zudio$'] = "dashboard";
 
 $route['^thoi-trang$'] = "home/fashion";
 $route['^anh-cuoi$'] = "home/wedding";
-$route['^chan-dung$'] = "home/portrait";
+
+$route['^chan-dung$'] = 'home/portrait/index/1';
+$route['^chan-dung/trang-(\d+)$'] = 'home/portrait/index/$1';
+
 $route['^nguoi-mau$'] = "home/models";
 $route['^lien-he$'] = "home/contact";
 /* End of file routes.php */
