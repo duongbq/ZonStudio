@@ -1,4 +1,4 @@
 RewriteEngine on
 RewriteRule ^$ /index.php?/$1 [L]
-RewriteCond $1 !^(index\.php|assets|uploads|robots\.txt)
+RewriteCond $1 !^(index\.php?|assets|ckeditor|kcfinder|uploads|robots\.txt)
 RewriteRule ^(.*)$ /index.php?/$1 [L]

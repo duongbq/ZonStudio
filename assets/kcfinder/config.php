@@ -18,11 +18,11 @@
 $_CONFIG = array(
     'disabled' => isset($_SESSION['default']['user_id']) && !is_null($_SESSION['default']['user_id']) ? false : true,
     'denyZipDownload' => false,
-    'denyUpdateCheck' => false,
+    'denyUpdateCheck' => true,
     'denyExtensionRename' => false,
     'theme' => "oxygen",
-    'uploadURL' => "upload",
-    'uploadDir' => "",
+    'uploadURL' => "/uploads/ckfinder",
+    'uploadDir' => "./uploads/ckfinder",
     'dirPerms' => 0755,
     'filePerms' => 0644,
     'access' => array(
