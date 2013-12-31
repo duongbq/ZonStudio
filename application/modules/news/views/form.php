@@ -62,20 +62,10 @@
 <script src="/assets/ckeditor/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('summary', {
-        filebrowserBrowseUrl: '/assets/kcfinder/browse.php?type=files',
-        filebrowserImageBrowseUrl: '/assets/kcfinder/browse.php?type=images',
-        filebrowserFlashBrowseUrl: '/assets/kcfinder/browse.php?type=flash',
-        filebrowserUploadUrl: '/assets/kcfinder/upload.php?type=files',
-        filebrowserImageUploadUrl: '/assets/kcfinder/upload.php?type=images',
-        filebrowserFlashUploadUrl: '/assets/kcfinder/upload.php?type=flash'
+        
     });
     CKEDITOR.replace('description', {
-        filebrowserBrowseUrl: '/assets/kcfinder/browse.php?type=files',
-        filebrowserImageBrowseUrl: '/assets/kcfinder/browse.php?type=images',
-        filebrowserFlashBrowseUrl: '/assets/kcfinder/browse.php?type=flash',
-        filebrowserUploadUrl: '/assets/kcfinder/upload.php?type=files',
-        filebrowserImageUploadUrl: '/assets/kcfinder/upload.php?type=images',
-        filebrowserFlashUploadUrl: '/assets/kcfinder/upload.php?type=flash'
+        
     });
     
 </script>

@@ -36,7 +36,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tin tức<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Danh sách tin đã đăng</a></li>
+                        <li><a href="<?php echo site_url('news/index')?>">Danh sách tin đã đăng</a></li>
                         <li><a href="<?php echo site_url('news/create')?>">Đăng tin</a></li>
                     </ul>
                 </li>
@@ -46,7 +46,9 @@
 
             <ul class="nav pull-right settings">
                 <li>
-                    <a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('sessions/profile'); ?>');"><?php echo $this->csession->get('full_name'); ?></a>
+                    <a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('sessions/profile'); ?>');">
+                        <?php echo $_SESSION['default']['full_name'] ; ?>
+                    </a>
                 </li>
                 <li><a href="<?php echo site_url('settings'); ?>" class="tip icon dropdown-toggle" data-original-title="Thiết lập" data-placement="bottom"><i class="icon-cog"></i></a></li>
                 <li class="divider-vertical"></li>

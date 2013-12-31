@@ -84,7 +84,8 @@ $autoload['helper'] = array(
     'language',
     'security',
     'paging',
-    'friendly_url'
+    'friendly_url',
+    'date_time'
 );
 
 

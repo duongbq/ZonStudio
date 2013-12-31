@@ -75,5 +75,28 @@ class Mdl_news extends MY_Model {
 
         return $view_data;
     }
+    
+    function post_news() {
+        $data = array(
+            'title' => $this->input->post('title'),
+            'summary' => $this->input->post('summary'),
+            'description' => $this->input->post('description'),
+            'is_active' => $this->input->post('is_active'),
+        );
+        
+        parent::add_new($data);
+    }
+    
+    function update_news() {
+        $data = array(
+            'title' => $this->input->post('title'),
+            'summary' => $this->input->post('summary'),
+            'description' => $this->input->post('description'),
+            'is_active' => $this->input->post('is_active'),
+            'id' => $this->input->post('news_id'),
+        );
+        
+        parent::update($data);
+    }
 
 }

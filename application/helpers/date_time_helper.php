@@ -104,3 +104,29 @@ function my_date_diff($old_date, $new_date)
     $offset = strtotime($new_date . " UTC") - strtotime($old_date . " UTC");
     return (int)($offset / 60 / 60 / 24);
 }
+
+function get_vndate_string($input) {
+    if (empty($input))
+        return $input;
+
+    $today = strtotime(date('Ymd H:i:s'));
+    if (!is_numeric($input))
+        $input = strtotime($input);
+    // Nếu tin được đăng trong 3 ngày gần nhất thì hiện màu đỏ
+    if (date("Ymd", $input) >= date("Ymd", $today - 60 * 60 * 24 * 2)) {
+        if (date("Ymd", $input) == date("Ymd", $today))
+            return '<span style="color: red;">' . 'Hôm nay lúc '. date("H:i", $input) . '</span>';
+        else if (date("Ymd", $input) == date("Ymd", $today - 60 * 60 * 24))
+            return '<span style="color: green;">'. 'Hôm qua' .'</span>';
+        else
+            return '<span style="color: blue;">'. 'Hôm kia' .'</span>';
+    }
+    // Nếu tin đăng trong năm hiện tại thì hiện tháng và ngày
+    if (date("Y", $input) == date("Y", $today)) {
+        return date("d/m", $input);
+    }
+    // Các năm khác thì hiện đầy đủ
+    else {
+        return date("d/m/y", $input);
+    }
+}

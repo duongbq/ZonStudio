@@ -58,15 +58,15 @@
 
 <!--=== Service ===-->
 <div class="wrapper service">
-    <?php foreach ($packages as $index => $package): ?>
+    <?php foreach ($packages as $index => $news): ?>
         <?php $i = $index + 1; ?>
 
         <div class="one_third <?php echo $i > 1 && $i % 3 == 0 ? 'service_last' : ''; ?>">
             <div class="infofield">
                 <ul>
-                    <li><span><?php echo $package->package_name; ?></span></li>
-                    <li><?php echo $package->summary; ?> <a href="#">Xem thêm</a></li>
-                    <li>Giá: <span><?php echo $package->price; ?></span></li>
+                    <li><span><?php echo $news->package_name; ?></span></li>
+                    <li><?php echo $news->summary; ?> <a href="#">Xem thêm</a></li>
+                    <li>Giá: <span><?php echo $news->price; ?></span></li>
                 </ul>
             </div>
         </div>

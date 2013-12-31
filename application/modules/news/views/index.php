@@ -1,8 +1,8 @@
 <div class="headerbar">
-    <h1>Gói dịch vụ</h1>
+    <h1>Tin tức</h1>
 
     <div class="pull-right">
-        <a class="btn btn-primary" href="<?php echo site_url('packages/create'); ?>"><i class="icon-plus icon-white"></i> Tạo gói dịch vụ mới</a>
+        <a class="btn btn-primary" href="<?php echo site_url('news/create'); ?>"><i class="icon-plus icon-white"></i> Đăng tin mới</a>
     </div>
 
 </div>
@@ -15,35 +15,33 @@
 
         <thead>
             <tr>
-                <th>Tên dịch vụ</th>
-                <th>Tên gói dịch vụ</th>
-                <th>Báo giá</th>
+                <th>Tiêu đề</th>
+                <th>Ngày đăng tin</th>
                 <th>Tùy chọn</th>
             </tr>
         </thead>
 
         <tbody>
-            <?php foreach ($packages as $news) { ?>
+            <?php foreach ($news as $article) { ?>
                 <tr>
-                    <td><?php echo $news->service_name; ?></td>
-                    <td><?php echo $news->package_name; ?></td>
-                    <td><?php echo $news->price; ?></td>
+                    <td><?php echo $article->title; ?></td>
+                    <td><?php echo get_vndate_string($article->created_at); ?></td>
                     <td>
                         <div class="options btn-group">
                             <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cog"></i> <?php echo lang('options'); ?></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="<?php echo site_url('packages/edit/' . $news->id); ?>">
+                                    <a class="fancy-iframe" href="<?php echo site_url('news/detail/' . $article->id); ?>">
+                                        <i class="icon-fullscreen"></i> Xem chi tiết
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url('news/edit/' . $article->id); ?>">
                                         <i class="icon-pencil"></i> Sửa thông tin
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#modal-placeholder" data-toggle="modal" onclick="load_modal('<?php echo site_url('packages/upload/' . $news->id); ?>');">
-                                        <i class="icon-picture"></i> Thêm ảnh slider
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo site_url('packages/delete/' . $news->id); ?>" onclick="return confirm('Chắc chắn xóa?');">
+                                    <a href="<?php echo site_url('news/delete/' . $article->id); ?>" onclick="return confirm('Chắc chắn xóa tin này?');">
                                         <i class="icon-trash"></i> Xóa
                                     </a>
                                 </li>
