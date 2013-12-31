@@ -22,17 +22,17 @@ class Mdl_news extends MY_Model {
             'title' => array(
                 'field' => 'title',
                 'label' => 'Tiêu đề',
-                'rules' => 'required'
+                'rules' => 'trim|required|min_length[12]|max_length[120]'
             ),
             'summary' => array(
                 'field' => 'summary',
                 'label' => 'Tóm tắt nội dung',
-                'rules' => 'required'
+                'rules' => 'trim|required|min_length[12]|max_length[500]'
             ),
             'description' => array(
                 'field' => 'description',
                 'label' => 'Nội dung chi tiết',
-                'rules' => 'required'
+                'rules' => 'trim|required|min_length[12]'
             ),
         );
     }
