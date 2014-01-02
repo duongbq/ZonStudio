@@ -11,10 +11,10 @@
  *
  * @author duongbq
  */
-class Error extends CI_Controller {
+class Error extends MX_Controller {
 
-    public function __construct() {
-        show_404();
+    function index() {
+        $this->load->view('common/under_construction');
     }
 
 }

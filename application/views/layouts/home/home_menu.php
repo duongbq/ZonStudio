@@ -10,7 +10,7 @@
             </ul>
         </li>-->
         <li><a href="<?php echo site_url('nguoi-mau');?>">Người mẫu</a></li>
-        <li><a href="#">Tin tức</a></li>
+        <li><a href="<?php echo site_url('tin-tuc');?>">Tin tức</a></li>
         <li class="last-child"><a href="<?php echo site_url('lien-he');?>" title="Liên hệ">Liên hệ</a></li>
     </ul>
 </nav>
