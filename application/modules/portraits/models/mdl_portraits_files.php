@@ -27,7 +27,7 @@ class mdl_portraits_files extends MY_Model {
         $this->db->order_by('uploaded_date');
         return parent::get_all();
     }
-
+    
     function remove_portrait_image($image_id, $portrait_id) {
 
         $this->db->where('portrait_id', $portrait_id);

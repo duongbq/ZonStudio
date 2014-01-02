@@ -1,3 +1,6 @@
+<?php echo link_tag('assets/fancybox/jquery.fancybox-1.3.4.css'); ?>
+<script src="<?php echo base_url(); ?>assets/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script src="<?php echo base_url(); ?>assets/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script type="text/javascript">
     $(function() {
         $('#slideshow_2').cycle({
@@ -45,8 +48,8 @@
                         </a>
                     </div>
                     <div class="data">
-                        <h4><a href="#"><?php //echo $package->package_name;     ?></a></h4>
-                        <p><?php //echo $image->summary;    ?></p>
+                        <h4><a href="#"><?php //echo $package->package_name;        ?></a></h4>
+                        <p><?php //echo $image->summary;       ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -65,12 +68,41 @@
                 <ul>
                     <li><span><?php echo $portrait->portrait_name; ?></span></li>
                     <?php
-                    $img_src = isset($portraits_files_arr[$portrait->id]) ? '/uploads/portraits/' . $files_arr[$portraits_files_arr[$portrait->id]] : '/assets/images/noimage.png';
+                    $img = get_displayed_image_by_portrait_id($portrait->id);
+                    if (is_object($img)) {
+                        $img_src = '/uploads/portraits/' . $img->file_name;
+                    } else {
+                        $img_src = '/assets/images/noimage.png';
+                    }
+
+
+                    $fancy_images = get_fancy_images_by_portrait_id($portrait->id);
                     ?>
-                    <li><img src="<?php echo $img_src; ?>"/></li>
+                    <li>
+                        <a rel="fancy_group_<?php echo $portrait->id; ?>" href="<?php echo $img_src; ?>" title="<?php echo $portrait->portrait_name; ?>">
+                            <img src="<?php echo $img_src; ?>" class="portrait" />
+                        </a>
+                    </li>
+                    <?php foreach ($fancy_images as $fancy_image): ?>
+                        <a rel="fancy_group_<?php echo $portrait->id; ?>" href="<?php echo $img_src; ?>" title="<?php echo $portrait->portrait_name; ?>"></a>
+                    <?php endforeach; ?>
                 </ul>
             </div>
         </div>
+    
+        <script>
+            $(function() {
+                $("a[rel=fancy_group_<?php echo $portrait->id; ?>]").fancybox({
+                    'transitionIn': 'none',
+                    'transitionOut': 'none',
+                    'titlePosition': 'over',
+                    'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
+                        return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                    }
+                });
+
+            });
+        </script>
 
     <?php endforeach; ?>
 

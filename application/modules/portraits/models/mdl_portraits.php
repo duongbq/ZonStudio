@@ -34,7 +34,7 @@ class Mdl_portraits extends MY_Model {
 
         return $this->db->get($this->_table_name)->result();
     }
-
+    
     function get_view_data($portrait_id = NULL) {
 
         $portrait_name = NULL;
@@ -77,7 +77,7 @@ class Mdl_portraits extends MY_Model {
 
     function get_all_images_by_portrait_id($portrait_id) {
 
-        $this->load->model('mdl_portraits_files');
+        $this->load->model('portraits/mdl_portraits_files');
 
         return $this->mdl_portraits_files->get_images_by_portrait_id($portrait_id);
     }

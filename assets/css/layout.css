@@ -303,3 +303,7 @@ div.logo a img{height: 149px; width: 428px; margin: auto;display: block;}
 }
 
 
+img.portrait{
+    width: 400px !important;
+    height: 300px !important;
+}
