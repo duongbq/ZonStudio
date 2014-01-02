@@ -2,9 +2,6 @@
 $fashion_img = is_object($fashion_image) && file_exists('./uploads/home/' . $fashion_image->file_name) ? '/uploads/home/' . $fashion_image->file_name : '';
 $wedding_img = is_object($wedding_image) && file_exists('./uploads/home/' . $wedding_image->file_name) ? '/uploads/home/' . $wedding_image->file_name : '';
 $product_img = is_object($product_image) && file_exists('./uploads/home/' . $product_image->file_name) ? '/uploads/home/' . $product_image->file_name : '';
-
-
-
 ?>
 
 <ul class="nav">

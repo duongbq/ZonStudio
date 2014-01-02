@@ -54,6 +54,8 @@ $route['^chan-dung$'] = 'home/portrait/index/1';
 $route['^chan-dung/trang-(\d+)$'] = 'home/portrait/index/$1';
 
 $route['^nguoi-mau$'] = "home/models";
+$route['^tin-tuc$'] = "home/news";
+
 $route['^lien-he$'] = "home/contact";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
