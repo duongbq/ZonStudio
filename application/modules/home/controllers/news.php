@@ -12,29 +12,27 @@
  * @author duongbq
  */
 class News extends Zon_Controller {
-    
+
     public function __construct() {
 
         $this->_page_title = 'ZonStudio - Tin tức';
         $this->_layout = 'layouts/home/home_layout';
 
         parent::__construct();
+
+        $this->load->model('news/mdl_news');
     }
 
-    public function index() {
-        
-//        $this->load->model('file/mdl_file');
-//        
-//        $fashion_image = $this->mdl_file->get_files(array('home_display_index' => 1));
-//        $wedding_image = $this->mdl_file->get_files(array('home_display_index' => 2));
-//        $product_image = $this->mdl_file->get_files(array('home_display_index' => 3));
-//        
-//        $view_data = array(
-//            'fashion_image' => count($fashion_image) == 1 ? $fashion_image[0] : NULL,
-//            'wedding_image' => count($wedding_image) == 1 ? $wedding_image[0] : NULL,
-//            'product_image' => count($product_image) == 1 ? $product_image[0] : NULL
-//        );
-        
-        $this->layout->view('news');
+    public function index($page = 1) {
+
+        $view_data['news'] = $this->mdl_news->get_all_with_paging(array('page' => $page, 'per_page' => 9));
+        $view_data['pagination'] = $this->mdl_news->get_pagination_link();
+
+        $this->layout->view('news', $view_data);
     }
+    
+    function view_detail($news_id = 0) {
+        echo $news_id;
+    }
+
 }

@@ -54,7 +54,11 @@ $route['^chan-dung$'] = 'home/portrait/index/1';
 $route['^chan-dung/trang-(\d+)$'] = 'home/portrait/index/$1';
 
 $route['^nguoi-mau$'] = "home/models";
-$route['^tin-tuc$'] = "home/news";
+//$route['^tin-tuc$'] = "home/news";
+
+$route['^tin-tuc$'] = 'home/news/index/1';
+$route['^tin-tuc/trang-(\d+)$'] = 'home/news/index/$1';
+$route['^tin-tuc/(:any)-i(\d+)$'] = 'home/news/view_detail/$2';
 
 $route['^lien-he$'] = "home/contact";
 /* End of file routes.php */

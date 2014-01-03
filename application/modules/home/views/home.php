@@ -1,30 +1,72 @@
 <?php
-$fashion_img = is_object($fashion_image) && file_exists('./uploads/home/' . $fashion_image->file_name) ? '/uploads/home/' . $fashion_image->file_name : '';
-$wedding_img = is_object($wedding_image) && file_exists('./uploads/home/' . $wedding_image->file_name) ? '/uploads/home/' . $wedding_image->file_name : '';
-$product_img = is_object($product_image) && file_exists('./uploads/home/' . $product_image->file_name) ? '/uploads/home/' . $product_image->file_name : '';
+$fashion_img = is_object($fashion_image) ? '/uploads/home/' . $fashion_image->file_name : '/assets/images/noimage.png';
+$wedding_img = is_object($wedding_image) ? '/uploads/home/' . $wedding_image->file_name : '/assets/images/noimage.png';
+$product_img = is_object($product_image) ? '/uploads/home/' . $product_image->file_name : '/assets/images/noimage.png';
 ?>
 
-<ul class="nav">
+<section class="ib-container" id="ib-container">
+    <article class="ib-fashion" >
+        <header>
+            <a href="<?php echo site_url('thoi-trang'); ?>">
+                <img src="<?php echo $fashion_img; ?>"/>
+                <span>Fashion</span>
+            </a>
+        </header>
+    </article>
+    <article  class="ib-wedding" >
+        <header>
+            <a href="<?php echo site_url('anh-cuoi'); ?>">
+                <img src="<?php echo $wedding_img; ?>"/>
+                <span>Wedding</span>
+            </a>
+        </header>
+    </article>
+    <article  class="ib-product" >
+        <header>
+            <a class="product_link" href="<?php echo site_url('chan-dung'); ?>">
+                <img src="<?php echo $product_img; ?>"/>
+                <span>Portrait</span>
+            </a>
+        </header>
+    </article>
+    <article  class="ib-contact" >
+        <header>
+            <a class="contact_link" href="<?php echo site_url('lien-he'); ?>">
+                <img src="/assets/css/img/contact.png"/>
+                <span>Contact us</span>
+            </a>
+        </header>
+    </article>
+</section>
+<script>
+    $(function() {
 
-    <li class="nav_fashion" >
+        var $container	= $('#ib-container'),
+                $articles	= $container.children('article'),
+                timeout;
 
-        <a href="<?php echo site_url('thoi-trang'); ?>" style="background: url(<?php echo $fashion_img; ?>) no-repeat;">
-            <span>Fashion</span>
-        </a>
+        $articles.on( 'mouseenter', function( event ) {
 
-    </li>
+            var $article	= $(this);
+            clearTimeout( timeout );
+            timeout = setTimeout( function() {
 
-    <li class="nav_weeding">
-        <a href="<?php echo site_url('anh-cuoi'); ?>" style="background: url(<?php echo $wedding_img; ?>) no-repeat;">
-            <span>Wedding</span>
-        </a>
-    </li>
+                if( $article.hasClass('active') ) return false;
 
-    <li class="nav_product">
-        <a class="product_link" href="<?php echo site_url('chan-dung'); ?>" style="background: url(<?php echo $product_img; ?>) no-repeat;">
-            <span>Portrait</span>
-        </a>
-        <a class="contact_link" href="<?php echo site_url('lien-he'); ?>"><span>Contact us</span></a>
-    </li>
+                $articles.not( $article.removeClass('blur').addClass('active') )
+                        .removeClass('active')
+                        .addClass('blur');
 
-</ul>
+            }, 65 );
+
+        });
+
+        $container.on( 'mouseleave', function( event ) {
+
+            clearTimeout( timeout );
+            $articles.removeClass('active blur');
+
+        });
+
+    });
+</script>

@@ -1,0 +1,167 @@
+.ib-container{
+    position: relative;
+    width: 94%;
+    margin: 30px auto;
+    display: block;
+    padding-left: 40px;
+}
+.ib-container:before,
+.ib-container:after {
+    content:"";
+    display:table;
+}
+.ib-container:after {
+    clear:both;
+}
+.ib-container article{
+    display: block;
+    width: 250px;
+    height: auto;
+    background: #fff;
+    cursor: pointer;
+    float: left;
+    text-align: left;
+    text-transform: none;
+    margin: 20px 40px 20px 20px;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+/*    box-shadow:
+        0px 0px 0px 10px rgba(255,255,255,1),
+        1px 1px 3px 10px rgba(0,0,0,0.2);*/
+    -webkit-transition:
+        opacity 0.4s linear,
+        -webkit-transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+    -moz-transition:
+        opacity 0.4s linear,
+        -moz-transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+    -o-transition:
+        opacity 0.4s linear,
+        -o-transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+    -ms-transition:
+        opacity 0.4s linear,
+        -ms-transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+    transition:
+        opacity 0.4s linear,
+        transform 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out;
+
+}
+
+.ib-container article header img{
+    height: 410px;
+    width: 250px;
+}
+
+/*wedding*/
+.ib-container article.ib-wedding{
+    margin-top: 60px;
+}
+
+.ib-container article.ib-wedding header img{
+    height: 280px;
+}
+
+/*product*/
+.ib-container article.ib-product header img{
+    height: 290px;
+}
+
+/*contact*/
+.ib-container article.ib-contact header img{
+    height: 58px;
+}
+
+.ib-container article a,
+.ib-container article a:hover{
+    display: block;
+    text-decoration: none;
+}
+
+.ib-container article a span {
+    color: #FFFFFF;
+    display: block;
+    font-family: "FontSegoeui",Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 15px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+/* Hover Style for all the items: blur, scale down*/
+.ib-container article.blur{
+    /*box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);*/
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+/* Hover Style for single item: scale up */
+.ib-container article.active{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+/*    box-shadow:
+        0px 0px 0px 10px rgba(255,255,255,1),
+        1px 11px 15px 10px rgba(0,0,0,0.4);*/
+    z-index: 100;
+    opacity: 1;
+    border: 0px solid #ffffff;
+}
+
+/*hover text position*/
+/*fashion*/
+.ib-container article a span.fashion {
+    top: 394px;
+}
+
+.ib-container article.blur a span.fashion,
+.ib-container article.active a span.fashion{
+    top: 374px;
+}
+
+/*wedding*/
+.ib-container article a span.wedding {
+    top: 18px;
+    width: 240px;
+    text-align: right;
+}
+
+.ib-container article.blur a span.wedding,
+.ib-container article.active a span.wedding{
+    top: -42px;
+}
+
+/*product*/
+.ib-container article a span.product {
+    top: -22px;
+    width: 240px;
+    text-align: left;
+    margin-left: -25px;
+}
+
+.ib-container article.blur a span.product,
+.ib-container article.active a span.product{
+    top: -42px;
+}
+
+/*contact*/
+.ib-container article a span.contact {
+    padding-left: 85px;
+    text-align: left;
+    top: 364px;
+}
+
+.ib-container article.blur a span.contact,
+.ib-container article.active a span.contact{
+    top: 14px;
+}
