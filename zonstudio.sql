@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 30, 2013 at 03:23 PM
+-- Generation Time: Jan 03, 2014 at 02:58 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `is_home_display` tinyint(1) DEFAULT '0',
   `home_display_index` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -104,11 +104,8 @@ CREATE TABLE IF NOT EXISTS `news` (
   `title` text,
   `summary` text,
   `description` text,
-  `is_active` tinyint(1) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '0',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `created_by` int(11) DEFAULT '0',
-  `updated_at` datetime DEFAULT NULL,
-  `updated_by` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -151,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `portraits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `portrait_name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

@@ -69,14 +69,15 @@
                     <li><span><?php echo $portrait->portrait_name; ?></span></li>
                     <?php
                     $img = get_displayed_image_by_portrait_id($portrait->id);
+                    
                     if (is_object($img)) {
                         $img_src = '/uploads/portraits/' . $img->file_name;
                     } else {
                         $img_src = '/assets/images/noimage.png';
                     }
-
-
                     $fancy_images = get_fancy_images_by_portrait_id($portrait->id);
+                    
+//                    print_r($fancy_images);die;
                     ?>
                     <li>
                         <a rel="fancy_group_<?php echo $portrait->id; ?>" href="<?php echo $img_src; ?>" title="<?php echo $portrait->portrait_name; ?>">
@@ -84,7 +85,7 @@
                         </a>
                     </li>
                     <?php foreach ($fancy_images as $fancy_image): ?>
-                        <a rel="fancy_group_<?php echo $portrait->id; ?>" href="<?php echo $img_src; ?>" title="<?php echo $portrait->portrait_name; ?>"></a>
+                        <a rel="fancy_group_<?php echo $portrait->id; ?>" href="/uploads/portraits/<?php echo $fancy_image->file_name; ?>" title="<?php echo $portrait->portrait_name; ?>"></a>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -96,8 +97,8 @@
                     'transitionIn': 'none',
                     'transitionOut': 'none',
                     'titlePosition': 'over',
-                    'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
-                        return '<span id="fancybox-title-over">' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+                    'titleFormat': function(title) {
+                        return '<span id="fancybox-title-over">' + (title.length ? ' &nbsp; ' + title : '') + '</span>';
                     }
                 });
 

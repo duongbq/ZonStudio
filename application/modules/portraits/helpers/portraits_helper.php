@@ -6,14 +6,13 @@ if (!function_exists('get_displayed_image_by_portrait_id')) {
         
         $CI =& get_instance();
         
-        $CI->db->where('portraits_files.is_displayed', 1);
         $CI->db->where('portraits_files.portrait_id', $portrait_id);
         
         $CI->db->join('files', 'files.id = portraits_files.file_id');
 
-        $CI->db->order_by('files.uploaded_date');
+        $CI->db->order_by('files.uploaded_date desc');
         
-        return $CI->db->get('portraits_files')->row();
+        return $CI->db->get('portraits_files')->last_row();
     }
 
 }

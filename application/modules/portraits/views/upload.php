@@ -19,6 +19,22 @@
 </div>
 
 <script>
+    
+    function set_display($img_id, $portrait_id) {
+
+        $.ajax({
+            type: "post",
+            url: "<?php echo site_url('portraits/set_display'); ?>",
+            data: {
+                img_id: $img_id,
+                portrait_id: $portrait_id
+            },
+            success: function(response) {
+//                alert(response);
+//                $('#list').html(response);
+            }
+        });
+    }
 
     function remove_image($image_id, $portrait_id) {
 

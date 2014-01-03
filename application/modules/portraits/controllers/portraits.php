@@ -95,5 +95,23 @@ class Portraits extends Admin_Controller {
             redirect(base_url());
         }
     }
+    
+    function set_display() {
+
+        if ($this->is_postback() && $this->input->is_ajax_request()) {
+
+            $image_id = $this->input->post('image_id');
+            $portrait_id = $this->input->post('portrait_id');
+            $this->load->model('portraits/mdl_portraits_files');
+//
+            $this->mdl_portraits_files->update_display_image($image_id, $portrait_id);
+//
+//            $images = $this->mdl_portraits->get_all_images_by_portrait_id($portrait_id);
+//            $images['portrait_id'] = $portrait_id;
+            echo 1;
+        } else {
+            redirect(base_url());
+        }
+    }
 
 }
