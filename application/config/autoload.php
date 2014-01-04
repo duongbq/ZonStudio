@@ -76,6 +76,7 @@ $autoload['libraries'] = array(
  */
 
 $autoload['helper'] = array(
+    'xml',
     'html',
     'form',
     'url',

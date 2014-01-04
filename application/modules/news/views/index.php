@@ -24,7 +24,15 @@
         <tbody>
             <?php foreach ($news as $article) { ?>
                 <tr>
-                    <td><?php echo $article->title; ?></td>
+                    <td>
+                        <?php if ($article->file_id > 0 && isset($file_arr[$article->file_id])) : ?>
+                            <img src="/uploads/news/<?php echo $file_arr[$article->file_id]; ?>" style="width: 150px; height: 100px;"/>
+                        <?php else : ?>
+                            <img src="/assets/images/noimage.png" style="width: 150px; height: 100px;"/>
+                        <?php endif; ?>
+                        &nbsp;
+                        <?php echo $article->title; ?>
+                    </td>
                     <td><?php echo get_vndate_string($article->created_at); ?></td>
                     <td>
                         <div class="options btn-group">

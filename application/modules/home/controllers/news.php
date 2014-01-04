@@ -32,7 +32,16 @@ class News extends Zon_Controller {
     }
     
     function view_detail($news_id = 0) {
-        echo $news_id;
+        
+        if($news_id <= 0) redirect ('tin-tuc');
+        
+        $news = $this->mdl_news->get_by_id($news_id);
+        $other_news = $this->mdl_news->get_other_news($news_id);
+        $view_data = array(
+            'news' => $news,
+            'other_news' => $other_news
+        );
+        $this->layout->view('news_detail', $view_data);         
     }
 
 }

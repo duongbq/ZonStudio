@@ -60,6 +60,8 @@ $route['^tin-tuc$'] = 'home/news/index/1';
 $route['^tin-tuc/trang-(\d+)$'] = 'home/news/index/$1';
 $route['^tin-tuc/(:any)-i(\d+)$'] = 'home/news/view_detail/$2';
 
+$route['^zonstudio.rss$'] = "home/feed/show_rss";
+
 $route['^lien-he$'] = "home/contact";
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

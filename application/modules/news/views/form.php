@@ -1,4 +1,4 @@
-<form method="post" class="form-horizontal">
+<form method="post" class="form-horizontal" enctype="multipart/form-data">
     <?php
     if (isset($news_id)) {
         $form_header = 'Chỉnh sửa tin tức';
@@ -29,18 +29,32 @@
         </div>
 
         <div class="control-group">
+            <label class="control-label">Ảnh</label>
+            <div class="controls">
+                <?php if ($file_id > 0 && isset($file_arr[$file_id])) : ?>
+                    <img src="/uploads/news/<?php echo $file_arr[$file_id]; ?>" style="width: 100px; height: 75px;"/>
+                <?php else : ?>
+                    <img src="/assets/images/noimage.png" style="width: 100px; height: 75px;"/>
+                <?php endif; ?>
+                &nbsp;
+                <input type="file" name="userfile" id="userfile" multiple accept="image/*"/>  
+                <input type="hidden" name="file_id" value="<?php echo $file_id; ?>"/>
+            </div>
+        </div>
 
-            <label class="control-label">Mô tả tóm tắt</label>
+        <div class="control-group">
+
+            <label class="control-label">Tóm tắt nội dung</label>
 
             <div class="controls">
-                <textarea name="summary"><?php echo set_value('summary', isset($summary) ? $summary : NULL); ?></textarea>
+                <textarea name="summary" class="input-block-level"><?php echo set_value('summary', isset($summary) ? $summary : NULL); ?></textarea>
             </div>
 
         </div>
 
         <div class="control-group">
 
-            <label class="control-label">Mô tả chi tiết</label>
+            <label class="control-label">Nội dung chi tiết</label>
 
             <div class="controls">
                 <textarea name="description"><?php echo set_value('description', isset($description) ? $description : NULL); ?></textarea>
@@ -61,11 +75,10 @@
 
 <script src="/assets/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('summary', {
-        
-    });
+//    CKEDITOR.replace('summary', {
+//        
+//    });
     CKEDITOR.replace('description', {
-        
     });
-    
+
 </script>
