@@ -86,7 +86,7 @@ $autoload['helper'] = array(
     'security',
     'paging',
     'friendly_url',
-    'date_time'
+    'commons'
 );
 
 

@@ -7,7 +7,11 @@
                 <ul>
                     <li><span><?php echo $article->title; ?></span></li>
                     <li>
-                        <?php echo $article->summary; ?>
+                        <?php if ($article->file_id > 0 && isset($file_arr[$article->file_id])) : ?>
+                            <img src="/uploads/news/<?php echo $file_arr[$article->file_id]; ?>" style="width: 150px; height: 100px;"/>
+                        <?php endif; ?>
+                        
+                        <?php echo get_short_description($article->summary, 150) ; ?>
                         <?php echo anchor($this->uri->segment(1) . '/' . mb_strtolower(url_title(removesign($article->title))) . '-i' . $article->id, 'Xem thêm'); ?>
                     </li>
                 </ul>

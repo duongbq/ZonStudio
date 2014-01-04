@@ -39,6 +39,9 @@ class News extends Admin_Controller {
             $return_val = NULL;
             if ($_FILES['userfile']['name'] != '') {
                 $return_val = $this->mdl_news->upload_new_image();
+            } else {
+                $this->mdl_news->post_news();
+                redirect('news');
             }
 
             if (is_numeric($return_val) && $return_val > 0) {
@@ -57,7 +60,7 @@ class News extends Admin_Controller {
         if ($news_id <= 0) {
             redirect('news/create');
         }
-        $redirect = FALSE;
+//        $redirect = FALSE;
         $view_data = $this->mdl_news->get_view_data($news_id);
         $view_data['file_arr'] = $this->mdl_file->get_files_array();
 
@@ -68,23 +71,20 @@ class News extends Admin_Controller {
             if ($_FILES['userfile']['name'] != '') {
                 $return_val = $this->mdl_news->upload_new_image();
             } else {
-                $redirect = TRUE;
+                $this->mdl_news->update_news();
+                redirect('news');
             }
 
             if (is_numeric($return_val) && $return_val > 0) {
                 $this->mdl_news->update(array('id' => $news_id, 'file_id' => $return_val));
                 $this->mdl_file->delete_file(array('file_id' => $view_data['file_id'], 'folder_name' => 'news'));
 
-                $redirect = TRUE;
+                $this->mdl_news->update_news();
+                redirect('news');
             }
 
 
             $view_data['error'] = $return_val;
-            
-            if ($redirect) {
-                $this->mdl_news->update_news();
-                redirect('news');
-            }
         }
 
         $this->layout->view('form', $view_data);

@@ -21,12 +21,14 @@ class News extends Zon_Controller {
         parent::__construct();
 
         $this->load->model('news/mdl_news');
+        $this->load->model('file/mdl_file');
     }
 
     public function index($page = 1) {
 
         $view_data['news'] = $this->mdl_news->get_all_with_paging(array('page' => $page, 'per_page' => 9));
         $view_data['pagination'] = $this->mdl_news->get_pagination_link();
+        $view_data['file_arr'] = $this->mdl_file->get_files_array();
 
         $this->layout->view('news', $view_data);
     }
@@ -39,7 +41,8 @@ class News extends Zon_Controller {
         $other_news = $this->mdl_news->get_other_news($news_id);
         $view_data = array(
             'news' => $news,
-            'other_news' => $other_news
+            'other_news' => $other_news,
+            'file_arr' => $this->mdl_file->get_files_array()
         );
         $this->layout->view('news_detail', $view_data);         
     }
