@@ -26,14 +26,11 @@ class Portrait extends Zon_Controller {
         parent::__construct();
 
         $this->load->model('portraits/mdl_portraits');
-        $this->load->model('portraits/mdl_portraits_files');
-        $this->load->model('file/mdl_file');
         
         $this->load->helper('portraits/portraits');
     }
 
     public function index($page) {
-        $view_data['images'] = $this->mdl_portraits->get_all();
         $view_data['portraits'] = $this->mdl_portraits->get_all_with_paging(array('page' => $page, 'per_page' => 9));
         $view_data['pagination'] = $this->mdl_portraits->get_pagination_link();
         
