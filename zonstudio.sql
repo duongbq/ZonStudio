@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 03, 2014 at 02:58 PM
+-- Generation Time: Jan 04, 2014 at 03:00 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.3.10-1ubuntu3.9
 
@@ -101,6 +101,7 @@ CREATE TABLE IF NOT EXISTS `models_files` (
 
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `file_id` int(11) DEFAULT '0',
   `title` text,
   `summary` text,
   `description` text,
